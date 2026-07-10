@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supplementary Material — Threatened Rupicolous Flora of Rio de Janeiro</title>
+<style>
+  :root{
+    --ink:#2c3e50; --ink2:#34495e; --muted:#7f8c8d; --line:#ecf0f1;
+    --blue:#3498db; --amber:#f39c12; --red:#e74c3c; --bg:#f4f6f8;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:"Segoe UI",Arial,sans-serif; background:var(--bg); margin:0; padding:20px; color:var(--ink);}
+  .container{max-width:1360px; margin:auto; background:#fff; padding:34px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08);}
+  h1{color:var(--ink); border-bottom:4px solid var(--blue); padding-bottom:10px; margin:0 0 6px;}
+  .sub{color:var(--muted); font-size:0.95em; margin-bottom:26px;}
+  h2{color:var(--ink2); margin-top:38px; border-bottom:2px solid var(--line); padding-bottom:5px;}
+
+  /* KPI cards */
+  .kpi-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:14px; margin:22px 0;}
+  .kpi{background:var(--line); padding:16px; border-radius:8px; text-align:center;}
+  .kpi .label{font-size:0.78em; color:var(--muted); text-transform:uppercase; letter-spacing:.03em;}
+  .kpi .value{font-size:1.7em; font-weight:bold; color:var(--ink); margin-top:4px;}
+  .kpi .value small{font-size:0.5em; color:var(--muted); font-weight:normal;}
+
+  /* IUCN distribution bar */
+  .iucn-bar{display:flex; height:42px; border-radius:8px; overflow:hidden; margin:14px 0 8px; box-shadow:inset 0 0 0 1px rgba(0,0,0,.05);}
+  .iucn-seg{display:flex; align-items:center; justify-content:center; color:#fff; font-weight:bold; font-size:0.9em; text-shadow:0 1px 2px rgba(0,0,0,.3); min-width:0; transition:flex .3s;}
+  .iucn-seg[data-cat="VU"], .iucn-seg[data-cat="NT"]{color:var(--ink); text-shadow:none;}
+  .iucn-legend{display:flex; flex-wrap:wrap; gap:14px; font-size:0.85em; margin-top:6px;}
+  .iucn-legend span{display:inline-flex; align-items:center; gap:6px;}
+  .swatch{width:14px; height:14px; border-radius:3px; display:inline-block; border:1px solid rgba(0,0,0,.1);}
+
+  /* Threat synthesis */
+  .threat-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:14px; margin-top:14px;}
+  .threat-card{background:#f8f9fa; border-left:4px solid var(--blue); border-radius:6px; padding:14px 16px; display:flex; gap:12px; align-items:flex-start;}
+  .threat-card .ic{font-size:2em; opacity:.85; line-height:1;}
+  .threat-card .nome{font-weight:bold; margin-bottom:8px;}
+  .threat-card .metric{font-size:0.82em; color:#555; margin-bottom:3px;}
+  .threat-card .metric b{color:var(--ink);}
+  .mini-bar{height:6px; background:#e3e8ec; border-radius:3px; overflow:hidden; margin-top:2px;}
+  .mini-bar>span{display:block; height:100%; background:var(--blue);}
+
+  /* Controls */
+  .controls{display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin:18px 0 6px;}
+  .controls input[type=text]{flex:1; min-width:220px; padding:10px 14px; border:1px solid #d5dbdf; border-radius:8px; font-size:0.95em;}
+  .controls select{padding:10px 12px; border:1px solid #d5dbdf; border-radius:8px; font-size:0.9em; background:#fff;}
+  .btn{padding:10px 16px; border:none; border-radius:8px; background:var(--blue); color:#fff; font-weight:bold; cursor:pointer; font-size:0.9em;}
+  .btn:hover{background:#2980b9;}
+  .count-info{font-size:0.85em; color:var(--muted);}
+
+  /* Table */
+  .tbl-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:8px; margin-top:12px;}
+  table{width:100%; border-collapse:collapse; font-size:0.9em;}
+  thead{background:var(--ink2); color:#fff; position:sticky; top:0; z-index:2;}
+  th{padding:11px 12px; text-align:left; white-space:nowrap; cursor:pointer; user-select:none;}
+  th:hover{background:#3d566e;}
+  th .arrow{opacity:.4; font-size:0.8em;}
+  th.sorted .arrow{opacity:1;}
+  td{padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:middle;}
+  tbody tr:hover{background:#f6fafd;}
+  .fam-header td{background:#eef2f5; font-weight:bold; color:var(--ink2); border-top:2px solid #dfe6ea; font-size:0.95em;}
+  .fam-header .fam-count{font-weight:normal; color:var(--muted); font-size:0.85em;}
+  .sp-name{font-style:italic; font-weight:600;}
+  .sp-link{color:var(--ink); text-decoration:none; border-bottom:1px dotted var(--blue);}
+  .sp-link:hover{color:var(--blue);}
+  .badge{display:inline-block; padding:3px 10px; border-radius:12px; font-weight:bold; font-size:0.82em; color:#fff; text-align:center; min-width:38px;}
+  .badge[data-cat="VU"], .badge[data-cat="NT"]{color:var(--ink);}
+  .amea-icons{font-size:1.05em; letter-spacing:2px; white-space:nowrap;}
+  .uc-yes{color:#1e8449; font-weight:bold;}
+  .uc-no{color:var(--red); font-weight:bold;}
+  .num{text-align:right; font-variant-numeric:tabular-nums;}
+
+  footer{color:var(--muted); font-size:0.85em; text-align:center; margin-top:40px; border-top:1px solid var(--line); padding-top:16px;}
+
+  @media (max-width:900px){ .kpi-grid{grid-template-columns:repeat(3,1fr);} }
+  @media print{
+    body{background:#fff; padding:0;} .container{box-shadow:none; max-width:100%;}
+    .controls{display:none;} thead{position:static;} .tbl-wrap{overflow:visible; border:none;}
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>Supplementary Material — Threatened Rupicolous Flora of Rio de Janeiro</h1>
+  <div class="sub">Regional IUCN Red List assessment synthesis · Rock outcrop endemics of the Atlantic Forest · Generated on 2026-07-09</div>
+
+  <!-- ===================== GENERAL STATISTICS ===================== -->
+  <h2>Dataset Overview</h2>
+  <div class="kpi-grid">
+    <div class="kpi"><div class="label">Species</div><div class="value">65</div></div>
+    <div class="kpi"><div class="label">Families</div><div class="value">22</div></div>
+    <div class="kpi"><div class="label">Genera</div><div class="value">34</div></div>
+    <div class="kpi"><div class="label">Threatened</div><div class="value">55 <small>CR+EN+VU</small></div></div>
+    <div class="kpi"><div class="label">% Threatened</div><div class="value">84.6<small>%</small></div></div>
+    <div class="kpi"><div class="label">In Protected Areas</div><div class="value">65</div></div>
+  </div>
+
+  <!-- ===================== IUCN DISTRIBUTION ===================== -->
+  <h2>Red List Category Distribution</h2>
+  <div class="iucn-bar" id="iucnBar"></div>
+  <div class="iucn-legend" id="iucnLegend"></div>
+
+  <!-- ===================== THREAT SYNTHESIS ===================== -->
+  <h2>Threat Synthesis (IUCN-CMP v3.3)</h2>
+  <p class="sub" style="margin-bottom:4px;">Prevalence across the assessed set and mean spatial impact, computed only over affected species. Bar length is scaled to prevalence.</p>
+  <div class="threat-grid" id="threatGrid"></div>
+
+  <!-- ===================== MASTER TABLE ===================== -->
+  <h2>Master Assessment Table</h2>
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search species, genus, family, criterion…">
+    <select id="filterCat"><option value="">All categories</option></select>
+    <select id="filterFam"><option value="">All families</option></select>
+    <select id="filterUC">
+      <option value="">PA: all</option>
+      <option value="Yes">In protected area</option>
+      <option value="No">Not protected</option>
+    </select>
+    <button class="btn" id="exportCsv">Export CSV</button>
+  </div>
+  <div class="count-info" id="countInfo"></div>
+
+  <div class="tbl-wrap">
+    <table id="masterTable">
+      <thead>
+        <tr>
+          <th data-key="species">Species <span class="arrow">↕</span></th>
+          <th data-key="genus">Genus <span class="arrow">↕</span></th>
+          <th data-key="IUCN">Category <span class="arrow">↕</span></th>
+          <th data-key="criterio">Criterion <span class="arrow">↕</span></th>
+          <th data-key="EOO" class="num">EOO (km²) <span class="arrow">↕</span></th>
+          <th data-key="AOO" class="num">AOO (km²) <span class="arrow">↕</span></th>
+          <th data-key="n_loc" class="num">Loc. <span class="arrow">↕</span></th>
+          <th data-key="ameaca_critica">Critical threat <span class="arrow">↕</span></th>
+          <th data-key="_amea">Active threats <span class="arrow">↕</span></th>
+          <th data-key="trend">Trend <span class="arrow">↕</span></th>
+          <th data-key="em_uc">PA <span class="arrow">↕</span></th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <footer>
+    Supplementary table generated on 2026-07-09 · IUCN Red List Categories &amp; Criteria v3.1 · Guidelines v16 (Mar 2024) · Threat classification IUCN-CMP v3.3<br>
+    Assessment scope: Regional (Rio de Janeiro, Brazil). Species restricted to those with computable AOO and EOO.
+  </footer>
+</div>
+
+<script>
+  const SPECIES  = [{"species":"Baccharis ciliata","family":"Asteraceae","genus":"Baccharis","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":76.3,"AOO":12,"n_loc":3,"trend":"Decreasing","ameaca_critica":1.1,"em_uc":"Yes","ficha":"Factsheet_Baccharis_ciliata.html","ameacas":"1.1,2.3,10.3"},{"species":"Baccharis pseudovaccinioides","family":"Asteraceae","genus":"Baccharis","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":926.2,"AOO":16,"n_loc":3,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Baccharis_pseudovaccinioides.html","ameacas":"1.1,2.3,10.3"},{"species":"Wunderlichia insignis","family":"Asteraceae","genus":"Wunderlichia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":1963.5,"AOO":20,"n_loc":5,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Wunderlichia_insignis.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Begonia egregia","family":"Begoniaceae","genus":"Begonia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":168.6,"AOO":12,"n_loc":2,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Begonia_egregia.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Begonia lunaris","family":"Begoniaceae","genus":"Begonia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":196.5,"AOO":28,"n_loc":4,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Begonia_lunaris.html","ameacas":"2.3,10.3"},{"species":"Begonia olsoniae","family":"Begoniaceae","genus":"Begonia","IUCN":"VU","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":16076.6,"AOO":48,"n_loc":9,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Begonia_olsoniae.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Begonia ramentacea","family":"Begoniaceae","genus":"Begonia","IUCN":"VU","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":1797.1,"AOO":40,"n_loc":7,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Begonia_ramentacea.html","ameacas":"2.3,10.3"},{"species":"Begonia rubropilosa","family":"Begoniaceae","genus":"Begonia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":66,"AOO":16,"n_loc":4,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Begonia_rubropilosa.html","ameacas":"2.3,10.3"},{"species":"Begonia sanguinea","family":"Begoniaceae","genus":"Begonia","IUCN":"VU","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":7305.2,"AOO":48,"n_loc":10,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Begonia_sanguinea.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Aechmea caesia","family":"Bromeliaceae","genus":"Aechmea","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":460.9,"AOO":36,"n_loc":5,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Aechmea_caesia.html","ameacas":"2.2,2.3,10.3"},{"species":"Alcantarea brasiliana","family":"Bromeliaceae","genus":"Alcantarea","IUCN":"LC/NT","criterio":"LC/NT","EOO":137.5,"AOO":12,"n_loc":2,"trend":"Decreasing","ameaca_critica":null,"em_uc":"Yes","ficha":"Factsheet_Alcantarea_brasiliana.html","ameacas":"1.1,2.2,2.3"},{"species":"Alcantarea geniculata","family":"Bromeliaceae","genus":"Alcantarea","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":1721.7,"AOO":24,"n_loc":5,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Alcantarea_geniculata.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Alcantarea glaziouana","family":"Bromeliaceae","genus":"Alcantarea","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":17.9,"AOO":12,"n_loc":3,"trend":"Decreasing","ameaca_critica":1.1,"em_uc":"Yes","ficha":"Factsheet_Alcantarea_glaziouana.html","ameacas":"1.1,2.3,10.3"},{"species":"Alcantarea heloisae","family":"Bromeliaceae","genus":"Alcantarea","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":546.3,"AOO":24,"n_loc":4,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Alcantarea_heloisae.html","ameacas":"1.1,2.1,2.3,10.3"},{"species":"Alcantarea odorata","family":"Bromeliaceae","genus":"Alcantarea","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":67,"AOO":8,"n_loc":2,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Alcantarea_odorata.html","ameacas":"2.2,2.3"},{"species":"Alcantarea tortuosa","family":"Bromeliaceae","genus":"Alcantarea","IUCN":"LC/NT","criterio":"LC/NT","EOO":4,"AOO":4,"n_loc":1,"trend":"Decreasing","ameaca_critica":null,"em_uc":"Yes","ficha":"Factsheet_Alcantarea_tortuosa.html","ameacas":"2.3"},{"species":"Canistropsis marceloi","family":"Bromeliaceae","genus":"Canistropsis","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":13.1,"AOO":12,"n_loc":2,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Canistropsis_marceloi.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Nidularium itatiaiae","family":"Bromeliaceae","genus":"Nidularium","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":18.6,"AOO":16,"n_loc":2,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Nidularium_itatiaiae.html","ameacas":"1.1,2.3"},{"species":"Pitcairnia encholirioides","family":"Bromeliaceae","genus":"Pitcairnia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":12,"AOO":12,"n_loc":3,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Pitcairnia_encholirioides.html","ameacas":"1.1,2.3,10.3"},{"species":"Pitcairnia staminea","family":"Bromeliaceae","genus":"Pitcairnia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":315.2,"AOO":16,"n_loc":4,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Pitcairnia_staminea.html","ameacas":"1.1,2.3,10.3"},{"species":"Quesnelia lateralis","family":"Bromeliaceae","genus":"Quesnelia","IUCN":"LC/NT","criterio":"LC/NT","EOO":3596.7,"AOO":72,"n_loc":14,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Quesnelia_lateralis.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Tillandsia araujei","family":"Bromeliaceae","genus":"Tillandsia","IUCN":"VU","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":5398,"AOO":36,"n_loc":8,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Tillandsia_araujei.html","ameacas":"1.1,2.1,2.2,2.3,10.3"},{"species":"Vriesea vidalii","family":"Bromeliaceae","genus":"Vriesea","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":470.1,"AOO":12,"n_loc":3,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Vriesea_vidalii.html","ameacas":"2.3,10.3"},{"species":"Clusia fragrans","family":"Clusiaceae","genus":"Clusia","IUCN":"VU","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":2067.1,"AOO":40,"n_loc":8,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Clusia_fragrans.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Siderasis fuscata","family":"Commelinaceae","genus":"Siderasis","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":76.7,"AOO":16,"n_loc":4,"trend":"Decreasing","ameaca_critica":1.1,"em_uc":"Yes","ficha":"Factsheet_Siderasis_fuscata.html","ameacas":"1.1,2.3,10.3"},{"species":"Prepusa hookeriana","family":"Gentianaceae","genus":"Prepusa","IUCN":"VU","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":6427.6,"AOO":60,"n_loc":9,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Prepusa_hookeriana.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Sinningia bulbosa","family":"Gesneriaceae","genus":"Sinningia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":824,"AOO":16,"n_loc":4,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Sinningia_bulbosa.html","ameacas":"1.1,2.3,10.3"},{"species":"Sinningia cardinalis","family":"Gesneriaceae","genus":"Sinningia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":598.5,"AOO":16,"n_loc":4,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Sinningia_cardinalis.html","ameacas":"2.2,2.3,10.3"},{"species":"Sinningia helleri","family":"Gesneriaceae","genus":"Sinningia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":16,"AOO":16,"n_loc":3,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Sinningia_helleri.html","ameacas":"1.1,2.3,10.3"},{"species":"Sinningia pusilla","family":"Gesneriaceae","genus":"Sinningia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":945.6,"AOO":24,"n_loc":5,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Sinningia_pusilla.html","ameacas":"2.1,2.2,2.3,10.3"},{"species":"Vanhouttea fruticulosa","family":"Gesneriaceae","genus":"Vanhouttea","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":1785.6,"AOO":28,"n_loc":5,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Vanhouttea_fruticulosa.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Vanhouttea gardneri","family":"Gesneriaceae","genus":"Vanhouttea","IUCN":"VU","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":2978.5,"AOO":28,"n_loc":7,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Vanhouttea_gardneri.html","ameacas":"2.3,10.3"},{"species":"Vanhouttea lanata","family":"Gesneriaceae","genus":"Vanhouttea","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":343.2,"AOO":20,"n_loc":5,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Vanhouttea_lanata.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Utricularia geminiloba","family":"Lentibulariaceae","genus":"Utricularia","IUCN":"VU","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":1565.1,"AOO":48,"n_loc":8,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Utricularia_geminiloba.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Bertolonia sanguinea","family":"Melastomataceae","genus":"Bertolonia","IUCN":"VU","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":6833.5,"AOO":44,"n_loc":10,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Bertolonia_sanguinea.html","ameacas":"2.3,10.3"},{"species":"Bradea brasiliensis","family":"Rubiaceae","genus":"Bradea","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":2031.6,"AOO":24,"n_loc":5,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Bradea_brasiliensis.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Hindsia glabra","family":"Rubiaceae","genus":"Hindsia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":411.5,"AOO":12,"n_loc":3,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Hindsia_glabra.html","ameacas":"2.2,2.3,10.3"},{"species":"Hindsia ramosissima","family":"Rubiaceae","genus":"Hindsia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":1146.4,"AOO":20,"n_loc":5,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Hindsia_ramosissima.html","ameacas":"2.3,10.3"},{"species":"Barbacenia brevifolia","family":"Velloziaceae","genus":"Barbacenia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":554,"AOO":20,"n_loc":5,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Barbacenia_brevifolia.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Barbacenia fannieae","family":"Velloziaceae","genus":"Barbacenia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":8,"AOO":8,"n_loc":2,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Barbacenia_fannieae.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Eryngium fluminense","family":"Apiaceae","genus":"Eryngium","IUCN":"VU","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":1559.2,"AOO":44,"n_loc":9,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Eryngium_fluminense.html","ameacas":"1.1,2.2,2.3,10.3"},{"species":"Luxemburgia glazioviana","family":"Ochnaceae","genus":"Luxemburgia","IUCN":"LC/NT","criterio":"LC/NT","EOO":8983.1,"AOO":68,"n_loc":14,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Luxemburgia_glazioviana.html","ameacas":"1.1,2.1,2.2,2.3,10.3"},{"species":"Worsleya procera","family":"Amaryllidaceae","genus":"Worsleya","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":410.8,"AOO":32,"n_loc":5,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Worsleya_procera.html","ameacas":"1.1,2.3,10.3"},{"species":"Pitcairnia suaveolens","family":"Bromeliaceae","genus":"Pitcairnia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":121.5,"AOO":12,"n_loc":3,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Pitcairnia_suaveolens.html","ameacas":"2.3,10.3"},{"species":"Sebastiania pteroclada","family":"Euphorbiaceae","genus":"Sebastiania","IUCN":"EN","criterio":"B2ab(i,ii,iii,iv)","EOO":6134.4,"AOO":24,"n_loc":5,"trend":"Decreasing","ameaca_critica":1.1,"em_uc":"Yes","ficha":"Factsheet_Sebastiania_pteroclada.html","ameacas":"1.1,2.3,10.3"},{"species":"Stillingia dichotoma","family":"Euphorbiaceae","genus":"Stillingia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":2173.6,"AOO":16,"n_loc":4,"trend":"Decreasing","ameaca_critica":1.1,"em_uc":"Yes","ficha":"Factsheet_Stillingia_dichotoma.html","ameacas":"1.1,2.3,10.3"},{"species":"Barbacenia squamata","family":"Velloziaceae","genus":"Barbacenia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":1461.5,"AOO":12,"n_loc":3,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Barbacenia_squamata.html","ameacas":"1.1,2.3,10.3"},{"species":"Prescottia spiranthophylla","family":"Orchidaceae","genus":"Prescottia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":3544.4,"AOO":12,"n_loc":2,"trend":"Decreasing","ameaca_critica":1.1,"em_uc":"Yes","ficha":"Factsheet_Prescottia_spiranthophylla.html","ameacas":"1.1,2.1,2.3"},{"species":"Baccharis friburgensis","family":"Asteraceae","genus":"Baccharis","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":384.1,"AOO":16,"n_loc":4,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Baccharis_friburgensis.html","ameacas":"2.3,10.3"},{"species":"Prepusa connata","family":"Gentianaceae","genus":"Prepusa","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":2468,"AOO":16,"n_loc":4,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Prepusa_connata.html","ameacas":"2.2,2.3,10.3"},{"species":"Alcantarea martinellii","family":"Bromeliaceae","genus":"Alcantarea","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":247.5,"AOO":12,"n_loc":3,"trend":"Decreasing","ameaca_critica":1.1,"em_uc":"Yes","ficha":"Factsheet_Alcantarea_martinellii.html","ameacas":"1.1,2.3,10.3"},{"species":"Dioscorea pedalis","family":"Dioscoreaceae","genus":"Dioscorea","IUCN":"LC/NT","criterio":"LC/NT","EOO":70.4,"AOO":16,"n_loc":2,"trend":"Decreasing","ameaca_critica":null,"em_uc":"Yes","ficha":"Factsheet_Dioscorea_pedalis.html","ameacas":"2.3"},{"species":"Rhipsalis flagelliformis","family":"Cactaceae","genus":"Rhipsalis","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":1078.5,"AOO":16,"n_loc":3,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Rhipsalis_flagelliformis.html","ameacas":"1.1,2.3,10.3"},{"species":"Amorimia coriacea","family":"Malpighiaceae","genus":"Amorimia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":2137.5,"AOO":16,"n_loc":4,"trend":"Decreasing","ameaca_critica":1.1,"em_uc":"Yes","ficha":"Factsheet_Amorimia_coriacea.html","ameacas":"1.1,2.3,10.3"},{"species":"Pleroma thereminianum","family":"Melastomataceae","genus":"Pleroma","IUCN":"VU","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":290.7,"AOO":36,"n_loc":6,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Pleroma_thereminianum.html","ameacas":"1.1,2.2,2.3"},{"species":"Pleroma vimineum","family":"Melastomataceae","genus":"Pleroma","IUCN":"LC/NT","criterio":"LC/NT","EOO":12525.6,"AOO":80,"n_loc":14,"trend":"Decreasing","ameaca_critica":1.1,"em_uc":"Yes","ficha":"Factsheet_Pleroma_vimineum.html","ameacas":"1.1,2.1,2.2,2.3,10.3"},{"species":"Pleroma virgatum","family":"Melastomataceae","genus":"Pleroma","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":38.5,"AOO":12,"n_loc":3,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Pleroma_virgatum.html","ameacas":"2.3,10.3"},{"species":"Begonia itingae","family":"Begoniaceae","genus":"Begonia","IUCN":"LC/NT","criterio":"LC/NT","EOO":8,"AOO":8,"n_loc":1,"trend":"Decreasing","ameaca_critica":null,"em_uc":"Yes","ficha":"Factsheet_Begonia_itingae.html","ameacas":"2.2,2.3,10.3"},{"species":"Begonia tripicoensis","family":"Begoniaceae","genus":"Begonia","IUCN":"CR","criterio":"B1ab(iv)+B2ab(iv)","EOO":4,"AOO":4,"n_loc":1,"trend":"Decreasing","ameaca_critica":10.3,"em_uc":"Yes","ficha":"Factsheet_Begonia_tripicoensis.html","ameacas":"10.3"},{"species":"Anthurium theofiloanum","family":"Araceae","genus":"Anthurium","IUCN":"LC/NT","criterio":"LC/NT","EOO":72.3,"AOO":20,"n_loc":2,"trend":"Decreasing","ameaca_critica":null,"em_uc":"Yes","ficha":"Factsheet_Anthurium_theofiloanum.html","ameacas":"2.3,10.3"},{"species":"Begonia itaipeensis","family":"Begoniaceae","genus":"Begonia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":8,"AOO":8,"n_loc":2,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Begonia_itaipeensis.html","ameacas":"2.3"},{"species":"Begonia fimbritepala","family":"Begoniaceae","genus":"Begonia","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":81.4,"AOO":16,"n_loc":4,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Begonia_fimbritepala.html","ameacas":"2.2,2.3,10.3"},{"species":"Kielmeyera stevensii","family":"Calophyllaceae","genus":"Kielmeyera","IUCN":"EN","criterio":"B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)","EOO":535.9,"AOO":16,"n_loc":3,"trend":"Decreasing","ameaca_critica":2.3,"em_uc":"Yes","ficha":"Factsheet_Kielmeyera_stevensii.html","ameacas":"2.1,2.3"},{"species":"Begonia pedrabrancensis","family":"Begoniaceae","genus":"Begonia","IUCN":"LC/NT","criterio":"LC/NT","EOO":4,"AOO":4,"n_loc":1,"trend":"Decreasing","ameaca_critica":null,"em_uc":"Yes","ficha":"Factsheet_Begonia_pedrabrancensis.html","ameacas":"2.3"},{"species":"Pilea bradei","family":"Urticaceae","genus":"Pilea","IUCN":"LC/NT","criterio":"LC/NT","EOO":8,"AOO":8,"n_loc":1,"trend":"Unknown","ameaca_critica":null,"em_uc":"Yes","ficha":"Factsheet_Pilea_bradei.html","ameacas":""}];
+  const CORES    = {"CR":"#D81E05","EN":"#FC7F3F","VU":"#F9E814","NT":"#CCE226","LC":"#60C659","LC/NT":"#60C659","DD":"#999999"};
+  const AMEACAS  = {"1.1":{"nome":"Housing & urban areas","icon":"🏘️"},"2.1":{"nome":"Non-timber crops","icon":"🌾"},"2.2":{"nome":"Wood & pulp plantations","icon":"🌲"},"2.3":{"nome":"Livestock farming & ranching","icon":"🐄"},"3.2":{"nome":"Mining & quarrying","icon":"⛏️"},"10.3":{"nome":"Avalanches/landslides","icon":"⛰️"},"11.4":{"nome":"Storms & flooding","icon":"⛈️"}};
+  const DIST     = [{"IUCN":"CR","n":1,"pct":1.5},{"IUCN":"EN","n":43,"pct":66.2},{"IUCN":"VU","n":11,"pct":16.9},{"IUCN":"LC/NT","n":10,"pct":15.4}];
+  const SINTESE  = [{"cod":"2.3","nome":"Livestock farming & ranching","icon":"🐄","n_sp":63,"pct_sp":100,"media_aoo":26,"media_eoo":38},{"cod":"10.3","nome":"Avalanches/landslides","icon":"⛰️","n_sp":54,"pct_sp":100,"media_aoo":19,"media_eoo":13.9},{"cod":"1.1","nome":"Housing & urban areas","icon":"🏘️","n_sp":39,"pct_sp":100,"media_aoo":13.1,"media_eoo":7.4},{"cod":"2.2","nome":"Wood & pulp plantations","icon":"🌲","n_sp":29,"pct_sp":100,"media_aoo":0.2,"media_eoo":0.4},{"cod":"2.1","nome":"Non-timber crops","icon":"🌾","n_sp":7,"pct_sp":100,"media_aoo":0.9,"media_eoo":2.3},{"cod":"3.2","nome":"Mining & quarrying","icon":"⛏️","n_sp":0,"media_aoo":0,"media_eoo":0},{"cod":"11.4","nome":"Storms & flooding","icon":"⛈️","n_sp":0,"media_aoo":0,"media_eoo":0}];
+  const ORDEM    = ["CR","EN","VU","NT","LC/NT","LC","DD"];
+
+  // Normaliza campo de ameacas para array
+  SPECIES.forEach(s => { s._amea = (s.ameacas && s.ameacas.length) ? s.ameacas.split(",") : []; });
+
+  /* ---------- IUCN distribution bar ---------- */
+  (function(){
+    const bar = document.getElementById("iucnBar");
+    const leg = document.getElementById("iucnLegend");
+    const total = DIST.reduce((a,d)=>a+d.n,0);
+    DIST.forEach(d=>{
+      const seg = document.createElement("div");
+      seg.className="iucn-seg"; seg.dataset.cat=d.IUCN;
+      seg.style.background = CORES[d.IUCN] || "#bdc3c7";
+      seg.style.flex = d.n;
+      seg.title = `${d.IUCN}: ${d.n} (${d.pct}%)`;
+      seg.textContent = (d.n/total > 0.05) ? `${d.IUCN} ${d.n}` : d.n;
+      bar.appendChild(seg);
+
+      const lg=document.createElement("span");
+      lg.innerHTML=`<span class="swatch" style="background:${CORES[d.IUCN]||'#bdc3c7'}"></span>${d.IUCN} — ${d.n} spp. (${d.pct}%)`;
+      leg.appendChild(lg);
+    });
+  })();
+
+  /* ---------- Threat synthesis cards ---------- */
+  (function(){
+    const grid=document.getElementById("threatGrid");
+    const maxPrev = Math.max(...SINTESE.map(t=>t.pct_sp), 1);
+    SINTESE.filter(t=>t.n_sp>0).forEach(t=>{
+      const card=document.createElement("div");
+      card.className="threat-card";
+      card.innerHTML=`
+        <div class="ic">${t.icon}</div>
+        <div style="flex:1; min-width:0;">
+          <div class="nome">${t.cod} ${t.nome}</div>
+          <div class="metric"><b>${t.n_sp}</b> species (${t.pct_sp}%)</div>
+          <div class="mini-bar"><span style="width:${(t.pct_sp/maxPrev*100).toFixed(0)}%"></span></div>
+          <div class="metric" style="margin-top:8px;">Mean impact — <b>${t.media_aoo}%</b> AOO · <b>${t.media_eoo}%</b> EOO</div>
+        </div>`;
+      grid.appendChild(card);
+    });
+  })();
+
+  /* ---------- Populate filters ---------- */
+  (function(){
+    const cats=[...new Set(SPECIES.map(s=>s.IUCN))].sort((a,b)=>ORDEM.indexOf(a)-ORDEM.indexOf(b));
+    const fams=[...new Set(SPECIES.map(s=>s.family))].sort();
+    const fc=document.getElementById("filterCat"), ff=document.getElementById("filterFam");
+    cats.forEach(c=>fc.insertAdjacentHTML("beforeend",`<option value="${c}">${c}</option>`));
+    fams.forEach(f=>ff.insertAdjacentHTML("beforeend",`<option value="${f}">${f}</option>`));
+  })();
+
+  /* ---------- Rendering (grouped by family) ---------- */
+  let sortKey="species", sortDir=1;
+  const tbody=document.getElementById("tbody");
+  const catBadge=(c)=>`<span class="badge" data-cat="${c}" style="background:${CORES[c]||'#bdc3c7'}">${c}</span>`;
+  const ameaIcons=(arr)=>arr.map(c=>`<span title="${c} ${AMEACAS[c]?AMEACAS[c].nome:''}">${AMEACAS[c]?AMEACAS[c].icon:'?'}</span>`).join("");
+
+  function currentRows(){
+    const q=document.getElementById("search").value.toLowerCase().trim();
+    const fc=document.getElementById("filterCat").value;
+    const ff=document.getElementById("filterFam").value;
+    const fu=document.getElementById("filterUC").value;
+    let rows=SPECIES.filter(s=>{
+      if(fc && s.IUCN!==fc) return false;
+      if(ff && s.family!==ff) return false;
+      if(fu && s.em_uc!==fu) return false;
+      if(q){
+        const hay=`${s.species} ${s.genus} ${s.family} ${s.criterio} ${s.ameaca_critica}`.toLowerCase();
+        if(!hay.includes(q)) return false;
+      }
+      return true;
+    });
+    rows.sort((a,b)=>{
+      let va,vb;
+      if(sortKey==="IUCN"){ va=ORDEM.indexOf(a.IUCN); vb=ORDEM.indexOf(b.IUCN); }
+      else if(sortKey==="_amea"){ va=a._amea.length; vb=b._amea.length; }
+      else { va=a[sortKey]; vb=b[sortKey]; }
+      if(va==null)va=-Infinity; if(vb==null)vb=-Infinity;
+      if(typeof va==="string"){ return va.localeCompare(vb)*sortDir; }
+      return (va-vb)*sortDir;
+    });
+    return rows;
+  }
+
+  function render(){
+    const rows=currentRows();
+    // Agrupa por familia mantendo a ordem de sort dentro de cada grupo
+    const byFam={};
+    rows.forEach(r=>{(byFam[r.family]=byFam[r.family]||[]).push(r);});
+    const fams=Object.keys(byFam).sort();
+    let html="";
+    fams.forEach(fam=>{
+      html+=`<tr class="fam-header"><td colspan="11">${fam} <span class="fam-count">— ${byFam[fam].length} species</span></td></tr>`;
+      byFam[fam].forEach(s=>{
+        html+=`<tr>
+          <td class="sp-name">${s.ficha ? `<a href="${s.ficha}" target="_blank" class="sp-link" title="Open factsheet">${s.species}</a>` : s.species}</td>
+          <td>${s.genus}</td>
+          <td>${catBadge(s.IUCN)}</td>
+          <td>${s.criterio}</td>
+          <td class="num">${s.EOO}</td>
+          <td class="num">${s.AOO}</td>
+          <td class="num">${s.n_loc==null?"—":s.n_loc}</td>
+          <td>${s.ameaca_critica}</td>
+          <td class="amea-icons">${ameaIcons(s._amea)||"—"}</td>
+          <td>${s.trend}</td>
+          <td class="${s.em_uc==="Yes"?"uc-yes":"uc-no"}">${s.em_uc}</td>
+        </tr>`;
+      });
+    });
+    tbody.innerHTML=html;
+    document.getElementById("countInfo").textContent=`Showing ${rows.length} of ${SPECIES.length} species across ${fams.length} families.`;
+  }
+
+  /* ---------- Events ---------- */
+  document.querySelectorAll("th[data-key]").forEach(th=>{
+    th.addEventListener("click",()=>{
+      const k=th.dataset.key;
+      if(sortKey===k) sortDir*=-1; else {sortKey=k; sortDir=1;}
+      document.querySelectorAll("th").forEach(x=>x.classList.remove("sorted"));
+      th.classList.add("sorted");
+      th.querySelector(".arrow").textContent = sortDir>0?"↑":"↓";
+      render();
+    });
+  });
+  ["search","filterCat","filterFam","filterUC"].forEach(id=>
+    document.getElementById(id).addEventListener("input",render));
+
+  document.getElementById("exportCsv").addEventListener("click",()=>{
+    const rows=currentRows();
+    const head=["species","genus","family","IUCN","criterio","EOO_km2","AOO_km2","n_locations","critical_threat","active_threats","trend","in_PA"];
+    const lines=[head.join(",")];
+    rows.forEach(s=>{
+      const rec=[s.species,s.genus,s.family,s.IUCN,s.criterio,s.EOO,s.AOO,s.n_loc??"",s.ameaca_critica,s._amea.join("|"),s.trend,s.em_uc]
+        .map(v=>`"${String(v).replace(/"/g,'""')}"`);
+      lines.push(rec.join(","));
+    });
+    const blob=new Blob([lines.join("\n")],{type:"text/csv;charset=utf-8;"});
+    const a=document.createElement("a");
+    a.href=URL.createObjectURL(blob);
+    a.download="supplementary_master_table.csv";
+    a.click();
+  });
+
+  render();
+</script>
+</body>
+</html>
+
+

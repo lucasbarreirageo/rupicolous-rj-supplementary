@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Prepusa hookeriana Gardner — IUCN Factsheet</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<style>
+  body { font-family:"Segoe UI",Arial,sans-serif; background:#f4f6f8; margin:0; padding:20px; }
+  .container { max-width:1200px; margin:auto; background:white; padding:30px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+  h1 { color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:10px; margin-bottom:10px; }
+  h2 { color:#34495e; margin-top:30px; border-bottom:2px solid #ecf0f1; padding-bottom:5px; }
+  .resumo-box { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; margin:20px 0; }
+  .resumo-item { background:#ecf0f1; padding:15px; border-radius:8px; text-align:center; }
+  .resumo-item .label { font-size:0.85em; color:#7f8c8d; text-transform:uppercase; }
+  .resumo-item .value { font-size:1.4em; font-weight:bold; color:#2c3e50; margin-top:5px; }
+  .categoria { font-size:2em; font-weight:bold; padding:10px 20px; border-radius:8px; color:white; display:inline-block; margin-bottom: 20px; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; }
+  th,td { padding:10px; border-bottom:1px solid #ecf0f1; text-align:left; }
+  .justificativa { background:#f8f9fa; padding:20px; border-left:4px solid #3498db; border-radius:4px; line-height:1.7; }
+  
+  ::-webkit-scrollbar { height: 8px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #95a5a6; }
+</style>
+</head>
+<body>
+
+<div id="imgModal" style="display:none; position:fixed; z-index:9999; padding-top:40px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.85);" onclick="if(event.target == this) closeModal()">
+  <span style="position:absolute; top:15px; right:35px; color:#f1f1f1; font-size:40px; font-weight:bold; cursor:pointer;" onclick="closeModal()">&times;</span>
+  <div style="margin:auto; display:flex; flex-direction:column; align-items:center; max-width:90%;">
+    <img id="modalContent" style="max-width:100%; max-height:75vh; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5);">
+    <div id="modalCaption" style="margin-top: 15px; background: rgba(255,255,255,0.95); padding: 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-size: 0.9em; max-width: 800px; line-height: 1.5;"></div>
+  </div>
+</div>
+
+<script>
+function openModal(imgElement) {
+  document.getElementById("imgModal").style.display = "block";
+  document.getElementById("modalContent").src = imgElement.src;
+  document.getElementById("modalCaption").innerHTML = imgElement.getAttribute("data-caption");
+}
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+</script>
+
+<div class="container">
+
+<h1><i>Prepusa hookeriana</i> <span style='font-size:0.55em; font-weight:normal; font-style:normal; color:#555;'>Gardner</span></h1>
+  <div style="margin-top: 15px; margin-bottom: 25px;">
+    <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scroll-snap-type: x mandatory;">
+      <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/662815758/original.jpg" alt="Photo of Prepusa hookeriana" data-caption="<b>Author/Owner:</b> Robin Heymans &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/662815758' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/662815552/original.jpg" alt="Photo of Prepusa hookeriana" data-caption="<b>Author/Owner:</b> Robin Heymans &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/662815552' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/662815613/original.jpg" alt="Photo of Prepusa hookeriana" data-caption="<b>Author/Owner:</b> Robin Heymans &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/662815613' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/653010141/original.jpg" alt="Photo of Prepusa hookeriana" data-caption="<b>Author/Owner:</b> Eduardo Moreira &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/653010141' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/653010221/original.jpg" alt="Photo of Prepusa hookeriana" data-caption="<b>Author/Owner:</b> Eduardo Moreira &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/653010221' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/653012683/original.jpg" alt="Photo of Prepusa hookeriana" data-caption="<b>Author/Owner:</b> Eduardo Moreira &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/653012683' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/653012765/original.jpg" alt="Photo of Prepusa hookeriana" data-caption="<b>Author/Owner:</b> Eduardo Moreira &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/653012765' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/494556950/original.jpeg" alt="Photo of Prepusa hookeriana" data-caption="<b>Author/Owner:</b> Léo &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/494556950' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/465171655/original.jpeg" alt="Photo of Prepusa hookeriana" data-caption="<b>Author/Owner:</b> Gabriel Garcia &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/465171655' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/465171673/original.jpeg" alt="Photo of Prepusa hookeriana" data-caption="<b>Author/Owner:</b> Gabriel Garcia &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/465171673' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+    </div>
+    <p style="font-size: 0.75em; color: #7f8c8d; margin-top: -5px;">Source: GBIF Occurrences (Click on any image to view details and references)</p>
+  </div>
+
+<h2>Taxonomy</h2>
+  <div style="background:#ecf0f1; padding:15px; border-radius:8px; display:flex; gap:30px; flex-wrap:wrap;">
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Family</span><br><b>Gentianaceae</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Genus</span><br><b>Prepusa</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Authority</span><br><b>Gardner</b></div>
+  </div>
+
+<br>
+<div class="categoria" style="background-color:#F9E814;">VU &middot; B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div>
+
+<h2>Assessment Summary</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Category</div><div class="value">VU</div></div>
+  <div class="resumo-item"><div class="label">Criterion</div><div class="value">B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div></div>
+  <div class="resumo-item"><div class="label">Year</div><div class="value">2026</div></div>
+  <div class="resumo-item"><div class="label">Scope</div><div class="value">Regional (RJ)</div></div>
+</div>
+
+<h2>Justification</h2>
+<div class="justificativa"><i>Prepusa hookeriana</i> is endemic to the state of Rio de Janeiro, with a rupicolous habit. The spatial analysis of confirmed occurrences (EOO = 6,427.6 km²; AOO = 60 km², 2×2 km grid) identified <b>9</b> locations determined by the threat. Assessment: <b>VU</b> under criterion B1 (EOO < 20,000 km²). Criterion: <b>B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</b>.  The number of locations (9) meets the IUCN threshold for VU (≤ 10).  Active threats (IUCN-CMP v3.3): 1.1 Housing & urban areas; 2.2 Wood & pulp plantations; 2.3 Livestock farming & ranching; 10.3 Avalanches/landslides.  Occurs in Protected Areas (PA regime: Integral Protection and Sustainable Use): PARQUE NATURAL MUNICIPAL DE PETRÓPOLIS | PARQUE NACIONAL DE ITATIAIA | PARQUE NATURAL MUNICIPAL MONTANHAS DE TERESÓPOLIS | ÁREA DE PROTEÇÃO AMBIENTAL DE TRÊS PICOS | ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO DOS FRADES | PARQUE ESTADUAL DOS TRÊS PICOS | ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO MACACU | RESERVA PARTICULAR DO PATRIMÔNIO NATURAL REGUA V | ÁREA DE PROTEÇÃO AMBIENTAL DA REGIÃO SERRANA DE PETRÓPOLIS | PARQUE NACIONAL DA SERRA DOS ÓRGÃOS. </div>
+
+<h2>Supporting Information</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Countries</div><div class="value" style="font-size:1em;">BR-RJ (Brazil, Rio de Janeiro)</div></div>
+  <div class="resumo-item"><div class="label">System</div><div class="value" style="font-size:1em;">Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Habitat</div><div class="value" style="font-size:1em;">Rupicolous</div></div>
+  <div class="resumo-item"><div class="label">Biome</div><div class="value" style="font-size:1em;">Atlantic Forest</div></div>
+  <div class="resumo-item"><div class="label">Vegetation</div><div class="value" style="font-size:1em;">High Altitude Grassland</div></div>
+</div>
+
+<h2>Geographic Distribution</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">EOO</div><div class="value">6427.6 km²</div></div>
+  <div class="resumo-item"><div class="label">AOO (2×2 km)</div><div class="value">60 km²</div></div>
+  <div class="resumo-item"><div class="label">Endemic to RJ</div><div class="value">Yes</div></div>
+  <div class="resumo-item"><div class="label">Occurrences</div><div class="value">22</div></div>
+</div>
+
+<h2>Population & Locations</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Locations §4.11</div><div class="value">9</div></div>
+  <div class="resumo-item"><div class="label">Critical Threat</div><div class="value" style="font-size:1em;">10.3</div></div>
+  <div class="resumo-item"><div class="label">Population Trend</div><div class="value" style="font-size:1em;">Decreasing</div></div>
+</div>
+
+<h2>Collections Used</h2>
+  <div style="max-height: 250px; overflow-y: auto; border: 1px solid #ecf0f1; padding: 15px; border-radius: 4px; background: #fafafa;">
+    <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; line-height: 1.6; color: #2c3e50;">
+      <li><b>A.L.Barreira; J.S. Drummond 3</b> (2026) - JBRJ — <i>Itatiaia</i></li><li><b>Almeda, F.; Martins, A. B.; Fritsch, P. W.; Aranha Filho, J. L.M.; Bush, C.; Belinello, R. 9776</b> (2009) - CAS — <i>Unknown Municipality</i></li><li><b>Baez, C;Lima, T.,Fernandez, E.,Baez, C.,Lima, T,Fernandez, E 224</b> (2015) - MBM — <i>Teresópolis</i></li><li><b>Brotto, M.L.; Völtz, R.R. 5551</b> (2023) - MBM — <i>Teresópolis</i></li><li><b>C. Baez 271</b> (2015) - NY — <i>Unknown Municipality</i></li><li><b>C. Baez; C. Vianna, G. Tisi 96</b> (2014) - JBRJ — <i>Nova Friburgo</i></li><li><b>C. Baez; T. Lima, E. Fernandez 318</b> (2014) - JBRJ — <i>Teresópolis</i></li><li><b>C. Farney 795</b> (1985) - NY — <i>Unknown Municipality</i></li><li><b>Costa, CB 508</b> (2001) - SPF — <i>Teresópolis</i></li><li><b>Costa, CB; et al. 508</b> (2001) - IPA/SP — <i>Teresópolis</i></li><li><b>G. Gardner 5823</b> (s.d.) - F — <i>Unknown Municipality</i></li><li><b>Gonzatti, F; Abreu, FP 9308</b> (2026) - UCS — <i>Teresópolis</i></li><li><b>Hb Gardner 5823</b> (s.d.) - NHMUK — <i>Unknown Municipality</i></li><li><b>J. E. Simonis 26</b> (1983) - NY — <i>Unknown Municipality</i></li><li><b>L.N.Gonçalves & P.Duffles 1060</b> (2021) - IF — <i>Guapimirim</i></li><li><b>Lombardi, J.A. 8227</b> (2011) - UFPR — <i>Teresópolis</i></li><li><b>M. Nadruz ; D. Costa, A. Alves & C. Cronemberg 1735</b> (2007) - JBRJ — <i>Teresópolis</i></li><li><b>Matsumoto, K; Gonçalves, APS; Belinello, R 790</b> (2002) - UNICAMP — <i>Teresópolis</i></li><li><b>Nadruz, MA 1735</b> (2007) - SPF — <i>Teresópolis</i></li><li><b>P. B. Schwartsburd; J. B. S. Pereira 2314</b> (2011) - JBRJ — <i>Teresópolis</i></li><li><b>P. von Luetzelburg s.n.</b> (1910) - NY — <i>Unknown Municipality</i></li><li><b>Völtz, R.R.; Brotto, M.L. 2960</b> (2023) - MBM — <i>Nova Friburgo</i></li>
+    </ul>
+  </div>
+  <p style="font-size:0.8em; color:#7f8c8d; margin-top:5px;">Total collections evaluated: 22</p>
+
+<h2>Threats Summary</h2>
+<table style="width:100%;border-collapse:collapse;"><thead style="background:#34495e;color:white;"><tr><th>Threat (IUCN-CMP v3.3)</th><th>Timing</th><th>Scope</th><th>% AOO</th><th>% EOO</th><th>Severity</th></tr></thead><tbody><tr><td><b>1.1 Housing & urban areas</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>8.22%</td><td>1.7%</td><td>slow</td></tr><tr><td><b>2.2 Wood & pulp plantations</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>0.08%</td><td>0.32%</td><td>slow</td></tr><tr><td><b>2.3 Livestock farming & ranching</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>20.41%</td><td>55.53%</td><td>slow</td></tr><tr><td><b>10.3 Avalanches/landslides</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>18.32%</td><td>9.03%</td><td>slow</td></tr></tbody></table>
+
+<h2>Threats — Methodological Details</h2>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">1.1 Housing & urban areas</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from human settlements with substantial footprint (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 24 (Urban Infrastructure).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">8.22% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">1.7% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🏘️
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.1 Annual & perennial non-timber crops</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Crops planted for food, fodder, fibre, fuel (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 18-20, 35-36, 39-41, 46-48, 62.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.02% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🌾
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.2 Wood & pulp plantations</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Stands of trees planted for timber outside natural forests (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 9 (Forest Plantation).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0.08% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.32% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🌲
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.3 Livestock farming & ranching</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Domestic terrestrial animals raised in one location or roaming wild (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 14, 15 and 21.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">20.41% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">55.53% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🐄
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">10.3 Avalanches/landslides</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from catastrophic geological events (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> High susceptibility polygons CPRM/IPT filtered by scars dated via LandTrendr/CCDC.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">18.32% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">9.03% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    ⛰️
+  </div>
+</div>
+
+<h2>Protection Status</h2>
+<p style='margin-bottom: 5px;'><b>Management Category:</b> Integral Protection and Sustainable Use</p><p style='margin-top: 0; margin-bottom: 5px;'><b>Protected Areas:</b></p><ul style='margin-top: 5px; margin-bottom: 0;'><li>PARQUE NATURAL MUNICIPAL DE PETRÓPOLIS</li><li>PARQUE NACIONAL DE ITATIAIA</li><li>PARQUE NATURAL MUNICIPAL MONTANHAS DE TERESÓPOLIS</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DE TRÊS PICOS</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO DOS FRADES</li><li>PARQUE ESTADUAL DOS TRÊS PICOS</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO MACACU</li><li>RESERVA PARTICULAR DO PATRIMÔNIO NATURAL REGUA V</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA REGIÃO SERRANA DE PETRÓPOLIS</li><li>PARQUE NACIONAL DA SERRA DOS ÓRGÃOS</li></ul>
+
+<h2>Conservation actions</h2>
+<ul><li>2.1 Site/area management</li><li>2.3 Habitat & natural process restoration</li><li>1.2 Resource & habitat protection</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
+
+<h2>Distribution Map</h2>
+  <div id="map_10361" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    try {
+      var map = L.map("map_10361");
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap contributors"
+      }).addTo(map);
+
+      map.createPane("ucsPane"); map.getPane("ucsPane").style.zIndex = 400;
+      map.createPane("eooPane"); map.getPane("eooPane").style.zIndex = 410;
+      map.createPane("aooPane"); map.getPane("aooPane").style.zIndex = 420;
+      map.createPane("ptsPane"); map.getPane("ptsPane").style.zIndex = 430;
+
+      var ucsData = null;
+      if (ucsData && ucsData.type) {
+        L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
+      }
+
+      var eooData = { "type": "FeatureCollection", "name": "file137d03f787758", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.6104073, -22.3986292 ], [ -42.64735, -22.531489 ], [ -42.7801452, -22.5259934 ], [ -42.9129298, -22.520389 ], [ -43.0457035, -22.5146757 ], [ -43.1784661, -22.5088535 ], [ -43.3655739, -22.494022 ], [ -43.5526413, -22.4789746 ], [ -43.7396678, -22.4637114 ], [ -43.9266527, -22.4482327 ], [ -44.1135957, -22.4325387 ], [ -44.3004961, -22.4166296 ], [ -44.4873533, -22.4005056 ], [ -44.674167, -22.384167 ], [ -44.5379357, -22.361005 ], [ -44.4017498, -22.3377291 ], [ -44.2656094, -22.3143394 ], [ -44.1295148, -22.2908361 ], [ -43.9934661, -22.2672195 ], [ -43.8574634, -22.2434895 ], [ -43.7215068, -22.2196465 ], [ -43.5855966, -22.1956906 ], [ -43.4497329, -22.171622 ], [ -43.3139158, -22.1474408 ], [ -43.1781454, -22.1231473 ], [ -43.042422, -22.0987415 ], [ -42.9067455, -22.0742237 ], [ -42.7711163, -22.0495941 ], [ -42.6355344, -22.0248528 ], [ -42.5, -22.0 ], [ -42.5367329, -22.1328847 ], [ -42.5735351, -22.2657611 ], [ -42.6104073, -22.3986292 ] ] ] } } ] };
+      if (eooData && eooData.type) {
+        L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
+      }
+
+      var aooData = { "type": "FeatureCollection", "name": "file137d045af564e", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.500000802068641, -22.000300354221114 ], [ -42.500000802068641, -21.980675569132956 ], [ -42.482032484160023, -21.980675569132956 ], [ -42.482032484160023, -22.000300354221114 ], [ -42.500000802068641, -22.000300354221114 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.02108202141882, -22.275327505988123 ], [ -43.02108202141882, -22.255665263784358 ], [ -43.003113703510202, -22.255665263784358 ], [ -43.003113703510202, -22.275327505988123 ], [ -43.02108202141882, -22.275327505988123 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.003113703510195, -22.275327505988123 ], [ -43.003113703510195, -22.255665263784358 ], [ -42.98514538560157, -22.255665263784358 ], [ -42.98514538560157, -22.275327505988123 ], [ -43.003113703510195, -22.275327505988123 ] ] ] } }, { "type": "Feature", "properties": { "count": 3.0, "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.733588934880792, -22.354003517799629 ], [ -42.733588934880792, -22.334330451581774 ], [ -42.71562061697216, -22.334330451581774 ], [ -42.71562061697216, -22.354003517799629 ], [ -42.733588934880792, -22.354003517799629 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.76952557069805, -22.373679298549575 ], [ -42.76952557069805, -22.354003517799629 ], [ -42.751557252789432, -22.354003517799629 ], [ -42.751557252789432, -22.373679298549575 ], [ -42.76952557069805, -22.373679298549575 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.674167269012493, -22.393357797250385 ], [ -44.674167269012493, -22.373679298549575 ], [ -44.656198951103875, -22.373679298549575 ], [ -44.656198951103875, -22.393357797250385 ], [ -44.674167269012493, -22.393357797250385 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.003113703510195, -22.432722962198152 ], [ -43.003113703510195, -22.413039017324518 ], [ -42.98514538560157, -22.413039017324518 ], [ -42.98514538560157, -22.432722962198152 ], [ -43.003113703510195, -22.432722962198152 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.967177067692944, -22.432722962198152 ], [ -42.967177067692944, -22.413039017324518 ], [ -42.949208749784319, -22.413039017324518 ], [ -42.949208749784319, -22.432722962198152 ], [ -42.967177067692944, -22.432722962198152 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.02108202141882, -22.452409635301155 ], [ -43.02108202141882, -22.432722962198152 ], [ -43.003113703510202, -22.432722962198152 ], [ -43.003113703510202, -22.452409635301155 ], [ -43.02108202141882, -22.452409635301155 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.003113703510195, -22.452409635301155 ], [ -43.003113703510195, -22.432722962198152 ], [ -42.98514538560157, -22.432722962198152 ], [ -42.98514538560157, -22.452409635301155 ], [ -43.003113703510195, -22.452409635301155 ] ] ] } }, { "type": "Feature", "properties": { "count": 6.0, "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.039050339327446, -22.472099040067107 ], [ -43.039050339327446, -22.452409635301155 ], [ -43.02108202141882, -22.452409635301155 ], [ -43.02108202141882, -22.472099040067107 ], [ -43.039050339327446, -22.472099040067107 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.02108202141882, -22.491791179933308 ], [ -43.02108202141882, -22.472099040067107 ], [ -43.003113703510202, -22.472099040067107 ], [ -43.003113703510202, -22.491791179933308 ], [ -43.02108202141882, -22.491791179933308 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.182796882596463, -22.511486058340786 ], [ -43.182796882596463, -22.491791179933308 ], [ -43.164828564687838, -22.491791179933308 ], [ -43.164828564687838, -22.511486058340786 ], [ -43.182796882596463, -22.511486058340786 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.074986975144704, -22.511486058340786 ], [ -43.074986975144704, -22.491791179933308 ], [ -43.057018657236071, -22.491791179933308 ], [ -43.057018657236071, -22.511486058340786 ], [ -43.074986975144704, -22.511486058340786 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa hookeriana" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.661715663246284, -22.550884044562334 ], [ -42.661715663246284, -22.531183678734283 ], [ -42.643747345337665, -22.531183678734283 ], [ -42.643747345337665, -22.550884044562334 ], [ -42.661715663246284, -22.550884044562334 ] ] ] } } ] };
+      if (aooData && aooData.type) {
+        L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
+      }
+
+      var pts = [[-22.384167, -44.674167],[-22.459430, -43.027790],[-22.354167, -42.760556],[-22.462500, -43.035278],[-22.342778, -42.725833],[-22.343611, -42.724722],[-22.461944, -43.031111],[-22.508854, -43.178466],[-22.270556, -43.000278],[-22.451667, -43.001111],[-22.000000, -42.500000],[-22.460042, -43.028192],[-22.531489, -42.647350],[-22.416052, -42.965751],[-22.486667, -43.010000],[-22.425556, -42.995278],[-22.461389, -43.033611],[-22.466167, -43.035611],[-22.274167, -43.020000],[-22.450000, -43.016667],[-22.496706, -43.073169],[-22.344167, -42.725278]];
+      if (pts.length > 0) {
+        pts.forEach(function(p) {
+          L.circleMarker(p, { pane: "ptsPane", radius: 4, fillColor: "#e74c3c", color: "#fff", weight: 1, opacity: 1, fillOpacity: 0.9 }).addTo(map);
+        });
+      }
+
+      var bounds = [[-22.550884, -44.674167], [-21.980676, -42.482032]];
+      if (bounds) {
+        map.fitBounds(bounds, {padding: [30, 30], maxZoom: 14});
+      } else {
+        map.setView([-22.9, -43.2], 7);
+      }
+    } catch (error) {
+      console.error("Leaflet Rendering Error:", error);
+    }
+  });
+  </script>
+
+<h2>References</h2>
+<p>Flora do Brasil 2020 em construção. Jardim Botânico do Rio de Janeiro. Disponível em: http://floradobrasil.jbrj.gov.br.</p><p><a href="http://reflora.jbrj.gov.br/reflora/listaBrasil/FichaPublicaTaxonUC/FichaPublicaTaxonUC.do?id=FB7778" target="_blank" style="color:#2980b9; text-decoration:none; font-weight:bold;">🌐 Link to this taxon on Reflora</a></p>
+
+<hr style="margin-top:40px;">
+<p style="color:#95a5a6;font-size:0.85em;text-align:center;">
+Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+</div>
+</body>
+</html>

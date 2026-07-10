@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Begonia olsoniae L.B.Sm. & B.G.Schub. — IUCN Factsheet</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<style>
+  body { font-family:"Segoe UI",Arial,sans-serif; background:#f4f6f8; margin:0; padding:20px; }
+  .container { max-width:1200px; margin:auto; background:white; padding:30px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+  h1 { color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:10px; margin-bottom:10px; }
+  h2 { color:#34495e; margin-top:30px; border-bottom:2px solid #ecf0f1; padding-bottom:5px; }
+  .resumo-box { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; margin:20px 0; }
+  .resumo-item { background:#ecf0f1; padding:15px; border-radius:8px; text-align:center; }
+  .resumo-item .label { font-size:0.85em; color:#7f8c8d; text-transform:uppercase; }
+  .resumo-item .value { font-size:1.4em; font-weight:bold; color:#2c3e50; margin-top:5px; }
+  .categoria { font-size:2em; font-weight:bold; padding:10px 20px; border-radius:8px; color:white; display:inline-block; margin-bottom: 20px; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; }
+  th,td { padding:10px; border-bottom:1px solid #ecf0f1; text-align:left; }
+  .justificativa { background:#f8f9fa; padding:20px; border-left:4px solid #3498db; border-radius:4px; line-height:1.7; }
+  
+  ::-webkit-scrollbar { height: 8px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #95a5a6; }
+</style>
+</head>
+<body>
+
+<div id="imgModal" style="display:none; position:fixed; z-index:9999; padding-top:40px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.85);" onclick="if(event.target == this) closeModal()">
+  <span style="position:absolute; top:15px; right:35px; color:#f1f1f1; font-size:40px; font-weight:bold; cursor:pointer;" onclick="closeModal()">&times;</span>
+  <div style="margin:auto; display:flex; flex-direction:column; align-items:center; max-width:90%;">
+    <img id="modalContent" style="max-width:100%; max-height:75vh; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5);">
+    <div id="modalCaption" style="margin-top: 15px; background: rgba(255,255,255,0.95); padding: 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-size: 0.9em; max-width: 800px; line-height: 1.5;"></div>
+  </div>
+</div>
+
+<script>
+function openModal(imgElement) {
+  document.getElementById("imgModal").style.display = "block";
+  document.getElementById("modalContent").src = imgElement.src;
+  document.getElementById("modalCaption").innerHTML = imgElement.getAttribute("data-caption");
+}
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+</script>
+
+<div class="container">
+
+<h1><i>Begonia olsoniae</i> <span style='font-size:0.55em; font-weight:normal; font-style:normal; color:#555;'>L.B.Sm. & B.G.Schub.</span></h1>
+  <div style="margin-top: 15px; margin-bottom: 25px;">
+    <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scroll-snap-type: x mandatory;">
+      <img src="http://jbrj-public-img.s3-sa-east-1.amazonaws.com/JPG/rbr/rbr/0/5/57/6/rbr00055706.jpg" alt="Photo of Begonia olsoniae" data-caption="<b>Author/Owner:</b> Universidade Federal Rural do Rio de Janeiro (RBR) &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://rbr.jbrj.gov.br/v2/regua/visualizador.php?r=true&colbot=rbr&codtestemunho=RBR55706&arquivo=rbr00055706.dzi' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://collections.nmnh.si.edu/media/?i=14501358&h=2000" alt="Photo of Begonia olsoniae" data-caption="<b>Author/Owner:</b> Ingrid P. Lin &middot; <b>License:</b> http://creativecommons.org/publicdomain/zero/1.0/ &middot; <a href='https://www.gbif.org/occurrence/2592218698' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://jbrj-public-img.s3-sa-east-1.amazonaws.com/JPG/rb/0/5/36/58/00053658.jpg" alt="Photo of Begonia olsoniae" data-caption="<b>Author/Owner:</b> L C Giordano; M G Bovini, J R Miguel et J C Silva &middot; <b>License:</b> License not specified &middot; <a href='https://www.gbif.org/occurrence/1424252700' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://jbrj-public-img.s3-sa-east-1.amazonaws.com/JPG/rb/0/5/34/43/00053443.jpg" alt="Photo of Begonia olsoniae" data-caption="<b>Author/Owner:</b> M.G. Bovini; M  C M Marques, R Marquete et al. &middot; <b>License:</b> License not specified &middot; <a href='https://www.gbif.org/occurrence/1424251381' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://jbrj-public-img.s3-sa-east-1.amazonaws.com/JPG/rb/0/5/38/31/00053831.jpg" alt="Photo of Begonia olsoniae" data-caption="<b>Author/Owner:</b> M.G. Bovini; L.C. Giordano, A. Castellar, J.Q. Melo et M. Boruche &middot; <b>License:</b> License not specified &middot; <a href='https://www.gbif.org/occurrence/1424254016' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://jbrj-public-img.s3-sa-east-1.amazonaws.com/JPG/rb/0/5/36/13/00053613.jpg" alt="Photo of Begonia olsoniae" data-caption="<b>Author/Owner:</b> A P S Ribeiro; R Marquete, M C Marques, S B Costa, M D Campos, et al &middot; <b>License:</b> License not specified &middot; <a href='https://www.gbif.org/occurrence/1424252617' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://jbrj-public-img.s3-sa-east-1.amazonaws.com/JPG/rb/0/5/36/74/00053674.jpg" alt="Photo of Begonia olsoniae" data-caption="<b>Author/Owner:</b> E A Filho; M C Marques, M Valle et J. Caruzo &middot; <b>License:</b> License not specified &middot; <a href='https://www.gbif.org/occurrence/1424252817' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://jbrj-public-img.s3-sa-east-1.amazonaws.com/JPG/rb/0/5/35/69/00053569.jpg" alt="Photo of Begonia olsoniae" data-caption="<b>Author/Owner:</b> R Marquete; N Marquete F Silva, M C Valente, Abreu & J Caruso (mateiro) &middot; <b>License:</b> License not specified &middot; <a href='https://www.gbif.org/occurrence/1424252475' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://collections.nmnh.si.edu/media/?i=15466301&h=2000" alt="Photo of Begonia olsoniae" data-caption="<b>Author/Owner:</b> Conveyor Belt &middot; <b>License:</b> Usage Conditions Apply &middot; <a href='https://www.gbif.org/occurrence/1319301701' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://collections.nmnh.si.edu/media/?i=11783162&h=2000" alt="Photo of Begonia olsoniae" data-caption="<b>Author/Owner:</b> Reflora Team &middot; <b>License:</b> Usage Conditions Apply &middot; <a href='https://www.gbif.org/occurrence/1319301701' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+    </div>
+    <p style="font-size: 0.75em; color: #7f8c8d; margin-top: -5px;">Source: GBIF Occurrences (Click on any image to view details and references)</p>
+  </div>
+
+<h2>Taxonomy</h2>
+  <div style="background:#ecf0f1; padding:15px; border-radius:8px; display:flex; gap:30px; flex-wrap:wrap;">
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Family</span><br><b>Begoniaceae</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Genus</span><br><b>Begonia</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Authority</span><br><b>L.B.Sm. & B.G.Schub.</b></div>
+  </div>
+
+<br>
+<div class="categoria" style="background-color:#F9E814;">VU &middot; B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div>
+
+<h2>Assessment Summary</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Category</div><div class="value">VU</div></div>
+  <div class="resumo-item"><div class="label">Criterion</div><div class="value">B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div></div>
+  <div class="resumo-item"><div class="label">Year</div><div class="value">2026</div></div>
+  <div class="resumo-item"><div class="label">Scope</div><div class="value">Regional (RJ)</div></div>
+</div>
+
+<h2>Justification</h2>
+<div class="justificativa"><i>Begonia olsoniae</i> is endemic to the state of Rio de Janeiro, with a rupicolous habit. The spatial analysis of confirmed occurrences (EOO = 16,076.6 km²; AOO = 48 km², 2×2 km grid) identified <b>9</b> locations determined by the threat. Assessment: <b>VU</b> under criterion B1 (EOO < 20,000 km²). Criterion: <b>B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</b>.  The number of locations (9) meets the IUCN threshold for VU (≤ 10).  Active threats (IUCN-CMP v3.3): 1.1 Housing & urban areas; 2.2 Wood & pulp plantations; 2.3 Livestock farming & ranching; 10.3 Avalanches/landslides.  Occurs in Protected Areas (PA regime: Integral Protection and Sustainable Use): ÁREA DE PROTEÇÃO AMBIENTAL ITAGUAÍ ITINGUSSÚ ESPIGÃO TAQUARA | ÁREA DE PROTEÇÃO AMBIENTAL ESTADUAL DE TAMOIOS | PARQUE NACIONAL DE ITATIAIA | ÁREA DE PROTEÇÃO AMBIENTAL DE PENEDO | ÁREA DE PROTEÇÃO AMBIENTAL DA SERRA DO CATUMBI | RESERVA BIOLÓGICA ESTADUAL DA PRAIA DO SUL | AREA DE PROTEÇÃO AMBIENTAL DO RIO GUANDU | PARQUE ESTADUAL DOS TRÊS PICOS | ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO MACACU | RESERVA DE DESENVOLVIMENTO SUSTENTÁVEL DO AVENTUREIRO | PARQUE ESTADUAL DO DESENGANO | PARQUE ESTADUAL DA PEDRA SELADA | ÁREA DE PROTEÇÃO AMBIENTAL DA REGIÃO SERRANA DE PETRÓPOLIS | ÁREA DE PROTEÇÃO AMBIENTAL DE CAIRUÇU | PARQUE NACIONAL DA SERRA DA BOCAINA | PARQUE NACIONAL DA SERRA DOS ÓRGÃOS. </div>
+
+<h2>Supporting Information</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Countries</div><div class="value" style="font-size:1em;">BR-RJ (Brazil, Rio de Janeiro)</div></div>
+  <div class="resumo-item"><div class="label">System</div><div class="value" style="font-size:1em;">Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Habitat</div><div class="value" style="font-size:1em;">Rupicolous</div></div>
+  <div class="resumo-item"><div class="label">Biome</div><div class="value" style="font-size:1em;">Atlantic Forest</div></div>
+  <div class="resumo-item"><div class="label">Vegetation</div><div class="value" style="font-size:1em;">Rainforest</div></div>
+</div>
+
+<h2>Geographic Distribution</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">EOO</div><div class="value">16076.6 km²</div></div>
+  <div class="resumo-item"><div class="label">AOO (2×2 km)</div><div class="value">48 km²</div></div>
+  <div class="resumo-item"><div class="label">Endemic to RJ</div><div class="value">Yes</div></div>
+  <div class="resumo-item"><div class="label">Occurrences</div><div class="value">22</div></div>
+</div>
+
+<h2>Population & Locations</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Locations §4.11</div><div class="value">9</div></div>
+  <div class="resumo-item"><div class="label">Critical Threat</div><div class="value" style="font-size:1em;">10.3</div></div>
+  <div class="resumo-item"><div class="label">Population Trend</div><div class="value" style="font-size:1em;">Decreasing</div></div>
+</div>
+
+<h2>Collections Used</h2>
+  <div style="max-height: 250px; overflow-y: auto; border: 1px solid #ecf0f1; padding: 15px; border-radius: 4px; background: #fafafa;">
+    <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; line-height: 1.6; color: #2c3e50;">
+      <li><b>C. Baez, T. Lima, P. da Rosa, D. Maurenza & J. Marins 940</b> (2016) - US — <i>Unknown Municipality</i></li><li><b>C. Baez; Paulo Hungria 1808</b> (2019) - JBRJ — <i>Itatiaia</i></li><li><b>C.M.Vieira; et al. 165</b> (1992) - JBRJ — <i>Guapimirim</i></li><li><b>D.R. Couto;H.B.M. Viana 4620</b> (2019) - HUENF — <i>Campos dos Goytacazes</i></li><li><b>Dorothy Araujo 9708</b> (1992) - JBRJ — <i>Angra dos Reis</i></li><li><b>E. Pereira 307[= herb. RB 47884]</b> (1943) - NY — <i>Unknown Municipality</i></li><li><b>E.L. Jacques; A.J. Santos Júnior, Marcelo 1965</b> (2016) - UFRRJ — <i>Paraty</i></li><li><b>E.L. Jacques; A.J. Santos-Júnior, Marcelo 1969</b> (2016) - UFRRJ — <i>Paraty</i></li><li><b>E.L. Jacques; H. Lorenzi, M. Peixoto 1854</b> (2012) - UFRRJ — <i>Paraty</i></li><li><b>E.L. Jacques; H. Lorenzi, M. Peixoto 1982</b> (2012) - UFRRJ — <i>Paraty</i></li><li><b>E.L. Jacques; P.W. Moonlight 2094</b> (2023) - UFRRJ — <i>Paraty</i></li><li><b>E.L. Jacques; P.W. Moonlight 2104</b> (2023) - UFRRJ — <i>Paraty</i></li><li><b>E.M. Saddi; P. Samor, J.H. Martins & R. Oliveira 423</b> (2011) - INMA — <i>Itaguaí</i></li><li><b>H. Lorenzi 3143</b> (2002) - UFRRJ — <i>Paraty</i></li><li><b>J. A. Lombardi; Taxonomia de Campo 8311</b> (2011) - INMA — <i>Teresópolis</i></li><li><b>J. A. Lombardi;Taxonomia de Campo 8311</b> (2011) - MBML — <i>Teresópolis</i></li><li><b>J.A. Lombardi 8311</b> (2011) - JBRJ — <i>Teresópolis</i></li><li><b>Lombardi, J.A. 8311</b> (2011) - UNESP-RC — <i>Teresópolis</i></li><li><b>Lombardi, JA;Lombardi, J.A. 8811</b> (2011) - MBM — <i>Teresópolis</i></li><li><b>M.G. Bovini; J.F.A. Baumgratz, M. Nadruz, S. Wrangler et F. Nadal 4490</b> (2019) - JBRJ — <i>Paraty</i></li><li><b>Rolf A. Engelmann; Jens Wesenberg, Kristin Baber RE1303</b> (2010) - JBRJ — <i>Guapimirim</i></li><li><b>Rolf A. Engelmann; Jens Wesenberg, Kristin Baber RE1353</b> (2010) - JBRJ — <i>Guapimirim</i></li>
+    </ul>
+  </div>
+  <p style="font-size:0.8em; color:#7f8c8d; margin-top:5px;">Total collections evaluated: 22</p>
+
+<h2>Threats Summary</h2>
+<table style="width:100%;border-collapse:collapse;"><thead style="background:#34495e;color:white;"><tr><th>Threat (IUCN-CMP v3.3)</th><th>Timing</th><th>Scope</th><th>% AOO</th><th>% EOO</th><th>Severity</th></tr></thead><tbody><tr><td><b>1.1 Housing & urban areas</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>1.01%</td><td>3.64%</td><td>slow</td></tr><tr><td><b>2.2 Wood & pulp plantations</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>0.09%</td><td>0.19%</td><td>slow</td></tr><tr><td><b>2.3 Livestock farming & ranching</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>10.15%</td><td>41.18%</td><td>slow</td></tr><tr><td><b>10.3 Avalanches/landslides</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>28.24%</td><td>7.92%</td><td>slow</td></tr></tbody></table>
+
+<h2>Threats — Methodological Details</h2>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">1.1 Housing & urban areas</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from human settlements with substantial footprint (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 24 (Urban Infrastructure).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">1.01% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">3.64% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🏘️
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.1 Annual & perennial non-timber crops</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Crops planted for food, fodder, fibre, fuel (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 18-20, 35-36, 39-41, 46-48, 62.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.01% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🌾
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.2 Wood & pulp plantations</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Stands of trees planted for timber outside natural forests (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 9 (Forest Plantation).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0.09% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.19% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🌲
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.3 Livestock farming & ranching</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Domestic terrestrial animals raised in one location or roaming wild (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 14, 15 and 21.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">10.15% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">41.18% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🐄
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">3.2 Mining & quarrying</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Exploring for, developing, and producing minerals and rocks (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 30 (Mining).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.05% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    ⛏️
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">10.3 Avalanches/landslides</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from catastrophic geological events (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> High susceptibility polygons CPRM/IPT filtered by scars dated via LandTrendr/CCDC.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">28.24% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">7.92% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    ⛰️
+  </div>
+</div>
+
+<h2>Protection Status</h2>
+<p style='margin-bottom: 5px;'><b>Management Category:</b> Integral Protection and Sustainable Use</p><p style='margin-top: 0; margin-bottom: 5px;'><b>Protected Areas:</b></p><ul style='margin-top: 5px; margin-bottom: 0;'><li>ÁREA DE PROTEÇÃO AMBIENTAL ITAGUAÍ ITINGUSSÚ ESPIGÃO TAQUARA</li><li>ÁREA DE PROTEÇÃO AMBIENTAL ESTADUAL DE TAMOIOS</li><li>PARQUE NACIONAL DE ITATIAIA</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DE PENEDO</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA SERRA DO CATUMBI</li><li>RESERVA BIOLÓGICA ESTADUAL DA PRAIA DO SUL</li><li>AREA DE PROTEÇÃO AMBIENTAL DO RIO GUANDU</li><li>PARQUE ESTADUAL DOS TRÊS PICOS</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO MACACU</li><li>RESERVA DE DESENVOLVIMENTO SUSTENTÁVEL DO AVENTUREIRO</li><li>PARQUE ESTADUAL DO DESENGANO</li><li>PARQUE ESTADUAL DA PEDRA SELADA</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA REGIÃO SERRANA DE PETRÓPOLIS</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DE CAIRUÇU</li><li>PARQUE NACIONAL DA SERRA DA BOCAINA</li><li>PARQUE NACIONAL DA SERRA DOS ÓRGÃOS</li></ul>
+
+<h2>Conservation actions</h2>
+<ul><li>2.1 Site/area management</li><li>2.3 Habitat & natural process restoration</li><li>1.2 Resource & habitat protection</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
+
+<h2>Distribution Map</h2>
+  <div id="map_11552" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    try {
+      var map = L.map("map_11552");
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap contributors"
+      }).addTo(map);
+
+      map.createPane("ucsPane"); map.getPane("ucsPane").style.zIndex = 400;
+      map.createPane("eooPane"); map.getPane("eooPane").style.zIndex = 410;
+      map.createPane("aooPane"); map.getPane("aooPane").style.zIndex = 420;
+      map.createPane("ptsPane"); map.getPane("ptsPane").style.zIndex = 430;
+
+      var ucsData = null;
+      if (ucsData && ucsData.type) {
+        L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
+      }
+
+      var eooData = { "type": "FeatureCollection", "name": "file137d06d045b43", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Begonia olsoniae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.192249, -23.1212203 ], [ -44.283333, -23.166667 ], [ -44.409357, -23.1975816 ], [ -44.5354393, -23.2283957 ], [ -44.6615796, -23.2591093 ], [ -44.787778, -23.289722 ], [ -44.839444, -23.208611 ], [ -44.842778, -23.201944 ], [ -44.8133661, -23.1088378 ], [ -44.783995, -23.0157262 ], [ -44.7546644, -22.9226092 ], [ -44.7253741, -22.8294868 ], [ -44.6961238, -22.736359 ], [ -44.6669134, -22.643226 ], [ -44.637742499999987, -22.5500876 ], [ -44.608611, -22.456944 ], [ -44.4291707, -22.4173522 ], [ -44.2498329, -22.3775625 ], [ -44.0705978, -22.3375752 ], [ -43.8914658, -22.2973909 ], [ -43.712437099999988, -22.2570102 ], [ -43.5335118, -22.2164335 ], [ -43.3546903, -22.1756613 ], [ -43.1759728, -22.1346941 ], [ -42.9973594, -22.0935325 ], [ -42.8188503, -22.052177 ], [ -42.6404459, -22.010628 ], [ -42.4621463, -21.9688861 ], [ -42.2839518, -21.9269519 ], [ -42.1058624, -21.8848258 ], [ -41.9278784, -21.8425083 ], [ -41.75, -21.8 ], [ -41.7547, -21.8114 ], [ -41.8890104, -21.8895271 ], [ -42.0234679, -21.9675452 ], [ -42.1580731, -22.0454537 ], [ -42.2928266, -22.123252 ], [ -42.4277287, -22.2009397 ], [ -42.5627802, -22.2785161 ], [ -42.6979814, -22.3559807 ], [ -42.833333, -22.433333 ], [ -42.9235028, -22.4795478 ], [ -43.0137327, -22.5257125 ], [ -43.104023, -22.5718269 ], [ -43.1943737, -22.6178908 ], [ -43.2847848, -22.663904 ], [ -43.3752566, -22.7098666 ], [ -43.4657892, -22.7557782 ], [ -43.5563825, -22.8016387 ], [ -43.6470369, -22.847448 ], [ -43.7377523, -22.893206 ], [ -43.8285288, -22.9389125 ], [ -43.9193667, -22.9845673 ], [ -44.0102659, -23.0301703 ], [ -44.1012266, -23.0757214 ], [ -44.192249, -23.1212203 ] ] ] } } ] };
+      if (eooData && eooData.type) {
+        L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
+      }
+
+      var aooData = { "type": "FeatureCollection", "name": "file137d069ddc48", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 2.0, "species": "Begonia olsoniae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.763359669305167, -21.81437288144841 ], [ -41.763359669305167, -21.794995749397035 ], [ -41.745429499243251, -21.794995749397035 ], [ -41.745429499243251, -21.81437288144841 ], [ -41.763359669305167, -21.81437288144841 ] ] ] } }, { "type": "Feature", "properties": { "count": 5.0, "species": "Begonia olsoniae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.000541403577778, -22.435811887892626 ], [ -43.000541403577778, -22.416351139359467 ], [ -42.982611233515861, -22.416351139359467 ], [ -42.982611233515861, -22.435811887892626 ], [ -43.000541403577778, -22.435811887892626 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia olsoniae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.839169873020481, -22.435811887892626 ], [ -42.839169873020481, -22.416351139359467 ], [ -42.821239702958565, -22.416351139359467 ], [ -42.821239702958565, -22.435811887892626 ], [ -42.839169873020481, -22.435811887892626 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia olsoniae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.578396369026905, -22.455275303541345 ], [ -44.578396369026905, -22.435811887892626 ], [ -44.560466198964988, -22.435811887892626 ], [ -44.560466198964988, -22.455275303541345 ], [ -44.578396369026905, -22.455275303541345 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia olsoniae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.614256709150744, -22.47474138962405 ], [ -44.614256709150744, -22.455275303541345 ], [ -44.596326539088828, -22.455275303541345 ], [ -44.596326539088828, -22.47474138962405 ], [ -44.614256709150744, -22.47474138962405 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia olsoniae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.018471573639701, -22.47474138962405 ], [ -43.018471573639701, -22.455275303541345 ], [ -43.000541403577778, -22.455275303541345 ], [ -43.000541403577778, -22.47474138962405 ], [ -43.018471573639701, -22.47474138962405 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia olsoniae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.018471573639701, -22.49421014946271 ], [ -43.018471573639701, -22.47474138962405 ], [ -43.000541403577778, -22.47474138962405 ], [ -43.000541403577778, -22.49421014946271 ], [ -43.018471573639701, -22.49421014946271 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia olsoniae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.789468886302345, -22.747548857165782 ], [ -43.789468886302345, -22.728045034570545 ], [ -43.771538716240421, -22.728045034570545 ], [ -43.771538716240421, -22.747548857165782 ], [ -43.789468886302345, -22.747548857165782 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia olsoniae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.291513648036158, -23.177327288149961 ], [ -44.291513648036158, -23.157762825878997 ], [ -44.273583477974228, -23.157762825878997 ], [ -44.273583477974228, -23.177327288149961 ], [ -44.291513648036158, -23.177327288149961 ] ] ] } }, { "type": "Feature", "properties": { "count": 3.0, "species": "Begonia olsoniae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.847348919955735, -23.216464603470161 ], [ -44.847348919955735, -23.196894546194201 ], [ -44.829418749893819, -23.196894546194201 ], [ -44.829418749893819, -23.216464603470161 ], [ -44.847348919955735, -23.216464603470161 ] ] ] } }, { "type": "Feature", "properties": { "count": 4.0, "species": "Begonia olsoniae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.829418749893819, -23.216464603470161 ], [ -44.829418749893819, -23.196894546194201 ], [ -44.811488579831888, -23.196894546194201 ], [ -44.811488579831888, -23.216464603470161 ], [ -44.829418749893819, -23.216464603470161 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia olsoniae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.793558409769972, -23.294772894194509 ], [ -44.793558409769972, -23.275191605330416 ], [ -44.775628239708048, -23.275191605330416 ], [ -44.775628239708048, -23.294772894194509 ], [ -44.793558409769972, -23.294772894194509 ] ] ] } } ] };
+      if (aooData && aooData.type) {
+        L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
+      }
+
+      var pts = [[-21.811400, -41.754700],[-22.456944, -44.608611],[-22.433333, -42.833333],[-21.800000, -41.750000],[-23.166667, -44.283333],[-22.448181, -44.563545],[-23.203333, -44.827778],[-23.198333, -44.830556],[-23.208611, -44.839444],[-23.213333, -44.827778],[-23.208333, -44.819722],[-23.208056, -44.822500],[-22.744444, -43.785556],[-23.201944, -44.842778],[-22.425556, -42.995472],[-22.425556, -42.995556],[-22.425556, -42.995278],[-22.416667, -42.983333],[-22.425556, -42.983333],[-23.289722, -44.787778],[-22.471389, -43.004722],[-22.475556, -43.005556]];
+      if (pts.length > 0) {
+        pts.forEach(function(p) {
+          L.circleMarker(p, { pane: "ptsPane", radius: 4, fillColor: "#e74c3c", color: "#fff", weight: 1, opacity: 1, fillOpacity: 0.9 }).addTo(map);
+        });
+      }
+
+      var bounds = [[-23.294773, -44.847349], [-21.794996, -41.745429]];
+      if (bounds) {
+        map.fitBounds(bounds, {padding: [30, 30], maxZoom: 14});
+      } else {
+        map.setView([-22.9, -43.2], 7);
+      }
+    } catch (error) {
+      console.error("Leaflet Rendering Error:", error);
+    }
+  });
+  </script>
+
+<h2>References</h2>
+<p>Flora do Brasil 2020 em construção. Jardim Botânico do Rio de Janeiro. Disponível em: http://floradobrasil.jbrj.gov.br.</p><p><a href="http://reflora.jbrj.gov.br/reflora/listaBrasil/FichaPublicaTaxonUC/FichaPublicaTaxonUC.do?id=FB5675" target="_blank" style="color:#2980b9; text-decoration:none; font-weight:bold;">🌐 Link to this taxon on Reflora</a></p>
+
+<hr style="margin-top:40px;">
+<p style="color:#95a5a6;font-size:0.85em;text-align:center;">
+Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+</div>
+</body>
+</html>

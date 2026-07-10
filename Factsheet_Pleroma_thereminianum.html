@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pleroma thereminianum (DC.) Triana — IUCN Factsheet</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<style>
+  body { font-family:"Segoe UI",Arial,sans-serif; background:#f4f6f8; margin:0; padding:20px; }
+  .container { max-width:1200px; margin:auto; background:white; padding:30px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+  h1 { color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:10px; margin-bottom:10px; }
+  h2 { color:#34495e; margin-top:30px; border-bottom:2px solid #ecf0f1; padding-bottom:5px; }
+  .resumo-box { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; margin:20px 0; }
+  .resumo-item { background:#ecf0f1; padding:15px; border-radius:8px; text-align:center; }
+  .resumo-item .label { font-size:0.85em; color:#7f8c8d; text-transform:uppercase; }
+  .resumo-item .value { font-size:1.4em; font-weight:bold; color:#2c3e50; margin-top:5px; }
+  .categoria { font-size:2em; font-weight:bold; padding:10px 20px; border-radius:8px; color:white; display:inline-block; margin-bottom: 20px; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; }
+  th,td { padding:10px; border-bottom:1px solid #ecf0f1; text-align:left; }
+  .justificativa { background:#f8f9fa; padding:20px; border-left:4px solid #3498db; border-radius:4px; line-height:1.7; }
+  
+  ::-webkit-scrollbar { height: 8px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #95a5a6; }
+</style>
+</head>
+<body>
+
+<div id="imgModal" style="display:none; position:fixed; z-index:9999; padding-top:40px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.85);" onclick="if(event.target == this) closeModal()">
+  <span style="position:absolute; top:15px; right:35px; color:#f1f1f1; font-size:40px; font-weight:bold; cursor:pointer;" onclick="closeModal()">&times;</span>
+  <div style="margin:auto; display:flex; flex-direction:column; align-items:center; max-width:90%;">
+    <img id="modalContent" style="max-width:100%; max-height:75vh; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5);">
+    <div id="modalCaption" style="margin-top: 15px; background: rgba(255,255,255,0.95); padding: 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-size: 0.9em; max-width: 800px; line-height: 1.5;"></div>
+  </div>
+</div>
+
+<script>
+function openModal(imgElement) {
+  document.getElementById("imgModal").style.display = "block";
+  document.getElementById("modalContent").src = imgElement.src;
+  document.getElementById("modalCaption").innerHTML = imgElement.getAttribute("data-caption");
+}
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+</script>
+
+<div class="container">
+
+<h1><i>Pleroma thereminianum</i> <span style='font-size:0.55em; font-weight:normal; font-style:normal; color:#555;'>(DC.) Triana</span></h1>
+  <div style="margin-top: 15px; margin-bottom: 25px;">
+    <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scroll-snap-type: x mandatory;">
+      <img src="https://d2jcv3kl45hlgi.cloudfront.net/4142b041457d09a6b366489d40803d55.jpg" alt="Photo of Pleroma thereminianum" data-caption="<b>Author/Owner:</b> Royal Botanic Gardens, Kew &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='http://specimens.kew.org/Herbarium/K002261018' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://d2jcv3kl45hlgi.cloudfront.net/ff4182b0f0f29331b595ac7c180aa064.jpg" alt="Photo of Pleroma thereminianum" data-caption="<b>Author/Owner:</b> Royal Botanic Gardens, Kew &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='http://specimens.kew.org/Herbarium/K000972370' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://collections.nmnh.si.edu/media/?i=11869884&h=2000" alt="Photo of Pleroma thereminianum" data-caption="<b>Author/Owner:</b> Reflora Team &middot; <b>License:</b> Usage Conditions Apply &middot; <a href='https://www.gbif.org/occurrence/1456405421' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://collections.nmnh.si.edu/media/?i=12943644&h=2000" alt="Photo of Pleroma thereminianum" data-caption="<b>Author/Owner:</b> Conveyor Belt &middot; <b>License:</b> Usage Conditions Apply &middot; <a href='https://www.gbif.org/occurrence/1456405421' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://collections.nmnh.si.edu/media/?i=12938205&h=2000" alt="Photo of Pleroma thereminianum" data-caption="<b>Author/Owner:</b> Conveyor Belt &middot; <b>License:</b> Usage Conditions Apply &middot; <a href='https://www.gbif.org/occurrence/2236071564' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://sweetgum.nybg.org/images3/537/035/00245751.jpg" alt="Photo of Pleroma thereminianum" data-caption="<b>Author/Owner:</b> The New York Botanical Garden &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.gbif.org/occurrence/1930961856' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://collections.nmnh.si.edu/media/?i=11869885&h=2000" alt="Photo of Pleroma thereminianum" data-caption="<b>Author/Owner:</b> Reflora Team &middot; <b>License:</b> Usage Conditions Apply &middot; <a href='https://www.gbif.org/occurrence/1455982446' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://collections.nmnh.si.edu/media/?i=12943104&h=2000" alt="Photo of Pleroma thereminianum" data-caption="<b>Author/Owner:</b> Conveyor Belt &middot; <b>License:</b> Usage Conditions Apply &middot; <a href='https://www.gbif.org/occurrence/1455982446' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://collections.nmnh.si.edu/media/?i=12949746&h=2000" alt="Photo of Pleroma thereminianum" data-caption="<b>Author/Owner:</b> Conveyor Belt &middot; <b>License:</b> Usage Conditions Apply &middot; <a href='https://www.gbif.org/occurrence/1456195439' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://collections.nmnh.si.edu/media/?i=11851434&h=2000" alt="Photo of Pleroma thereminianum" data-caption="<b>Author/Owner:</b> Reflora Team &middot; <b>License:</b> Usage Conditions Apply &middot; <a href='https://www.gbif.org/occurrence/1456195439' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+    </div>
+    <p style="font-size: 0.75em; color: #7f8c8d; margin-top: -5px;">Source: GBIF Occurrences (Click on any image to view details and references)</p>
+  </div>
+
+<h2>Taxonomy</h2>
+  <div style="background:#ecf0f1; padding:15px; border-radius:8px; display:flex; gap:30px; flex-wrap:wrap;">
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Family</span><br><b>Melastomataceae</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Genus</span><br><b>Pleroma</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Authority</span><br><b>(DC.) Triana</b></div>
+  </div>
+
+<br>
+<div class="categoria" style="background-color:#F9E814;">VU &middot; B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div>
+
+<h2>Assessment Summary</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Category</div><div class="value">VU</div></div>
+  <div class="resumo-item"><div class="label">Criterion</div><div class="value">B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div></div>
+  <div class="resumo-item"><div class="label">Year</div><div class="value">2026</div></div>
+  <div class="resumo-item"><div class="label">Scope</div><div class="value">Regional (RJ)</div></div>
+</div>
+
+<h2>Justification</h2>
+<div class="justificativa"><i>Pleroma thereminianum</i> is endemic to the state of Rio de Janeiro, with a rupicolous habit. The spatial analysis of confirmed occurrences (EOO = 290.7 km²; AOO = 36 km², 2×2 km grid) identified <b>6</b> locations determined by the threat. Assessment: <b>VU</b> under criterion B1 (EOO < 20,000 km²). Criterion: <b>B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</b>.  The number of locations (6) meets the IUCN threshold for VU (≤ 10).  Active threats (IUCN-CMP v3.3): 1.1 Housing & urban areas; 2.2 Wood & pulp plantations; 2.3 Livestock farming & ranching.  Occurs in Protected Areas (PA regime: Integral Protection and Sustainable Use): ÁREA DE PROTEÇÃO AMBIENTAL ESTADUAL DE TAMOIOS | RESERVA BIOLÓGICA ESTADUAL DA PRAIA DO SUL | ÁREA DE PROTEÇÃO AMBIENTAL ALTO PIRAÍ - APA ALTO PIRAÍ | PARQUE ESTADUAL CUNHAMBEBE | PARQUE ESTADUAL DA ILHA GRANDE. </div>
+
+<h2>Supporting Information</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Countries</div><div class="value" style="font-size:1em;">BR-RJ (Brazil, Rio de Janeiro)</div></div>
+  <div class="resumo-item"><div class="label">System</div><div class="value" style="font-size:1em;">Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Habitat</div><div class="value" style="font-size:1em;">Rupicolous, Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Biome</div><div class="value" style="font-size:1em;">Atlantic Forest</div></div>
+  <div class="resumo-item"><div class="label">Vegetation</div><div class="value" style="font-size:1em;">Rainforest</div></div>
+</div>
+
+<h2>Geographic Distribution</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">EOO</div><div class="value">290.7 km²</div></div>
+  <div class="resumo-item"><div class="label">AOO (2×2 km)</div><div class="value">36 km²</div></div>
+  <div class="resumo-item"><div class="label">Endemic to RJ</div><div class="value">Yes</div></div>
+  <div class="resumo-item"><div class="label">Occurrences</div><div class="value">11</div></div>
+</div>
+
+<h2>Population & Locations</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Locations §4.11</div><div class="value">6</div></div>
+  <div class="resumo-item"><div class="label">Critical Threat</div><div class="value" style="font-size:1em;">2.3</div></div>
+  <div class="resumo-item"><div class="label">Population Trend</div><div class="value" style="font-size:1em;">Decreasing</div></div>
+</div>
+
+<h2>Collections Used</h2>
+  <div style="max-height: 250px; overflow-y: auto; border: 1px solid #ecf0f1; padding: 15px; border-radius: 4px; background: #fafafa;">
+    <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; line-height: 1.6; color: #2c3e50;">
+      <li><b>A. C. Brade 14906</b> (1935) - NY — <i>Unknown Municipality</i></li><li><b>A.A.M. Barros; B.H.G de Oliveira 4023</b> (2010) - JBRJ — <i>Angra dos Reis</i></li><li><b>Baumgratz, J.F.A.; Nadruz, M. Camelo, M. Moutinho, M.R. Bastos, L. 1622</b> (2019) - UFPR — <i>Rio Claro</i></li><li><b>Baumgratz, J.F.A.; Nadruz, M.; Camelo, M.; Moutinho, M.R. & Bastos, L. 1622</b> (2019) - UFU — <i>Rio Claro</i></li><li><b>C.N. Fraga 1178</b> (s.d.) - JBRJ — <i>Angra dos Reis</i></li><li><b>D.S.P. Silva; J.F.A. Baumgratz, M.G. Bovini, M. Nadruz & B.C. Bandeira 80</b> (2013) - JBRJ — <i>Rio Claro</i></li><li><b>E.A. Ribeiro 839</b> (2014) - JBRJ — <i>Angra dos Reis</i></li><li><b>F. M. Pinheiro 10</b> (2011) - JBRJ — <i>Angra dos Reis</i></li><li><b>J. N. Rose 20362</b> (1915) - NY — <i>Unknown Municipality</i></li><li><b>M.R. Moutinho; J.F.A. Baumgratz, L. Bastos, M. Camelo & M. Nadruz 101</b> (2019) - JBRJ — <i>Rio Claro</i></li><li><b>M.R. Moutinho; J.F.A. Baumgratz, L. Bastos, M. Camelo & M. Nadruz 98</b> (2019) - JBRJ — <i>Rio Claro</i></li>
+    </ul>
+  </div>
+  <p style="font-size:0.8em; color:#7f8c8d; margin-top:5px;">Total collections evaluated: 11</p>
+
+<h2>Threats Summary</h2>
+<table style="width:100%;border-collapse:collapse;"><thead style="background:#34495e;color:white;"><tr><th>Threat (IUCN-CMP v3.3)</th><th>Timing</th><th>Scope</th><th>% AOO</th><th>% EOO</th><th>Severity</th></tr></thead><tbody><tr><td><b>1.1 Housing & urban areas</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>6.43%</td><td>3.63%</td><td>slow</td></tr><tr><td><b>2.2 Wood & pulp plantations</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>0.02%</td><td>0.05%</td><td>slow</td></tr><tr><td><b>2.3 Livestock farming & ranching</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>12.42%</td><td>8.82%</td><td>slow</td></tr></tbody></table>
+
+<h2>Threats — Methodological Details</h2>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">1.1 Housing & urban areas</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from human settlements with substantial footprint (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 24 (Urban Infrastructure).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">6.43% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">3.63% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🏘️
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.2 Wood & pulp plantations</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Stands of trees planted for timber outside natural forests (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 9 (Forest Plantation).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0.02% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.05% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🌲
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.3 Livestock farming & ranching</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Domestic terrestrial animals raised in one location or roaming wild (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 14, 15 and 21.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">12.42% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">8.82% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🐄
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">10.3 Avalanches/landslides</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from catastrophic geological events (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> High susceptibility polygons CPRM/IPT filtered by scars dated via LandTrendr/CCDC.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.97% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    ⛰️
+  </div>
+</div>
+
+<h2>Protection Status</h2>
+<p style='margin-bottom: 5px;'><b>Management Category:</b> Integral Protection and Sustainable Use</p><p style='margin-top: 0; margin-bottom: 5px;'><b>Protected Areas:</b></p><ul style='margin-top: 5px; margin-bottom: 0;'><li>ÁREA DE PROTEÇÃO AMBIENTAL ESTADUAL DE TAMOIOS</li><li>RESERVA BIOLÓGICA ESTADUAL DA PRAIA DO SUL</li><li>ÁREA DE PROTEÇÃO AMBIENTAL ALTO PIRAÍ - APA ALTO PIRAÍ</li><li>PARQUE ESTADUAL CUNHAMBEBE</li><li>PARQUE ESTADUAL DA ILHA GRANDE</li></ul>
+
+<h2>Conservation actions</h2>
+<ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
+
+<h2>Distribution Map</h2>
+  <div id="map_33307" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    try {
+      var map = L.map("map_33307");
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap contributors"
+      }).addTo(map);
+
+      map.createPane("ucsPane"); map.getPane("ucsPane").style.zIndex = 400;
+      map.createPane("eooPane"); map.getPane("eooPane").style.zIndex = 410;
+      map.createPane("aooPane"); map.getPane("aooPane").style.zIndex = 420;
+      map.createPane("ptsPane"); map.getPane("ptsPane").style.zIndex = 430;
+
+      var ucsData = null;
+      if (ucsData && ucsData.type) {
+        L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
+      }
+
+      var eooData = { "type": "FeatureCollection", "name": "file137d04709333f", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Pleroma thereminianum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.1794451, -23.0354165 ], [ -44.178889, -23.172778 ], [ -44.201389, -23.182778 ], [ -44.234582, -23.150897 ], [ -44.2741251, -23.0533699 ], [ -44.313611, -22.955833 ], [ -44.2559, -22.910245 ], [ -44.215833, -22.885833 ], [ -44.18, -22.898055 ], [ -44.1794451, -23.0354165 ] ] ] } } ] };
+      if (eooData && eooData.type) {
+        L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
+      }
+
+      var aooData = { "type": "FeatureCollection", "name": "file137d01e48730", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Pleroma thereminianum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.228285016231546, -22.899464666286136 ], [ -44.228285016231546, -22.880223664729947 ], [ -44.210320207741283, -22.880223664729947 ], [ -44.210320207741283, -22.899464666286136 ], [ -44.228285016231546, -22.899464666286136 ] ] ] } }, { "type": "Feature", "properties": { "count": 3.0, "species": "Pleroma thereminianum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.192355399251042, -22.899464666286136 ], [ -44.192355399251042, -22.880223664729947 ], [ -44.174390590760787, -22.880223664729947 ], [ -44.174390590760787, -22.899464666286136 ], [ -44.192355399251042, -22.899464666286136 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Pleroma thereminianum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.264214633212049, -22.918708335498923 ], [ -44.264214633212049, -22.899464666286136 ], [ -44.246249824721787, -22.899464666286136 ], [ -44.246249824721787, -22.918708335498923 ], [ -44.264214633212049, -22.918708335498923 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Pleroma thereminianum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.228285016231546, -22.918708335498923 ], [ -44.228285016231546, -22.899464666286136 ], [ -44.210320207741283, -22.899464666286136 ], [ -44.210320207741283, -22.918708335498923 ], [ -44.228285016231546, -22.918708335498923 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Pleroma thereminianum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.318109058682801, -22.957203689931205 ], [ -44.318109058682801, -22.937954675626667 ], [ -44.300144250192538, -22.937954675626667 ], [ -44.300144250192538, -22.957203689931205 ], [ -44.318109058682801, -22.957203689931205 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Pleroma thereminianum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.300144250192538, -22.976455381677905 ], [ -44.300144250192538, -22.957203689931205 ], [ -44.28217944170229, -22.957203689931205 ], [ -44.28217944170229, -22.976455381677905 ], [ -44.300144250192538, -22.976455381677905 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Pleroma thereminianum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.246249824721787, -23.169120279373981 ], [ -44.246249824721787, -23.14984163283161 ], [ -44.228285016231538, -23.14984163283161 ], [ -44.228285016231538, -23.169120279373981 ], [ -44.246249824721787, -23.169120279373981 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Pleroma thereminianum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.210320207741297, -23.188401639511678 ], [ -44.210320207741297, -23.169120279373981 ], [ -44.192355399251042, -23.169120279373981 ], [ -44.192355399251042, -23.188401639511678 ], [ -44.210320207741297, -23.188401639511678 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Pleroma thereminianum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.192355399251042, -23.188401639511678 ], [ -44.192355399251042, -23.169120279373981 ], [ -44.174390590760787, -23.169120279373981 ], [ -44.174390590760787, -23.188401639511678 ], [ -44.192355399251042, -23.188401639511678 ] ] ] } } ] };
+      if (aooData && aooData.type) {
+        L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
+      }
+
+      var pts = [[-22.910245, -44.255900],[-23.182778, -44.201389],[-22.898055, -44.183333],[-22.898056, -44.183333],[-22.955833, -44.313611],[-22.905833, -44.223611],[-23.172778, -44.178889],[-22.974640, -44.297150],[-23.150897, -44.234582],[-22.885833, -44.215833],[-22.898055, -44.180000]];
+      if (pts.length > 0) {
+        pts.forEach(function(p) {
+          L.circleMarker(p, { pane: "ptsPane", radius: 4, fillColor: "#e74c3c", color: "#fff", weight: 1, opacity: 1, fillOpacity: 0.9 }).addTo(map);
+        });
+      }
+
+      var bounds = [[-23.188402, -44.318109], [-22.880224, -44.174391]];
+      if (bounds) {
+        map.fitBounds(bounds, {padding: [30, 30], maxZoom: 14});
+      } else {
+        map.setView([-22.9, -43.2], 7);
+      }
+    } catch (error) {
+      console.error("Leaflet Rendering Error:", error);
+    }
+  });
+  </script>
+
+<h2>References</h2>
+<p>Flora do Brasil 2020 em construção. Jardim Botânico do Rio de Janeiro. Disponível em: http://floradobrasil.jbrj.gov.br.</p><p><a href="http://reflora.jbrj.gov.br/reflora/listaBrasil/FichaPublicaTaxonUC/FichaPublicaTaxonUC.do?id=FB603052" target="_blank" style="color:#2980b9; text-decoration:none; font-weight:bold;">🌐 Link to this taxon on Reflora</a></p>
+
+<hr style="margin-top:40px;">
+<p style="color:#95a5a6;font-size:0.85em;text-align:center;">
+Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+</div>
+</body>
+</html>

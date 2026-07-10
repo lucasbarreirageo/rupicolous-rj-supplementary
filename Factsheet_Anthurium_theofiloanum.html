@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Anthurium theofiloanum Nadruz — IUCN Factsheet</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<style>
+  body { font-family:"Segoe UI",Arial,sans-serif; background:#f4f6f8; margin:0; padding:20px; }
+  .container { max-width:1200px; margin:auto; background:white; padding:30px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+  h1 { color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:10px; margin-bottom:10px; }
+  h2 { color:#34495e; margin-top:30px; border-bottom:2px solid #ecf0f1; padding-bottom:5px; }
+  .resumo-box { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; margin:20px 0; }
+  .resumo-item { background:#ecf0f1; padding:15px; border-radius:8px; text-align:center; }
+  .resumo-item .label { font-size:0.85em; color:#7f8c8d; text-transform:uppercase; }
+  .resumo-item .value { font-size:1.4em; font-weight:bold; color:#2c3e50; margin-top:5px; }
+  .categoria { font-size:2em; font-weight:bold; padding:10px 20px; border-radius:8px; color:white; display:inline-block; margin-bottom: 20px; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; }
+  th,td { padding:10px; border-bottom:1px solid #ecf0f1; text-align:left; }
+  .justificativa { background:#f8f9fa; padding:20px; border-left:4px solid #3498db; border-radius:4px; line-height:1.7; }
+  
+  ::-webkit-scrollbar { height: 8px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #95a5a6; }
+</style>
+</head>
+<body>
+
+<div id="imgModal" style="display:none; position:fixed; z-index:9999; padding-top:40px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.85);" onclick="if(event.target == this) closeModal()">
+  <span style="position:absolute; top:15px; right:35px; color:#f1f1f1; font-size:40px; font-weight:bold; cursor:pointer;" onclick="closeModal()">&times;</span>
+  <div style="margin:auto; display:flex; flex-direction:column; align-items:center; max-width:90%;">
+    <img id="modalContent" style="max-width:100%; max-height:75vh; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5);">
+    <div id="modalCaption" style="margin-top: 15px; background: rgba(255,255,255,0.95); padding: 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-size: 0.9em; max-width: 800px; line-height: 1.5;"></div>
+  </div>
+</div>
+
+<script>
+function openModal(imgElement) {
+  document.getElementById("imgModal").style.display = "block";
+  document.getElementById("modalContent").src = imgElement.src;
+  document.getElementById("modalCaption").innerHTML = imgElement.getAttribute("data-caption");
+}
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+</script>
+
+<div class="container">
+
+<h1><i>Anthurium theofiloanum</i> <span style='font-size:0.55em; font-weight:normal; font-style:normal; color:#555;'>Nadruz</span></h1>
+  <div style="margin-top: 15px; margin-bottom: 25px;">
+    <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scroll-snap-type: x mandatory;">
+      <img src="http://jbrj-public-img.s3-sa-east-1.amazonaws.com/JPG/rbr/rbr/0/5/85/22/rbr00058522.jpg" alt="Photo of Anthurium theofiloanum" data-caption="<b>Author/Owner:</b> Universidade Federal Rural do Rio de Janeiro (RBR) &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://rbr.jbrj.gov.br/v2/regua/visualizador.php?r=true&colbot=rbr&codtestemunho=RBR58522&arquivo=rbr00058522.dzi' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://images.mobot.org/tropicosimages3/detailimages/TropicosImageVol3/100587000/2D7420E8-230E-47AF-A4CB-B07FC627293F.jpg" alt="Photo of Anthurium theofiloanum" data-caption="<b>Author/Owner:</b> MBG &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc-sa/3.0/ &middot; <a href='https://www.tropicos.org/ImageFullView.aspx?imageid=100587587' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://images.mobot.org/tropicosimages3/detailimages/TropicosImageVol3/100587000/54125938-C137-4DC7-9635-CAD71FB65E12.jpg" alt="Photo of Anthurium theofiloanum" data-caption="<b>Author/Owner:</b> MBG &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc-sa/3.0/ &middot; <a href='https://www.tropicos.org/ImageFullView.aspx?imageid=100587584' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://images.mobot.org/tropicosimages3/detailimages/TropicosImageVol3/100587000/67715E01-C7E5-43E8-9A9E-F356F93F14F9.jpg" alt="Photo of Anthurium theofiloanum" data-caption="<b>Author/Owner:</b> MBG &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc-sa/3.0/ &middot; <a href='https://www.tropicos.org/ImageFullView.aspx?imageid=100587585' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://images.mobot.org/tropicosimages3/detailimages/TropicosImageVol3/100587000/C4FEBFCD-F4CA-4314-BACB-B33959CEA52B.jpg" alt="Photo of Anthurium theofiloanum" data-caption="<b>Author/Owner:</b> MBG &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc-sa/3.0/ &middot; <a href='https://www.tropicos.org/ImageFullView.aspx?imageid=100587583' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://images.mobot.org/tropicosimages3/detailimages/TropicosImageVol3/100587000/DC3493EC-AC27-40E4-9F8B-092246A8FA5D.jpg" alt="Photo of Anthurium theofiloanum" data-caption="<b>Author/Owner:</b> MBG &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc-sa/3.0/ &middot; <a href='https://www.tropicos.org/ImageFullView.aspx?imageid=100587582' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://images.mobot.org/tropicosimages3/detailimages/TropicosImageVol3/100587000/F966FC46-7CD7-494E-B56C-246AA21EBAF9.jpg" alt="Photo of Anthurium theofiloanum" data-caption="<b>Author/Owner:</b> MBG &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc-sa/3.0/ &middot; <a href='https://www.tropicos.org/ImageFullView.aspx?imageid=100587586' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://images.mobot.org/tropicosimages3/detailimages/TropicosImageVol3/100581000/E106CEA1-510D-4374-AF4D-753E05601540.jpg" alt="Photo of Anthurium theofiloanum" data-caption="<b>Author/Owner:</b> MBG &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc-sa/3.0/ &middot; <a href='https://www.tropicos.org/ImageFullView.aspx?imageid=100581068' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://images.mobot.org/tropicosimages3/detailimages/TropicosImageVol3/100587000/4933DC8B-20C3-47A5-8B7C-667A190427EC.jpg" alt="Photo of Anthurium theofiloanum" data-caption="<b>Author/Owner:</b> MBG &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc-sa/3.0/ &middot; <a href='https://www.tropicos.org/ImageFullView.aspx?imageid=100587590' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://images.mobot.org/tropicosimages3/detailimages/TropicosImageVol3/100587000/53E01157-F294-4736-9332-D286F17F9A79.jpg" alt="Photo of Anthurium theofiloanum" data-caption="<b>Author/Owner:</b> MBG &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc-sa/3.0/ &middot; <a href='https://www.tropicos.org/ImageFullView.aspx?imageid=100587589' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+    </div>
+    <p style="font-size: 0.75em; color: #7f8c8d; margin-top: -5px;">Source: GBIF Occurrences (Click on any image to view details and references)</p>
+  </div>
+
+<h2>Taxonomy</h2>
+  <div style="background:#ecf0f1; padding:15px; border-radius:8px; display:flex; gap:30px; flex-wrap:wrap;">
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Family</span><br><b>Araceae</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Genus</span><br><b>Anthurium</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Authority</span><br><b>Nadruz</b></div>
+  </div>
+
+<br>
+<div class="categoria" style="background-color:#60C659;">LC/NT &middot; LC/NT</div>
+
+<h2>Assessment Summary</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Category</div><div class="value">LC/NT</div></div>
+  <div class="resumo-item"><div class="label">Criterion</div><div class="value">LC/NT</div></div>
+  <div class="resumo-item"><div class="label">Year</div><div class="value">2026</div></div>
+  <div class="resumo-item"><div class="label">Scope</div><div class="value">Regional (RJ)</div></div>
+</div>
+
+<h2>Justification</h2>
+<div class="justificativa"><i>Anthurium theofiloanum</i> is endemic to the state of Rio de Janeiro, with a rupicolous habit. The spatial analysis of confirmed occurrences (EOO = 72.3 km²; AOO = 20 km², 2×2 km grid) identified <b>2</b> locations determined by the threat. Category: <b>LC/NT</b> — the quantitative thresholds for IUCN Criteria B and D were not met.</div>
+
+<h2>Supporting Information</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Countries</div><div class="value" style="font-size:1em;">BR-RJ (Brazil, Rio de Janeiro)</div></div>
+  <div class="resumo-item"><div class="label">System</div><div class="value" style="font-size:1em;">Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Habitat</div><div class="value" style="font-size:1em;">Rupicolous, Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Biome</div><div class="value" style="font-size:1em;">Atlantic Forest</div></div>
+  <div class="resumo-item"><div class="label">Vegetation</div><div class="value" style="font-size:1em;">Rainforest</div></div>
+</div>
+
+<h2>Geographic Distribution</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">EOO</div><div class="value">72.3 km²</div></div>
+  <div class="resumo-item"><div class="label">AOO (2×2 km)</div><div class="value">20 km²</div></div>
+  <div class="resumo-item"><div class="label">Endemic to RJ</div><div class="value">Yes</div></div>
+  <div class="resumo-item"><div class="label">Occurrences</div><div class="value">5</div></div>
+</div>
+
+<h2>Population & Locations</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Locations §4.11</div><div class="value">2</div></div>
+  <div class="resumo-item"><div class="label">Critical Threat</div><div class="value" style="font-size:1em;">NA</div></div>
+  <div class="resumo-item"><div class="label">Population Trend</div><div class="value" style="font-size:1em;">Decreasing</div></div>
+</div>
+
+<h2>Collections Used</h2>
+  <div style="max-height: 250px; overflow-y: auto; border: 1px solid #ecf0f1; padding: 15px; border-radius: 4px; background: #fafafa;">
+    <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; line-height: 1.6; color: #2c3e50;">
+      <li><b>C.N. Fraga; M.O.O. Pellegrini; C.T. Oliveira; J.A. Oliveira 3454</b> (2012) - JBRJ — <i>Santa Maria Madalena</i></li><li><b>M. Nadruz 4454</b> (2024) - JBRJ — <i>Santa Maria Madalena</i></li><li><b>M. Nadruz; ,J.F. Baumgratz, M. Souza, B.C. Bandeira 2744</b> (2012) - JBRJ — <i>Santa Maria Madalena</i></li><li><b>M. Nadruz; J. Mattos & S. Wrangler 3677</b> (2020) - JBRJ — <i>Santa Maria Madalena</i></li><li><b>M.S. Wängler; I.C.S. Batista, M.A.C. Loureiro, V. Ferreira 3078</b> (2021) - UFRRJ — <i>Santa Maria Madalena</i></li>
+    </ul>
+  </div>
+  <p style="font-size:0.8em; color:#7f8c8d; margin-top:5px;">Total collections evaluated: 5</p>
+
+<h2>Threats Summary</h2>
+<table style="width:100%;border-collapse:collapse;"><thead style="background:#34495e;color:white;"><tr><th>Threat (IUCN-CMP v3.3)</th><th>Timing</th><th>Scope</th><th>% AOO</th><th>% EOO</th><th>Severity</th></tr></thead><tbody><tr><td><b>2.3 Livestock farming & ranching</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>36.76%</td><td>24.37%</td><td>slow</td></tr><tr><td><b>10.3 Avalanches/landslides</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>0.39%</td><td>2.2%</td><td>slow</td></tr></tbody></table>
+
+<h2>Threats — Methodological Details</h2>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.3 Livestock farming & ranching</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Domestic terrestrial animals raised in one location or roaming wild (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 14, 15 and 21.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">36.76% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">24.37% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🐄
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">10.3 Avalanches/landslides</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from catastrophic geological events (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> High susceptibility polygons CPRM/IPT filtered by scars dated via LandTrendr/CCDC.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0.39% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">2.2% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    ⛰️
+  </div>
+</div>
+
+<h2>Protection Status</h2>
+<p style='margin-bottom: 5px;'><b>Management Category:</b> Integral Protection and Sustainable Use</p><p style='margin-top: 0; margin-bottom: 5px;'><b>Protected Areas:</b></p><ul style='margin-top: 5px; margin-bottom: 0;'><li>RESERVA PARTICULAR DO PATRIMÔNIO NATURAL NÃO PENSEI</li><li>PARQUE ESTADUAL DO DESENGANO</li></ul>
+
+<h2>Conservation actions</h2>
+<ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li></ul>
+
+<h2>Distribution Map</h2>
+  <div id="map_20199" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    try {
+      var map = L.map("map_20199");
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap contributors"
+      }).addTo(map);
+
+      map.createPane("ucsPane"); map.getPane("ucsPane").style.zIndex = 400;
+      map.createPane("eooPane"); map.getPane("eooPane").style.zIndex = 410;
+      map.createPane("aooPane"); map.getPane("aooPane").style.zIndex = 420;
+      map.createPane("ptsPane"); map.getPane("ptsPane").style.zIndex = 430;
+
+      var ucsData = null;
+      if (ucsData && ucsData.type) {
+        L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
+      }
+
+      var eooData = { "type": "FeatureCollection", "name": "file137d067c11bae", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Anthurium theofiloanum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.919444, -21.876111 ], [ -41.876389, -21.988611 ], [ -41.8825, -22.016667 ], [ -41.964167, -21.995833 ], [ -41.919444, -21.876111 ] ] ] } } ] };
+      if (eooData && eooData.type) {
+        L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
+      }
+
+      var aooData = { "type": "FeatureCollection", "name": "file137d0694e793f", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Anthurium theofiloanum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.929147358401018, -21.876892507248765 ], [ -41.929147358401018, -21.857047318610036 ], [ -41.91140862592394, -21.857047318610036 ], [ -41.91140862592394, -21.876892507248765 ], [ -41.929147358401018, -21.876892507248765 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Anthurium theofiloanum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.964624823355173, -21.996020389439401 ], [ -41.964624823355173, -21.976158969107416 ], [ -41.946886090878095, -21.976158969107416 ], [ -41.946886090878095, -21.996020389439401 ], [ -41.964624823355173, -21.996020389439401 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Anthurium theofiloanum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.893669893446862, -21.996020389439401 ], [ -41.893669893446862, -21.976158969107416 ], [ -41.875931160969785, -21.976158969107416 ], [ -41.875931160969785, -21.996020389439401 ], [ -41.893669893446862, -21.996020389439401 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Anthurium theofiloanum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.929147358401018, -22.015884527184546 ], [ -41.929147358401018, -21.996020389439405 ], [ -41.91140862592394, -21.996020389439405 ], [ -41.91140862592394, -22.015884527184546 ], [ -41.929147358401018, -22.015884527184546 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Anthurium theofiloanum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.893669893446862, -22.035751385818738 ], [ -41.893669893446862, -22.015884527184546 ], [ -41.875931160969785, -22.015884527184546 ], [ -41.875931160969785, -22.035751385818738 ], [ -41.893669893446862, -22.035751385818738 ] ] ] } } ] };
+      if (aooData && aooData.type) {
+        L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
+      }
+
+      var pts = [[-21.988611, -41.876389],[-21.876111, -41.919444],[-21.998333, -41.916944],[-22.016667, -41.882500],[-21.995833, -41.964167]];
+      if (pts.length > 0) {
+        pts.forEach(function(p) {
+          L.circleMarker(p, { pane: "ptsPane", radius: 4, fillColor: "#e74c3c", color: "#fff", weight: 1, opacity: 1, fillOpacity: 0.9 }).addTo(map);
+        });
+      }
+
+      var bounds = [[-22.035751, -41.964625], [-21.857047, -41.875931]];
+      if (bounds) {
+        map.fitBounds(bounds, {padding: [30, 30], maxZoom: 14});
+      } else {
+        map.setView([-22.9, -43.2], 7);
+      }
+    } catch (error) {
+      console.error("Leaflet Rendering Error:", error);
+    }
+  });
+  </script>
+
+<h2>References</h2>
+<p>Flora do Brasil 2020 em construção. Jardim Botânico do Rio de Janeiro. Disponível em: http://floradobrasil.jbrj.gov.br.</p><p><a href="http://reflora.jbrj.gov.br/reflora/listaBrasil/FichaPublicaTaxonUC/FichaPublicaTaxonUC.do?id=FB606597" target="_blank" style="color:#2980b9; text-decoration:none; font-weight:bold;">🌐 Link to this taxon on Reflora</a></p>
+
+<hr style="margin-top:40px;">
+<p style="color:#95a5a6;font-size:0.85em;text-align:center;">
+Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+</div>
+</body>
+</html>

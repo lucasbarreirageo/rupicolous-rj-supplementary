@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nidularium itatiaiae L.B.Sm. — IUCN Factsheet</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<style>
+  body { font-family:"Segoe UI",Arial,sans-serif; background:#f4f6f8; margin:0; padding:20px; }
+  .container { max-width:1200px; margin:auto; background:white; padding:30px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+  h1 { color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:10px; margin-bottom:10px; }
+  h2 { color:#34495e; margin-top:30px; border-bottom:2px solid #ecf0f1; padding-bottom:5px; }
+  .resumo-box { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; margin:20px 0; }
+  .resumo-item { background:#ecf0f1; padding:15px; border-radius:8px; text-align:center; }
+  .resumo-item .label { font-size:0.85em; color:#7f8c8d; text-transform:uppercase; }
+  .resumo-item .value { font-size:1.4em; font-weight:bold; color:#2c3e50; margin-top:5px; }
+  .categoria { font-size:2em; font-weight:bold; padding:10px 20px; border-radius:8px; color:white; display:inline-block; margin-bottom: 20px; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; }
+  th,td { padding:10px; border-bottom:1px solid #ecf0f1; text-align:left; }
+  .justificativa { background:#f8f9fa; padding:20px; border-left:4px solid #3498db; border-radius:4px; line-height:1.7; }
+  
+  ::-webkit-scrollbar { height: 8px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #95a5a6; }
+</style>
+</head>
+<body>
+
+<div id="imgModal" style="display:none; position:fixed; z-index:9999; padding-top:40px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.85);" onclick="if(event.target == this) closeModal()">
+  <span style="position:absolute; top:15px; right:35px; color:#f1f1f1; font-size:40px; font-weight:bold; cursor:pointer;" onclick="closeModal()">&times;</span>
+  <div style="margin:auto; display:flex; flex-direction:column; align-items:center; max-width:90%;">
+    <img id="modalContent" style="max-width:100%; max-height:75vh; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5);">
+    <div id="modalCaption" style="margin-top: 15px; background: rgba(255,255,255,0.95); padding: 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-size: 0.9em; max-width: 800px; line-height: 1.5;"></div>
+  </div>
+</div>
+
+<script>
+function openModal(imgElement) {
+  document.getElementById("imgModal").style.display = "block";
+  document.getElementById("modalContent").src = imgElement.src;
+  document.getElementById("modalCaption").innerHTML = imgElement.getAttribute("data-caption");
+}
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+</script>
+
+<div class="container">
+
+<h1><i>Nidularium itatiaiae</i> <span style='font-size:0.55em; font-weight:normal; font-style:normal; color:#555;'>L.B.Sm.</span></h1>
+  <div style="margin-top: 15px; margin-bottom: 25px;">
+    <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scroll-snap-type: x mandatory;">
+      <img src="https://collections.nmnh.si.edu/media/?i=14699536&h=2000" alt="Photo of Nidularium itatiaiae" data-caption="<b>Author/Owner:</b> Conveyor Belt &middot; <b>License:</b> Usage Conditions Apply &middot; <a href='https://www.gbif.org/occurrence/2817940305' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://fm-digital-assets.fieldmuseum.org/1480/127/V0404157F.jpg" alt="Photo of Nidularium itatiaiae" data-caption="<b>Author/Owner:</b> Field Museum of Natural History - Botany Department &middot; <b>License:</b> (c) Field Museum of Natural History - CC BY-NC 4.0 &middot; <a href='https://www.gbif.org/occurrence/1424777181' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://d2jcv3kl45hlgi.cloudfront.net/e040b041fa4a1b93a7f3a96692ce3d9d.jpg" alt="Photo of Nidularium itatiaiae" data-caption="<b>Author/Owner:</b> Royal Botanic Gardens, Kew &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='http://specimens.kew.org/Herbarium/K000976465' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://s3.amazonaws.com/huhspecimenimages/JPG/02014548.jpg" alt="Photo of Nidularium itatiaiae" data-caption="<b>Author/Owner:</b> President and Fellows of Harvard College &middot; <b>License:</b> https://huh.harvard.edu/access-digital-reproductions-works-public-domain &middot; <a href='http://data.huh.harvard.edu/36d49960-c104-423d-8221-d74f8aec30c1' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://s3.amazonaws.com/huhspecimenimages/JPG/02014547.jpg" alt="Photo of Nidularium itatiaiae" data-caption="<b>Author/Owner:</b> President and Fellows of Harvard College &middot; <b>License:</b> https://huh.harvard.edu/access-digital-reproductions-works-public-domain &middot; <a href='http://data.huh.harvard.edu/3111e32d-8995-4ad2-98a8-9fac4ae65b96' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://s3.amazonaws.com/herbaria2/GPI-Types/HUHGPI0050/Bromeliaceae/full/full_GH00029157.jpg" alt="Photo of Nidularium itatiaiae" data-caption="<b>Author/Owner:</b> President and Fellows of Harvard College &middot; <b>License:</b> https://huh.harvard.edu/access-digital-reproductions-works-public-domain &middot; <a href='http://data.huh.harvard.edu/4b0baef9-b182-48b8-8c71-a5e0fddf1d0d' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://s3.amazonaws.com/huhwebimages/9F03F9826D1E48E/type/full/29157.jpg" alt="Photo of Nidularium itatiaiae" data-caption="<b>Author/Owner:</b> President and Fellows of Harvard College &middot; <b>License:</b> https://huh.harvard.edu/access-digital-reproductions-works-public-domain &middot; <a href='http://data.huh.harvard.edu/4b0baef9-b182-48b8-8c71-a5e0fddf1d0d' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://s3.amazonaws.com/huhspecimenimages/JPG/02014546.jpg" alt="Photo of Nidularium itatiaiae" data-caption="<b>Author/Owner:</b> President and Fellows of Harvard College &middot; <b>License:</b> https://huh.harvard.edu/access-digital-reproductions-works-public-domain &middot; <a href='http://data.huh.harvard.edu/56967e3e-aef9-4b6f-8134-d038084a6d0b' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://collections.nmnh.si.edu/media/?i=14694937&h=2000" alt="Photo of Nidularium itatiaiae" data-caption="<b>Author/Owner:</b> Conveyor Belt &middot; <b>License:</b> Usage Conditions Apply &middot; <a href='https://www.gbif.org/occurrence/2817983323' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+    </div>
+    <p style="font-size: 0.75em; color: #7f8c8d; margin-top: -5px;">Source: GBIF Occurrences (Click on any image to view details and references)</p>
+  </div>
+
+<h2>Taxonomy</h2>
+  <div style="background:#ecf0f1; padding:15px; border-radius:8px; display:flex; gap:30px; flex-wrap:wrap;">
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Family</span><br><b>Bromeliaceae</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Genus</span><br><b>Nidularium</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Authority</span><br><b>L.B.Sm.</b></div>
+  </div>
+
+<br>
+<div class="categoria" style="background-color:#FC7F3F;">EN &middot; B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div>
+
+<h2>Assessment Summary</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Category</div><div class="value">EN</div></div>
+  <div class="resumo-item"><div class="label">Criterion</div><div class="value">B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div></div>
+  <div class="resumo-item"><div class="label">Year</div><div class="value">2026</div></div>
+  <div class="resumo-item"><div class="label">Scope</div><div class="value">Regional (RJ)</div></div>
+</div>
+
+<h2>Justification</h2>
+<div class="justificativa"><i>Nidularium itatiaiae</i> is endemic to the state of Rio de Janeiro, with a rupicolous habit. The spatial analysis of confirmed occurrences (EOO = 18.6 km²; AOO = 16 km², 2×2 km grid) identified <b>2</b> locations determined by the threat. Assessment: <b>EN</b> under criterion B1 (EOO < 5,000 km²). Criterion: <b>B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</b>.  The number of locations (2) meets the IUCN threshold for EN (≤ 5).  Active threats (IUCN-CMP v3.3): 1.1 Housing & urban areas; 2.3 Livestock farming & ranching.  Occurs in Protected Areas (PA regime: Integral Protection and Sustainable Use): PARQUE NACIONAL DE ITATIAIA | REFÚGIO DE VIDA SILVESTRE ESTADUAL DO MÉDIO PARAÍBA. </div>
+
+<h2>Supporting Information</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Countries</div><div class="value" style="font-size:1em;">BR-RJ (Brazil, Rio de Janeiro)</div></div>
+  <div class="resumo-item"><div class="label">System</div><div class="value" style="font-size:1em;">Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Habitat</div><div class="value" style="font-size:1em;">Epiphytic, Rupicolous, Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Biome</div><div class="value" style="font-size:1em;">Atlantic Forest</div></div>
+  <div class="resumo-item"><div class="label">Vegetation</div><div class="value" style="font-size:1em;">Rainforest</div></div>
+</div>
+
+<h2>Geographic Distribution</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">EOO</div><div class="value">18.6 km²</div></div>
+  <div class="resumo-item"><div class="label">AOO (2×2 km)</div><div class="value">16 km²</div></div>
+  <div class="resumo-item"><div class="label">Endemic to RJ</div><div class="value">Yes</div></div>
+  <div class="resumo-item"><div class="label">Occurrences</div><div class="value">6</div></div>
+</div>
+
+<h2>Population & Locations</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Locations §4.11</div><div class="value">2</div></div>
+  <div class="resumo-item"><div class="label">Critical Threat</div><div class="value" style="font-size:1em;">2.3</div></div>
+  <div class="resumo-item"><div class="label">Population Trend</div><div class="value" style="font-size:1em;">Decreasing</div></div>
+</div>
+
+<h2>Collections Used</h2>
+  <div style="max-height: 250px; overflow-y: auto; border: 1px solid #ecf0f1; padding: 15px; border-radius: 4px; background: #fafafa;">
+    <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; line-height: 1.6; color: #2c3e50;">
+      <li><b>Grupo Vermelho 158</b> (2015) - UNESP-RC — <i>Itatiaia</i></li><li><b>J. Ferreira 1800</b> (1929) - US — <i>Unknown Municipality</i></li><li><b>J.M.A. Braga; Diego Ferreira da Silva & José Roberto Ferraz 25-215</b> (2025) - JBRJ — <i>Itatiaia</i></li><li><b>K. R. Silva; L. C. Seidinger; R. A. Gonçalves 158</b> (2015) - JBRJ — <i>Itatiaia</i></li><li><b>M.W.Torres 15</b> (2010) - JBRJ — <i>Itatiaia</i></li><li><b>R. Reitz; Smith</b> (s.d.) - UNESC — <i>Itatiaia</i></li>
+    </ul>
+  </div>
+  <p style="font-size:0.8em; color:#7f8c8d; margin-top:5px;">Total collections evaluated: 6</p>
+
+<h2>Threats Summary</h2>
+<table style="width:100%;border-collapse:collapse;"><thead style="background:#34495e;color:white;"><tr><th>Threat (IUCN-CMP v3.3)</th><th>Timing</th><th>Scope</th><th>% AOO</th><th>% EOO</th><th>Severity</th></tr></thead><tbody><tr><td><b>1.1 Housing & urban areas</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>7.3%</td><td>5.7%</td><td>slow</td></tr><tr><td><b>2.3 Livestock farming & ranching</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>17.04%</td><td>28.71%</td><td>slow</td></tr></tbody></table>
+
+<h2>Threats — Methodological Details</h2>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">1.1 Housing & urban areas</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from human settlements with substantial footprint (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 24 (Urban Infrastructure).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">7.3% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">5.7% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🏘️
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.3 Livestock farming & ranching</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Domestic terrestrial animals raised in one location or roaming wild (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 14, 15 and 21.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">17.04% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">28.71% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🐄
+  </div>
+</div>
+
+<h2>Protection Status</h2>
+<p style='margin-bottom: 5px;'><b>Management Category:</b> Integral Protection and Sustainable Use</p><p style='margin-top: 0; margin-bottom: 5px;'><b>Protected Areas:</b></p><ul style='margin-top: 5px; margin-bottom: 0;'><li>PARQUE NACIONAL DE ITATIAIA</li><li>REFÚGIO DE VIDA SILVESTRE ESTADUAL DO MÉDIO PARAÍBA</li></ul>
+
+<h2>Conservation actions</h2>
+<ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
+
+<h2>Distribution Map</h2>
+  <div id="map_41738" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    try {
+      var map = L.map("map_41738");
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap contributors"
+      }).addTo(map);
+
+      map.createPane("ucsPane"); map.getPane("ucsPane").style.zIndex = 400;
+      map.createPane("eooPane"); map.getPane("eooPane").style.zIndex = 410;
+      map.createPane("aooPane"); map.getPane("aooPane").style.zIndex = 420;
+      map.createPane("ptsPane"); map.getPane("ptsPane").style.zIndex = 430;
+
+      var ucsData = null;
+      if (ucsData && ucsData.type) {
+        L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
+      }
+
+      var eooData = { "type": "FeatureCollection", "name": "file137d05fe4379e", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Nidularium itatiaiae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.604378, -22.431869 ], [ -44.563611, -22.496667 ], [ -44.63, -22.47 ], [ -44.6125, -22.442222 ], [ -44.604444, -22.431944 ], [ -44.604378, -22.431869 ] ] ] } } ] };
+      if (eooData && eooData.type) {
+        L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
+      }
+
+      var aooData = { "type": "FeatureCollection", "name": "file137d039081ce2", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 2.0, "species": "Nidularium itatiaiae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.614086352792526, -22.433638445772445 ], [ -44.614086352792526, -22.413223941954318 ], [ -44.596803889620176, -22.413223941954318 ], [ -44.596803889620176, -22.433638445772445 ], [ -44.614086352792526, -22.433638445772445 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Nidularium itatiaiae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.614086352792526, -22.4540558842405 ], [ -44.614086352792526, -22.433638445772445 ], [ -44.596803889620176, -22.433638445772445 ], [ -44.596803889620176, -22.4540558842405 ], [ -44.614086352792526, -22.4540558842405 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Nidularium itatiaiae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.631368815964876, -22.474476261188961 ], [ -44.631368815964876, -22.454055884240496 ], [ -44.614086352792526, -22.454055884240496 ], [ -44.614086352792526, -22.474476261188961 ], [ -44.631368815964876, -22.474476261188961 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Nidularium itatiaiae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.579521426447819, -22.515325845870539 ], [ -44.579521426447819, -22.494899580452607 ], [ -44.562238963275462, -22.494899580452607 ], [ -44.562238963275462, -22.515325845870539 ], [ -44.579521426447819, -22.515325845870539 ] ] ] } } ] };
+      if (aooData && aooData.type) {
+        L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
+      }
+
+      var pts = [[-22.431869, -44.604378],[-22.470000, -44.630000],[-22.442222, -44.612500],[-22.431944, -44.604444],[-22.452500, -44.610000],[-22.496667, -44.563611]];
+      if (pts.length > 0) {
+        pts.forEach(function(p) {
+          L.circleMarker(p, { pane: "ptsPane", radius: 4, fillColor: "#e74c3c", color: "#fff", weight: 1, opacity: 1, fillOpacity: 0.9 }).addTo(map);
+        });
+      }
+
+      var bounds = [[-22.515326, -44.631369], [-22.413224, -44.562239]];
+      if (bounds) {
+        map.fitBounds(bounds, {padding: [30, 30], maxZoom: 14});
+      } else {
+        map.setView([-22.9, -43.2], 7);
+      }
+    } catch (error) {
+      console.error("Leaflet Rendering Error:", error);
+    }
+  });
+  </script>
+
+<h2>References</h2>
+<p>Flora do Brasil 2020 em construção. Jardim Botânico do Rio de Janeiro. Disponível em: http://floradobrasil.jbrj.gov.br.</p><p><a href="http://reflora.jbrj.gov.br/reflora/listaBrasil/FichaPublicaTaxonUC/FichaPublicaTaxonUC.do?id=FB6254" target="_blank" style="color:#2980b9; text-decoration:none; font-weight:bold;">🌐 Link to this taxon on Reflora</a></p>
+
+<hr style="margin-top:40px;">
+<p style="color:#95a5a6;font-size:0.85em;text-align:center;">
+Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+</div>
+</body>
+</html>

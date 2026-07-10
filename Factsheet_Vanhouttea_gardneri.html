@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vanhouttea gardneri (Hook.) Fritsch — IUCN Factsheet</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<style>
+  body { font-family:"Segoe UI",Arial,sans-serif; background:#f4f6f8; margin:0; padding:20px; }
+  .container { max-width:1200px; margin:auto; background:white; padding:30px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+  h1 { color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:10px; margin-bottom:10px; }
+  h2 { color:#34495e; margin-top:30px; border-bottom:2px solid #ecf0f1; padding-bottom:5px; }
+  .resumo-box { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; margin:20px 0; }
+  .resumo-item { background:#ecf0f1; padding:15px; border-radius:8px; text-align:center; }
+  .resumo-item .label { font-size:0.85em; color:#7f8c8d; text-transform:uppercase; }
+  .resumo-item .value { font-size:1.4em; font-weight:bold; color:#2c3e50; margin-top:5px; }
+  .categoria { font-size:2em; font-weight:bold; padding:10px 20px; border-radius:8px; color:white; display:inline-block; margin-bottom: 20px; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; }
+  th,td { padding:10px; border-bottom:1px solid #ecf0f1; text-align:left; }
+  .justificativa { background:#f8f9fa; padding:20px; border-left:4px solid #3498db; border-radius:4px; line-height:1.7; }
+  
+  ::-webkit-scrollbar { height: 8px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #95a5a6; }
+</style>
+</head>
+<body>
+
+<div id="imgModal" style="display:none; position:fixed; z-index:9999; padding-top:40px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.85);" onclick="if(event.target == this) closeModal()">
+  <span style="position:absolute; top:15px; right:35px; color:#f1f1f1; font-size:40px; font-weight:bold; cursor:pointer;" onclick="closeModal()">&times;</span>
+  <div style="margin:auto; display:flex; flex-direction:column; align-items:center; max-width:90%;">
+    <img id="modalContent" style="max-width:100%; max-height:75vh; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5);">
+    <div id="modalCaption" style="margin-top: 15px; background: rgba(255,255,255,0.95); padding: 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-size: 0.9em; max-width: 800px; line-height: 1.5;"></div>
+  </div>
+</div>
+
+<script>
+function openModal(imgElement) {
+  document.getElementById("imgModal").style.display = "block";
+  document.getElementById("modalContent").src = imgElement.src;
+  document.getElementById("modalCaption").innerHTML = imgElement.getAttribute("data-caption");
+}
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+</script>
+
+<div class="container">
+
+<h1><i>Vanhouttea gardneri</i> <span style='font-size:0.55em; font-weight:normal; font-style:normal; color:#555;'>(Hook.) Fritsch</span></h1>
+  <div style="margin-top: 15px; margin-bottom: 25px;">
+    <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scroll-snap-type: x mandatory;">
+      <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/309871403/original.jpg" alt="Photo of Vanhouttea gardneri" data-caption="<b>Author/Owner:</b> Diego Monsores &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/309871403' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/309871419/original.jpg" alt="Photo of Vanhouttea gardneri" data-caption="<b>Author/Owner:</b> Diego Monsores &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/309871419' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/310002429/original.jpeg" alt="Photo of Vanhouttea gardneri" data-caption="<b>Author/Owner:</b> Gabriel Silva Guimarães &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/310002429' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/310002458/original.jpeg" alt="Photo of Vanhouttea gardneri" data-caption="<b>Author/Owner:</b> Gabriel Silva Guimarães &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/310002458' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/310002497/original.jpeg" alt="Photo of Vanhouttea gardneri" data-caption="<b>Author/Owner:</b> Gabriel Silva Guimarães &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/310002497' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/310002536/original.jpeg" alt="Photo of Vanhouttea gardneri" data-caption="<b>Author/Owner:</b> Gabriel Silva Guimarães &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/310002536' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/310002580/original.jpeg" alt="Photo of Vanhouttea gardneri" data-caption="<b>Author/Owner:</b> Gabriel Silva Guimarães &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/310002580' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/310002629/original.jpeg" alt="Photo of Vanhouttea gardneri" data-caption="<b>Author/Owner:</b> Gabriel Silva Guimarães &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/310002629' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/148821145/original.jpeg" alt="Photo of Vanhouttea gardneri" data-caption="<b>Author/Owner:</b> Victor Farjalla Pontes &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.inaturalist.org/photos/148821145' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/148821244/original.jpeg" alt="Photo of Vanhouttea gardneri" data-caption="<b>Author/Owner:</b> Victor Farjalla Pontes &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.inaturalist.org/photos/148821244' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+    </div>
+    <p style="font-size: 0.75em; color: #7f8c8d; margin-top: -5px;">Source: GBIF Occurrences (Click on any image to view details and references)</p>
+  </div>
+
+<h2>Taxonomy</h2>
+  <div style="background:#ecf0f1; padding:15px; border-radius:8px; display:flex; gap:30px; flex-wrap:wrap;">
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Family</span><br><b>Gesneriaceae</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Genus</span><br><b>Vanhouttea</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Authority</span><br><b>(Hook.) Fritsch</b></div>
+  </div>
+
+<br>
+<div class="categoria" style="background-color:#F9E814;">VU &middot; B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div>
+
+<h2>Assessment Summary</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Category</div><div class="value">VU</div></div>
+  <div class="resumo-item"><div class="label">Criterion</div><div class="value">B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div></div>
+  <div class="resumo-item"><div class="label">Year</div><div class="value">2026</div></div>
+  <div class="resumo-item"><div class="label">Scope</div><div class="value">Regional (RJ)</div></div>
+</div>
+
+<h2>Justification</h2>
+<div class="justificativa"><i>Vanhouttea gardneri</i> is endemic to the state of Rio de Janeiro, with a rupicolous habit. The spatial analysis of confirmed occurrences (EOO = 2,978.5 km²; AOO = 28 km², 2×2 km grid) identified <b>7</b> locations determined by the threat. Assessment: <b>VU</b> under criterion B1 (EOO < 20,000 km²). Criterion: <b>B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</b>.  The number of locations (7) meets the IUCN threshold for VU (≤ 10).  Active threats (IUCN-CMP v3.3): 2.3 Livestock farming & ranching.  Occurs in Protected Areas (PA regime: Integral Protection and Sustainable Use): RESERVA PARTICULAR DO PATRIMÔNIO NATURAL VERBICARO | PARQUE NACIONAL DA TIJUCA | ÁREA DE PROTEÇÃO AMBIENTAL SÃO DOMINGOS | ÁREA DE PROTEÇÃO AMBIENTAL DE MACAÉ DE CIMA | PARQUE ESTADUAL DOS TRÊS PICOS | ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO MACACU | PARQUE ESTADUAL DO DESENGANO | PARQUE NACIONAL DA SERRA DOS ÓRGÃOS. </div>
+
+<h2>Supporting Information</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Countries</div><div class="value" style="font-size:1em;">BR-RJ (Brazil, Rio de Janeiro)</div></div>
+  <div class="resumo-item"><div class="label">System</div><div class="value" style="font-size:1em;">Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Habitat</div><div class="value" style="font-size:1em;">Rupicolous</div></div>
+  <div class="resumo-item"><div class="label">Biome</div><div class="value" style="font-size:1em;">Atlantic Forest</div></div>
+  <div class="resumo-item"><div class="label">Vegetation</div><div class="value" style="font-size:1em;">Rainforest</div></div>
+</div>
+
+<h2>Geographic Distribution</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">EOO</div><div class="value">2978.5 km²</div></div>
+  <div class="resumo-item"><div class="label">AOO (2×2 km)</div><div class="value">28 km²</div></div>
+  <div class="resumo-item"><div class="label">Endemic to RJ</div><div class="value">Yes</div></div>
+  <div class="resumo-item"><div class="label">Occurrences</div><div class="value">11</div></div>
+</div>
+
+<h2>Population & Locations</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Locations §4.11</div><div class="value">7</div></div>
+  <div class="resumo-item"><div class="label">Critical Threat</div><div class="value" style="font-size:1em;">10.3</div></div>
+  <div class="resumo-item"><div class="label">Population Trend</div><div class="value" style="font-size:1em;">Decreasing</div></div>
+</div>
+
+<h2>Collections Used</h2>
+  <div style="max-height: 250px; overflow-y: auto; border: 1px solid #ecf0f1; padding: 15px; border-radius: 4px; background: #fafafa;">
+    <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; line-height: 1.6; color: #2c3e50;">
+      <li><b>C.Baez; Rafael Gomes, Patrícia da Rosa, Mássimo Bovini e Carlos Ferreira 595</b> (2016) - JBRJ — <i>Rio de Janeiro</i></li><li><b>Costa, CB; et al. 472</b> (2001) - IPA/SP — <i>Teresópolis</i></li><li><b>H. C. de Lima; Et al. 3009</b> (1987) - JBRJ — <i>Santa Maria Madalena</i></li><li><b>L. B. Smith 6687</b> (1952) - NY — <i>Unknown Municipality</i></li><li><b>M.S.Wängler; V.S.Ferreira; L.F.A. Barros 1621</b> (2015) - JBRJ — <i>Santa Maria Madalena</i></li><li><b>Monzoli, J.V.L.; Araújo, M.D.F. 475</b> (2022) - UNESP-IBILCE — <i>Rio de Janeiro</i></li><li><b>Perret, M., A. Chautems, M. Peixoto & I. G. Costa 67</b> (2012) - CJBG — <i>Campos dos Goytacazes</i></li><li><b>Perret, M., M. Wolowski Torres, A. Chautems, Y. Menneret & M. Peixoto 339</b> (2019) - CJBG — <i>Teresópolis</i></li><li><b>Romão, GO; Dantas, APT 1456</b> (2006) - UNICAMP — <i>Santa Maria Madalena</i></li><li><b>Smith, LB 6687</b> (1952) - IPA/SP — <i>Nova Friburgo</i></li><li><b>W. R. Anderson 11722</b> (1976) - NY — <i>Unknown Municipality</i></li>
+    </ul>
+  </div>
+  <p style="font-size:0.8em; color:#7f8c8d; margin-top:5px;">Total collections evaluated: 11</p>
+
+<h2>Threats Summary</h2>
+<table style="width:100%;border-collapse:collapse;"><thead style="background:#34495e;color:white;"><tr><th>Threat (IUCN-CMP v3.3)</th><th>Timing</th><th>Scope</th><th>% AOO</th><th>% EOO</th><th>Severity</th></tr></thead><tbody><tr><td><b>2.3 Livestock farming & ranching</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>21.01%</td><td>38.54%</td><td>slow</td></tr><tr><td><b>10.3 Avalanches/landslides</b></td><td><span style="color:#9b59b6;font-weight:bold;">past_likely_return</span></td><td>minority</td><td>30.12%</td><td>11.71%</td><td>no_decline</td></tr></tbody></table>
+
+<h2>Threats — Methodological Details</h2>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">1.1 Housing & urban areas</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from human settlements with substantial footprint (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 24 (Urban Infrastructure).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">4.07% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🏘️
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.1 Annual & perennial non-timber crops</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Crops planted for food, fodder, fibre, fuel (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 18-20, 35-36, 39-41, 46-48, 62.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.1% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🌾
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.2 Wood & pulp plantations</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Stands of trees planted for timber outside natural forests (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 9 (Forest Plantation).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.52% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🌲
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.3 Livestock farming & ranching</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Domestic terrestrial animals raised in one location or roaming wild (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 14, 15 and 21.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">21.01% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">38.54% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🐄
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">3.2 Mining & quarrying</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Exploring for, developing, and producing minerals and rocks (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 30 (Mining).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.01% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    ⛏️
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">10.3 Avalanches/landslides</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from catastrophic geological events (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> High susceptibility polygons CPRM/IPT filtered by scars dated via LandTrendr/CCDC.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">30.12% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">11.71% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    ⛰️
+  </div>
+</div>
+
+<h2>Protection Status</h2>
+<p style='margin-bottom: 5px;'><b>Management Category:</b> Integral Protection and Sustainable Use</p><p style='margin-top: 0; margin-bottom: 5px;'><b>Protected Areas:</b></p><ul style='margin-top: 5px; margin-bottom: 0;'><li>RESERVA PARTICULAR DO PATRIMÔNIO NATURAL VERBICARO</li><li>PARQUE NACIONAL DA TIJUCA</li><li>ÁREA DE PROTEÇÃO AMBIENTAL SÃO DOMINGOS</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DE MACAÉ DE CIMA</li><li>PARQUE ESTADUAL DOS TRÊS PICOS</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO MACACU</li><li>PARQUE ESTADUAL DO DESENGANO</li><li>PARQUE NACIONAL DA SERRA DOS ÓRGÃOS</li></ul>
+
+<h2>Conservation actions</h2>
+<ul><li>2.1 Site/area management</li><li>2.3 Habitat & natural process restoration</li><li>1.2 Resource & habitat protection</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
+
+<h2>Distribution Map</h2>
+  <div id="map_72158" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    try {
+      var map = L.map("map_72158");
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap contributors"
+      }).addTo(map);
+
+      map.createPane("ucsPane"); map.getPane("ucsPane").style.zIndex = 400;
+      map.createPane("eooPane"); map.getPane("eooPane").style.zIndex = 410;
+      map.createPane("aooPane"); map.getPane("aooPane").style.zIndex = 420;
+      map.createPane("ptsPane"); map.getPane("ptsPane").style.zIndex = 430;
+
+      var ucsData = null;
+      if (ucsData && ucsData.type) {
+        L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
+      }
+
+      var eooData = { "type": "FeatureCollection", "name": "file137d037903d82", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Vanhouttea gardneri" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.1617538, -22.8963415 ], [ -43.256667, -22.964167 ], [ -43.256944, -22.964167 ], [ -43.1928057, -22.8360802 ], [ -43.1287881, -22.7079678 ], [ -43.0648902, -22.57983 ], [ -43.001111, -22.451667 ], [ -42.8539684, -22.3746816 ], [ -42.7069887, -22.2975633 ], [ -42.5601712, -22.2203128 ], [ -42.413515499999988, -22.1429308 ], [ -42.2670211, -22.0654178 ], [ -42.1206874, -21.9877746 ], [ -41.9745139, -21.9100018 ], [ -41.8285, -21.8321 ], [ -41.9121324, -21.905737 ], [ -41.9958512, -21.9793316 ], [ -42.079656799999988, -22.0528838 ], [ -42.1635496, -22.1263932 ], [ -42.24753, -22.1998598 ], [ -42.3315983, -22.2732832 ], [ -42.4157548, -22.3466634 ], [ -42.5, -22.42 ], [ -42.5942559, -22.4882145 ], [ -42.6886046, -22.5563742 ], [ -42.7830466, -22.6244788 ], [ -42.8775822, -22.6925281 ], [ -42.9722117, -22.7605218 ], [ -43.0669355, -22.8284596 ], [ -43.1617538, -22.8963415 ] ] ] } } ] };
+      if (eooData && eooData.type) {
+        L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
+      }
+
+      var aooData = { "type": "FeatureCollection", "name": "file137d031dc69d", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Vanhouttea gardneri" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.837167658706306, -21.841804704004925 ], [ -41.837167658706306, -21.822362359661284 ], [ -41.819305557596877, -21.822362359661284 ], [ -41.819305557596877, -21.841804704004925 ], [ -41.837167658706306, -21.841804704004925 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Vanhouttea gardneri" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.997926568691199, -21.958513140296208 ], [ -41.997926568691199, -21.939055245348694 ], [ -41.980064467581769, -21.939055245348694 ], [ -41.980064467581769, -21.958513140296208 ], [ -41.997926568691199, -21.958513140296208 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Vanhouttea gardneri" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.033650770910079, -21.977973638403768 ], [ -42.033650770910079, -21.958513140296208 ], [ -42.015788669800635, -21.958513140296208 ], [ -42.015788669800635, -21.977973638403768 ], [ -42.033650770910079, -21.977973638403768 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Vanhouttea gardneri" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.140823377566662, -22.016902457159162 ], [ -42.140823377566662, -21.997436742935555 ], [ -42.122961276457225, -21.997436742935555 ], [ -42.122961276457225, -22.016902457159162 ], [ -42.140823377566662, -22.016902457159162 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Vanhouttea gardneri" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.515927500864748, -22.426291118426604 ], [ -42.515927500864748, -22.406769839707707 ], [ -42.498065399755312, -22.406769839707707 ], [ -42.498065399755312, -22.426291118426604 ], [ -42.515927500864748, -22.426291118426604 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Vanhouttea gardneri" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.016066331928862, -22.465341726596165 ], [ -43.016066331928862, -22.445815079606625 ], [ -42.998204230819425, -22.445815079606625 ], [ -42.998204230819425, -22.465341726596165 ], [ -43.016066331928862, -22.465341726596165 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Vanhouttea gardneri" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.266135747460915, -22.973988323096961 ], [ -43.266135747460915, -22.954390657843501 ], [ -43.248273646351478, -22.954390657843501 ], [ -43.248273646351478, -22.973988323096961 ], [ -43.266135747460915, -22.973988323096961 ] ] ] } } ] };
+      if (aooData && aooData.type) {
+        L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
+      }
+
+      var pts = [[-22.964167, -43.256944],[-22.451667, -43.001111],[-21.950000, -41.983333],[-22.420000, -42.500000],[-21.943055, -41.993333],[-22.964167, -43.256667],[-21.832100, -41.828500],[-22.452000, -43.000000],[-22.015278, -42.125000],[-22.416667, -42.500000],[-21.970000, -42.020000]];
+      if (pts.length > 0) {
+        pts.forEach(function(p) {
+          L.circleMarker(p, { pane: "ptsPane", radius: 4, fillColor: "#e74c3c", color: "#fff", weight: 1, opacity: 1, fillOpacity: 0.9 }).addTo(map);
+        });
+      }
+
+      var bounds = [[-22.973988, -43.266136], [-21.822362, -41.819306]];
+      if (bounds) {
+        map.fitBounds(bounds, {padding: [30, 30], maxZoom: 14});
+      } else {
+        map.setView([-22.9, -43.2], 7);
+      }
+    } catch (error) {
+      console.error("Leaflet Rendering Error:", error);
+    }
+  });
+  </script>
+
+<h2>References</h2>
+<p>Flora do Brasil 2020 em construção. Jardim Botânico do Rio de Janeiro. Disponível em: http://floradobrasil.jbrj.gov.br.</p><p><a href="http://reflora.jbrj.gov.br/reflora/listaBrasil/FichaPublicaTaxonUC/FichaPublicaTaxonUC.do?id=FB7941" target="_blank" style="color:#2980b9; text-decoration:none; font-weight:bold;">🌐 Link to this taxon on Reflora</a></p>
+
+<hr style="margin-top:40px;">
+<p style="color:#95a5a6;font-size:0.85em;text-align:center;">
+Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+</div>
+</body>
+</html>

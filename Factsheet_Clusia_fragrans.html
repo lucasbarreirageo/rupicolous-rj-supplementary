@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clusia fragrans Gardner — IUCN Factsheet</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<style>
+  body { font-family:"Segoe UI",Arial,sans-serif; background:#f4f6f8; margin:0; padding:20px; }
+  .container { max-width:1200px; margin:auto; background:white; padding:30px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+  h1 { color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:10px; margin-bottom:10px; }
+  h2 { color:#34495e; margin-top:30px; border-bottom:2px solid #ecf0f1; padding-bottom:5px; }
+  .resumo-box { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; margin:20px 0; }
+  .resumo-item { background:#ecf0f1; padding:15px; border-radius:8px; text-align:center; }
+  .resumo-item .label { font-size:0.85em; color:#7f8c8d; text-transform:uppercase; }
+  .resumo-item .value { font-size:1.4em; font-weight:bold; color:#2c3e50; margin-top:5px; }
+  .categoria { font-size:2em; font-weight:bold; padding:10px 20px; border-radius:8px; color:white; display:inline-block; margin-bottom: 20px; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; }
+  th,td { padding:10px; border-bottom:1px solid #ecf0f1; text-align:left; }
+  .justificativa { background:#f8f9fa; padding:20px; border-left:4px solid #3498db; border-radius:4px; line-height:1.7; }
+  
+  ::-webkit-scrollbar { height: 8px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #95a5a6; }
+</style>
+</head>
+<body>
+
+<div id="imgModal" style="display:none; position:fixed; z-index:9999; padding-top:40px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.85);" onclick="if(event.target == this) closeModal()">
+  <span style="position:absolute; top:15px; right:35px; color:#f1f1f1; font-size:40px; font-weight:bold; cursor:pointer;" onclick="closeModal()">&times;</span>
+  <div style="margin:auto; display:flex; flex-direction:column; align-items:center; max-width:90%;">
+    <img id="modalContent" style="max-width:100%; max-height:75vh; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5);">
+    <div id="modalCaption" style="margin-top: 15px; background: rgba(255,255,255,0.95); padding: 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-size: 0.9em; max-width: 800px; line-height: 1.5;"></div>
+  </div>
+</div>
+
+<script>
+function openModal(imgElement) {
+  document.getElementById("imgModal").style.display = "block";
+  document.getElementById("modalContent").src = imgElement.src;
+  document.getElementById("modalCaption").innerHTML = imgElement.getAttribute("data-caption");
+}
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+</script>
+
+<div class="container">
+
+<h1><i>Clusia fragrans</i> <span style='font-size:0.55em; font-weight:normal; font-style:normal; color:#555;'>Gardner</span></h1>
+  <div style="margin-top: 15px; margin-bottom: 25px;">
+    <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scroll-snap-type: x mandatory;">
+      <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/115639477/original.jpg" alt="Photo of Clusia fragrans" data-caption="<b>Author/Owner:</b> Victor Farjalla Pontes &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.inaturalist.org/photos/115639477' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://fm-digital-assets.fieldmuseum.org/924/819/V0316085F.jpg" alt="Photo of Clusia fragrans" data-caption="<b>Author/Owner:</b> Field Museum of Natural History - Botany Department | GDI 2013-2015 &middot; <b>License:</b> (c) Field Museum of Natural History - CC BY-NC 4.0 &middot; <a href='https://www.gbif.org/occurrence/1228593388' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://sweetgum.nybg.org/images3/2168/937/00455777.jpg" alt="Photo of Clusia fragrans" data-caption="<b>Author/Owner:</b> The New York Botanical Garden &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.gbif.org/occurrence/1929036955' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://d2jcv3kl45hlgi.cloudfront.net/6052de0e9d96b08d5ed7c2c69a56af8b.jpg" alt="Photo of Clusia fragrans" data-caption="<b>Author/Owner:</b> Royal Botanic Gardens, Kew &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='http://specimens.kew.org/Herbarium/K001230124' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://sweetgum.nybg.org/images3/779/125/01551266.jpg" alt="Photo of Clusia fragrans" data-caption="<b>Author/Owner:</b> The New York Botanical Garden &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.gbif.org/occurrence/1928849922' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://d2jcv3kl45hlgi.cloudfront.net/ba139255fade3b26743eab79be0180c5.jpg" alt="Photo of Clusia fragrans" data-caption="<b>Author/Owner:</b> Royal Botanic Gardens, Kew &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='http://specimens.kew.org/Herbarium/K001230125' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://sweetgum.nybg.org/images3/2168/934/00455772.jpg" alt="Photo of Clusia fragrans" data-caption="<b>Author/Owner:</b> The New York Botanical Garden &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.gbif.org/occurrence/1928103461' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://sweetgum.nybg.org/images3/2168/935/00455773.jpg" alt="Photo of Clusia fragrans" data-caption="<b>Author/Owner:</b> The New York Botanical Garden &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.gbif.org/occurrence/1929722397' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://sweetgum.nybg.org/images3/2168/936/00455774.jpg" alt="Photo of Clusia fragrans" data-caption="<b>Author/Owner:</b> The New York Botanical Garden &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.gbif.org/occurrence/1928471053' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://sweetgum.nybg.org/images3/2168/933/00455771.jpg" alt="Photo of Clusia fragrans" data-caption="<b>Author/Owner:</b> The New York Botanical Garden &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.gbif.org/occurrence/1928231376' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+    </div>
+    <p style="font-size: 0.75em; color: #7f8c8d; margin-top: -5px;">Source: GBIF Occurrences (Click on any image to view details and references)</p>
+  </div>
+
+<h2>Taxonomy</h2>
+  <div style="background:#ecf0f1; padding:15px; border-radius:8px; display:flex; gap:30px; flex-wrap:wrap;">
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Family</span><br><b>Clusiaceae</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Genus</span><br><b>Clusia</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Authority</span><br><b>Gardner</b></div>
+  </div>
+
+<br>
+<div class="categoria" style="background-color:#F9E814;">VU &middot; B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div>
+
+<h2>Assessment Summary</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Category</div><div class="value">VU</div></div>
+  <div class="resumo-item"><div class="label">Criterion</div><div class="value">B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div></div>
+  <div class="resumo-item"><div class="label">Year</div><div class="value">2026</div></div>
+  <div class="resumo-item"><div class="label">Scope</div><div class="value">Regional (RJ)</div></div>
+</div>
+
+<h2>Justification</h2>
+<div class="justificativa"><i>Clusia fragrans</i> is endemic to the state of Rio de Janeiro, with a rupicolous habit. The spatial analysis of confirmed occurrences (EOO = 2,067.1 km²; AOO = 40 km², 2×2 km grid) identified <b>8</b> locations determined by the threat. Assessment: <b>VU</b> under criterion B1 (EOO < 20,000 km²). Criterion: <b>B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</b>.  The number of locations (8) meets the IUCN threshold for VU (≤ 10).  Active threats (IUCN-CMP v3.3): 1.1 Housing & urban areas; 2.2 Wood & pulp plantations; 2.3 Livestock farming & ranching.  Occurs in Protected Areas (PA regime: Integral Protection and Sustainable Use): RESERVA PARTICULAR DO PATRIMÔNIO NATURAL TOCA DA ONÇA | PARQUE NATURAL MUNICIPAL MONTANHAS DE TERESÓPOLIS | MONUMENTO NATURAL ESTADUAL DA SERRA DA MARIA COMPRIDA | RESERVA BIOLÓGICA DE ARARAS | ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO MACACU | PARQUE ESTADUAL DO DESENGANO | ÁREA DE PROTEÇÃO AMBIENTAL DA REGIÃO SERRANA DE PETRÓPOLIS | RESERVA BIOLÓGICA DO TINGUÁ | PARQUE NACIONAL DA SERRA DOS ÓRGÃOS. </div>
+
+<h2>Supporting Information</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Countries</div><div class="value" style="font-size:1em;">BR-RJ (Brazil, Rio de Janeiro)</div></div>
+  <div class="resumo-item"><div class="label">System</div><div class="value" style="font-size:1em;">Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Habitat</div><div class="value" style="font-size:1em;">Rupicolous, Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Biome</div><div class="value" style="font-size:1em;">Atlantic Forest</div></div>
+  <div class="resumo-item"><div class="label">Vegetation</div><div class="value" style="font-size:1em;">High Altitude Grassland, Rainforest</div></div>
+</div>
+
+<h2>Geographic Distribution</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">EOO</div><div class="value">2067.1 km²</div></div>
+  <div class="resumo-item"><div class="label">AOO (2×2 km)</div><div class="value">40 km²</div></div>
+  <div class="resumo-item"><div class="label">Endemic to RJ</div><div class="value">Yes</div></div>
+  <div class="resumo-item"><div class="label">Occurrences</div><div class="value">15</div></div>
+</div>
+
+<h2>Population & Locations</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Locations §4.11</div><div class="value">8</div></div>
+  <div class="resumo-item"><div class="label">Critical Threat</div><div class="value" style="font-size:1em;">2.3</div></div>
+  <div class="resumo-item"><div class="label">Population Trend</div><div class="value" style="font-size:1em;">Decreasing</div></div>
+</div>
+
+<h2>Collections Used</h2>
+  <div style="max-height: 250px; overflow-y: auto; border: 1px solid #ecf0f1; padding: 15px; border-radius: 4px; background: #fafafa;">
+    <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; line-height: 1.6; color: #2c3e50;">
+      <li><b>A. C. Brade 21205</b> (1952) - NY — <i>Unknown Municipality</i></li><li><b>Baez, C; Lima, T 435</b> (2016) - UNICAMP — <i>São Fidélis</i></li><li><b>Braga, J.M.A; Joffily, A.; Joffily, T.; Braga, C. 18-074</b> (2018) - MBM — <i>Petrópolis</i></li><li><b>C. Baez; Thalis Lima 435</b> (2016) - JBRJ — <i>São Fidélis</i></li><li><b>D. Nunes; J.M.A. Braga, P. Feliz, T. Fernandes & E.F.S. Rossetto 1935</b> (2024) - JBRJ — <i>Petrópolis</i></li><li><b>Fiaschi, P 3892</b> (2012) - SPF — <i>Teresópolis</i></li><li><b>G. Martinelli; M.A. Moraes & B. Benevenuto 16046</b> (2006) - JBRJ — <i>Petrópolis</i></li><li><b>J. H. Kirkbride Jr. 1725</b> (1972) - NY — <i>Unknown Municipality</i></li><li><b>J. Wesenberg; R. Engelmann 651</b> (2005) - JBRJ — <i>Teresópolis</i></li><li><b>Lombardi, J.A. 8293</b> (s.d.) - UNESP-RC — <i>Teresópolis</i></li><li><b>M. Leitman; et al 201</b> (1986) - JBRJ — <i>Nova Friburgo</i></li><li><b>M.S. Wängler; Arruda, B.A. 2281</b> (2018) - JBRJ — <i>Petrópolis</i></li><li><b>T.M. Portugal 115</b> (2018) - JBRJ — <i>Petrópolis</i></li><li><b>T.M. Portugal 24</b> (2017) - JBRJ — <i>Petrópolis</i></li><li><b>M. Moraes ; G. Martinelli, B. Benevenuto & L. Melo</b> (2006) - JBRJ — <i>Petrópolis</i></li>
+    </ul>
+  </div>
+  <p style="font-size:0.8em; color:#7f8c8d; margin-top:5px;">Total collections evaluated: 15</p>
+
+<h2>Threats Summary</h2>
+<table style="width:100%;border-collapse:collapse;"><thead style="background:#34495e;color:white;"><tr><th>Threat (IUCN-CMP v3.3)</th><th>Timing</th><th>Scope</th><th>% AOO</th><th>% EOO</th><th>Severity</th></tr></thead><tbody><tr><td><b>1.1 Housing & urban areas</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>6.28%</td><td>2.46%</td><td>slow</td></tr><tr><td><b>2.2 Wood & pulp plantations</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>0.12%</td><td>0.68%</td><td>slow</td></tr><tr><td><b>2.3 Livestock farming & ranching</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>20.06%</td><td>46.46%</td><td>slow</td></tr><tr><td><b>10.3 Avalanches/landslides</b></td><td><span style="color:#9b59b6;font-weight:bold;">past_likely_return</span></td><td>minority</td><td>24.12%</td><td>12.4%</td><td>no_decline</td></tr></tbody></table>
+
+<h2>Threats — Methodological Details</h2>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">1.1 Housing & urban areas</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from human settlements with substantial footprint (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 24 (Urban Infrastructure).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">6.28% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">2.46% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🏘️
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.2 Wood & pulp plantations</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Stands of trees planted for timber outside natural forests (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 9 (Forest Plantation).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0.12% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.68% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🌲
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.3 Livestock farming & ranching</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Domestic terrestrial animals raised in one location or roaming wild (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 14, 15 and 21.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">20.06% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">46.46% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🐄
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">10.3 Avalanches/landslides</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from catastrophic geological events (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> High susceptibility polygons CPRM/IPT filtered by scars dated via LandTrendr/CCDC.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">24.12% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">12.4% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    ⛰️
+  </div>
+</div>
+
+<h2>Protection Status</h2>
+<p style='margin-bottom: 5px;'><b>Management Category:</b> Integral Protection and Sustainable Use</p><p style='margin-top: 0; margin-bottom: 5px;'><b>Protected Areas:</b></p><ul style='margin-top: 5px; margin-bottom: 0;'><li>RESERVA PARTICULAR DO PATRIMÔNIO NATURAL TOCA DA ONÇA</li><li>PARQUE NATURAL MUNICIPAL MONTANHAS DE TERESÓPOLIS</li><li>MONUMENTO NATURAL ESTADUAL DA SERRA DA MARIA COMPRIDA</li><li>RESERVA BIOLÓGICA DE ARARAS</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO MACACU</li><li>PARQUE ESTADUAL DO DESENGANO</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA REGIÃO SERRANA DE PETRÓPOLIS</li><li>RESERVA BIOLÓGICA DO TINGUÁ</li><li>PARQUE NACIONAL DA SERRA DOS ÓRGÃOS</li></ul>
+
+<h2>Conservation actions</h2>
+<ul><li>2.1 Site/area management</li><li>2.3 Habitat & natural process restoration</li><li>1.2 Resource & habitat protection</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
+
+<h2>Distribution Map</h2>
+  <div id="map_22053" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    try {
+      var map = L.map("map_22053");
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap contributors"
+      }).addTo(map);
+
+      map.createPane("ucsPane"); map.getPane("ucsPane").style.zIndex = 400;
+      map.createPane("eooPane"); map.getPane("eooPane").style.zIndex = 410;
+      map.createPane("aooPane"); map.getPane("aooPane").style.zIndex = 420;
+      map.createPane("ptsPane"); map.getPane("ptsPane").style.zIndex = 430;
+
+      var ucsData = null;
+      if (ucsData && ucsData.type) {
+        L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
+      }
+
+      var eooData = { "type": "FeatureCollection", "name": "file137d07aaf1200", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Clusia fragrans" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.9403078, -22.4416447 ], [ -43.067954, -22.504339 ], [ -43.1771811, -22.4922063 ], [ -43.286389, -22.48 ], [ -43.292222, -22.445555 ], [ -43.233333, -22.4 ], [ -43.1185581, -22.3357349 ], [ -43.003889, -22.271389 ], [ -42.8672278, -22.2212299 ], [ -42.7306644, -22.1709568 ], [ -42.5941987, -22.1205701 ], [ -42.4578307, -22.07007 ], [ -42.3215602, -22.019457 ], [ -42.1853872, -21.9687314 ], [ -42.0493115, -21.9178936 ], [ -41.913333, -21.866944 ], [ -41.913333, -21.869444 ], [ -41.9816351, -21.9347361 ], [ -42.05, -22.0 ], [ -42.1768442, -22.0633876 ], [ -42.3038022, -22.1266774 ], [ -42.4308742, -22.189869 ], [ -42.5580604, -22.2529619 ], [ -42.6853613, -22.3159557 ], [ -42.8127769, -22.3788501 ], [ -42.9403078, -22.4416447 ] ] ] } } ] };
+      if (eooData && eooData.type) {
+        L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
+      }
+
+      var aooData = { "type": "FeatureCollection", "name": "file137d07d4925", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 2.0, "species": "Clusia fragrans" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.931124650154175, -21.885907665669908 ], [ -41.931124650154175, -21.866614120560801 ], [ -41.913213906935653, -21.866614120560801 ], [ -41.913213906935653, -21.885907665669908 ], [ -41.931124650154175, -21.885907665669908 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Clusia fragrans" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.056499852683821, -22.001722596680722 ], [ -42.056499852683821, -21.982413704135947 ], [ -42.038589109465299, -21.982413704135947 ], [ -42.038589109465299, -22.001722596680722 ], [ -42.056499852683821, -22.001722596680722 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Clusia fragrans" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.005769243265426, -22.272318301102167 ], [ -43.005769243265426, -22.252973149878095 ], [ -42.987858500046904, -22.252973149878095 ], [ -42.987858500046904, -22.272318301102167 ], [ -43.005769243265426, -22.272318301102167 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Clusia fragrans" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.238608905106197, -22.407807735745134 ], [ -43.238608905106197, -22.388444217750564 ], [ -43.220698161887668, -22.388444217750564 ], [ -43.220698161887668, -22.407807735745134 ], [ -43.238608905106197, -22.407807735745134 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Clusia fragrans" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.987858500046904, -22.427173890585816 ], [ -42.987858500046904, -22.407807735745124 ], [ -42.969947756828383, -22.407807735745124 ], [ -42.969947756828383, -22.427173890585816 ], [ -42.987858500046904, -22.427173890585816 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Clusia fragrans" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.292341134761756, -22.446542685538446 ], [ -43.292341134761756, -22.427173890585816 ], [ -43.274430391543234, -22.427173890585816 ], [ -43.274430391543234, -22.446542685538446 ], [ -43.292341134761756, -22.446542685538446 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Clusia fragrans" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.256519648324712, -22.446542685538446 ], [ -43.256519648324712, -22.427173890585816 ], [ -43.23860890510619, -22.427173890585816 ], [ -43.23860890510619, -22.446542685538446 ], [ -43.256519648324712, -22.446542685538446 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Clusia fragrans" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.023679986483948, -22.465914123872309 ], [ -43.023679986483948, -22.446542685538439 ], [ -43.005769243265419, -22.446542685538439 ], [ -43.005769243265419, -22.465914123872309 ], [ -43.023679986483948, -22.465914123872309 ] ] ] } }, { "type": "Feature", "properties": { "count": 3.0, "species": "Clusia fragrans" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.292341134761756, -22.485288208860197 ], [ -43.292341134761756, -22.465914123872309 ], [ -43.274430391543234, -22.465914123872309 ], [ -43.274430391543234, -22.485288208860197 ], [ -43.292341134761756, -22.485288208860197 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Clusia fragrans" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.077412216139514, -22.504664943778362 ], [ -43.077412216139514, -22.48528820886019 ], [ -43.059501472920985, -22.48528820886019 ], [ -43.059501472920985, -22.504664943778362 ], [ -43.077412216139514, -22.504664943778362 ] ] ] } } ] };
+      if (aooData && aooData.type) {
+        L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
+      }
+
+      var pts = [[-22.504339, -43.067954],[-21.869444, -41.913333],[-22.479722, -43.286389],[-21.866944, -41.913333],[-22.478333, -43.285278],[-22.271389, -43.003889],[-22.432500, -43.242222],[-22.449167, -43.013889],[-22.463889, -43.013333],[-22.416667, -42.983333],[-22.000000, -42.050000],[-22.428333, -43.246111],[-22.480000, -43.286389],[-22.445555, -43.292222],[-22.400000, -43.233333]];
+      if (pts.length > 0) {
+        pts.forEach(function(p) {
+          L.circleMarker(p, { pane: "ptsPane", radius: 4, fillColor: "#e74c3c", color: "#fff", weight: 1, opacity: 1, fillOpacity: 0.9 }).addTo(map);
+        });
+      }
+
+      var bounds = [[-22.504665, -43.292341], [-21.866614, -41.913214]];
+      if (bounds) {
+        map.fitBounds(bounds, {padding: [30, 30], maxZoom: 14});
+      } else {
+        map.setView([-22.9, -43.2], 7);
+      }
+    } catch (error) {
+      console.error("Leaflet Rendering Error:", error);
+    }
+  });
+  </script>
+
+<h2>References</h2>
+<p>Flora do Brasil 2020 em construção. Jardim Botânico do Rio de Janeiro. Disponível em: http://floradobrasil.jbrj.gov.br.</p><p><a href="http://reflora.jbrj.gov.br/reflora/listaBrasil/FichaPublicaTaxonUC/FichaPublicaTaxonUC.do?id=FB6835" target="_blank" style="color:#2980b9; text-decoration:none; font-weight:bold;">🌐 Link to this taxon on Reflora</a></p>
+
+<hr style="margin-top:40px;">
+<p style="color:#95a5a6;font-size:0.85em;text-align:center;">
+Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+</div>
+</body>
+</html>

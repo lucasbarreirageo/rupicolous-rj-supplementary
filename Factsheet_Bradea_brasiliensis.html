@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bradea brasiliensis Standl. — IUCN Factsheet</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<style>
+  body { font-family:"Segoe UI",Arial,sans-serif; background:#f4f6f8; margin:0; padding:20px; }
+  .container { max-width:1200px; margin:auto; background:white; padding:30px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+  h1 { color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:10px; margin-bottom:10px; }
+  h2 { color:#34495e; margin-top:30px; border-bottom:2px solid #ecf0f1; padding-bottom:5px; }
+  .resumo-box { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; margin:20px 0; }
+  .resumo-item { background:#ecf0f1; padding:15px; border-radius:8px; text-align:center; }
+  .resumo-item .label { font-size:0.85em; color:#7f8c8d; text-transform:uppercase; }
+  .resumo-item .value { font-size:1.4em; font-weight:bold; color:#2c3e50; margin-top:5px; }
+  .categoria { font-size:2em; font-weight:bold; padding:10px 20px; border-radius:8px; color:white; display:inline-block; margin-bottom: 20px; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; }
+  th,td { padding:10px; border-bottom:1px solid #ecf0f1; text-align:left; }
+  .justificativa { background:#f8f9fa; padding:20px; border-left:4px solid #3498db; border-radius:4px; line-height:1.7; }
+  
+  ::-webkit-scrollbar { height: 8px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #95a5a6; }
+</style>
+</head>
+<body>
+
+<div id="imgModal" style="display:none; position:fixed; z-index:9999; padding-top:40px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.85);" onclick="if(event.target == this) closeModal()">
+  <span style="position:absolute; top:15px; right:35px; color:#f1f1f1; font-size:40px; font-weight:bold; cursor:pointer;" onclick="closeModal()">&times;</span>
+  <div style="margin:auto; display:flex; flex-direction:column; align-items:center; max-width:90%;">
+    <img id="modalContent" style="max-width:100%; max-height:75vh; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5);">
+    <div id="modalCaption" style="margin-top: 15px; background: rgba(255,255,255,0.95); padding: 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-size: 0.9em; max-width: 800px; line-height: 1.5;"></div>
+  </div>
+</div>
+
+<script>
+function openModal(imgElement) {
+  document.getElementById("imgModal").style.display = "block";
+  document.getElementById("modalContent").src = imgElement.src;
+  document.getElementById("modalCaption").innerHTML = imgElement.getAttribute("data-caption");
+}
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+</script>
+
+<div class="container">
+
+<h1><i>Bradea brasiliensis</i> <span style='font-size:0.55em; font-weight:normal; font-style:normal; color:#555;'>Standl.</span></h1>
+  <div style="margin-top: 15px; margin-bottom: 25px;">
+    <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scroll-snap-type: x mandatory;">
+      <img src="http://jbrj-public-img.s3-sa-east-1.amazonaws.com/JPG/rbr/rbr/0/5/85/13/rbr00058513.jpg" alt="Photo of Bradea brasiliensis" data-caption="<b>Author/Owner:</b> Universidade Federal Rural do Rio de Janeiro (RBR) &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://rbr.jbrj.gov.br/v2/regua/visualizador.php?r=true&colbot=rbr&codtestemunho=RBR58513&arquivo=rbr00058513.dzi' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://sweetgum.nybg.org/images3/2437/270/03097852.jpg" alt="Photo of Bradea brasiliensis" data-caption="<b>Author/Owner:</b> The New York Botanical Garden &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.gbif.org/occurrence/1929557084' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://d2jcv3kl45hlgi.cloudfront.net/cefdcaf4192242e725f57baf6f2b07a6.jpg" alt="Photo of Bradea brasiliensis" data-caption="<b>Author/Owner:</b> Royal Botanic Gardens, Kew &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='http://specimens.kew.org/Herbarium/K001336181' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://d2jcv3kl45hlgi.cloudfront.net/8d4fdf81baff6e93c641758cdc8815b2.jpg" alt="Photo of Bradea brasiliensis" data-caption="<b>Author/Owner:</b> Royal Botanic Gardens, Kew &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='http://specimens.kew.org/Herbarium/K001136451' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://d2jcv3kl45hlgi.cloudfront.net/54b0160fcfc7bb9916011b61d7513a2e.jpg" alt="Photo of Bradea brasiliensis" data-caption="<b>Author/Owner:</b> Royal Botanic Gardens, Kew &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='http://specimens.kew.org/Herbarium/K001136454' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://media01.symbiota.org/media/h_seinet/seinet/ASU/ASU0042/ASU0042666_lg.jpg" alt="Photo of Bradea brasiliensis" data-caption="<b>Author/Owner:</b> Arizona State University Vascular Plant Herbarium &middot; <b>License:</b> License not specified &middot; <a href='https://www.gbif.org/occurrence/2270542895' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://media01.symbiota.org/media/h_seinet/seinet/ASU/ASU0042/ASU0042666a_lg.jpg" alt="Photo of Bradea brasiliensis" data-caption="<b>Author/Owner:</b> Arizona State University Vascular Plant Herbarium &middot; <b>License:</b> License not specified &middot; <a href='https://www.gbif.org/occurrence/2270542895' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://oxalis.br.fgov.be/images/BR0/000/031/962/551/BR0000031962551.jpg" alt="Photo of Bradea brasiliensis" data-caption="<b>Author/Owner:</b> Meise Botanic Garden &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.gbif.org/occurrence/4072943138' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://d2jcv3kl45hlgi.cloudfront.net/32eca7ef93c0f6e6ba60961359e5dcbb.jpg" alt="Photo of Bradea brasiliensis" data-caption="<b>Author/Owner:</b> Royal Botanic Gardens, Kew &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='http://specimens.kew.org/Herbarium/K001136450' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://sweetgum.nybg.org/images3/1917/602/01032939.jpg" alt="Photo of Bradea brasiliensis" data-caption="<b>Author/Owner:</b> The New York Botanical Garden &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.gbif.org/occurrence/1927915383' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+    </div>
+    <p style="font-size: 0.75em; color: #7f8c8d; margin-top: -5px;">Source: GBIF Occurrences (Click on any image to view details and references)</p>
+  </div>
+
+<h2>Taxonomy</h2>
+  <div style="background:#ecf0f1; padding:15px; border-radius:8px; display:flex; gap:30px; flex-wrap:wrap;">
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Family</span><br><b>Rubiaceae</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Genus</span><br><b>Bradea</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Authority</span><br><b>Standl.</b></div>
+  </div>
+
+<br>
+<div class="categoria" style="background-color:#FC7F3F;">EN &middot; B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div>
+
+<h2>Assessment Summary</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Category</div><div class="value">EN</div></div>
+  <div class="resumo-item"><div class="label">Criterion</div><div class="value">B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div></div>
+  <div class="resumo-item"><div class="label">Year</div><div class="value">2026</div></div>
+  <div class="resumo-item"><div class="label">Scope</div><div class="value">Regional (RJ)</div></div>
+</div>
+
+<h2>Justification</h2>
+<div class="justificativa"><i>Bradea brasiliensis</i> is endemic to the state of Rio de Janeiro, with a rupicolous habit. The spatial analysis of confirmed occurrences (EOO = 2,031.6 km²; AOO = 24 km², 2×2 km grid) identified <b>5</b> locations determined by the threat. Assessment: <b>EN</b> under criterion B1 (EOO < 5,000 km²). Criterion: <b>B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</b>.  The number of locations (5) meets the IUCN threshold for EN (≤ 5).  Active threats (IUCN-CMP v3.3): 1.1 Housing & urban areas; 2.2 Wood & pulp plantations; 2.3 Livestock farming & ranching.  Occurs in Protected Areas (PA regime: Integral Protection and Sustainable Use): RESERVA PARTICULAR DO PATRIMÔNIO NATURAL VERBICARO | ÁREA DE PROTEÇÃO AMBIENTAL SÃO DOMINGOS. </div>
+
+<h2>Supporting Information</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Countries</div><div class="value" style="font-size:1em;">BR-RJ (Brazil, Rio de Janeiro)</div></div>
+  <div class="resumo-item"><div class="label">System</div><div class="value" style="font-size:1em;">Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Habitat</div><div class="value" style="font-size:1em;">Rupicolous</div></div>
+  <div class="resumo-item"><div class="label">Biome</div><div class="value" style="font-size:1em;">Atlantic Forest</div></div>
+  <div class="resumo-item"><div class="label">Vegetation</div><div class="value" style="font-size:1em;">Rock Outcrop Vegetation</div></div>
+</div>
+
+<h2>Geographic Distribution</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">EOO</div><div class="value">2031.6 km²</div></div>
+  <div class="resumo-item"><div class="label">AOO (2×2 km)</div><div class="value">24 km²</div></div>
+  <div class="resumo-item"><div class="label">Endemic to RJ</div><div class="value">Yes</div></div>
+  <div class="resumo-item"><div class="label">Occurrences</div><div class="value">14</div></div>
+</div>
+
+<h2>Population & Locations</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Locations §4.11</div><div class="value">5</div></div>
+  <div class="resumo-item"><div class="label">Critical Threat</div><div class="value" style="font-size:1em;">2.3</div></div>
+  <div class="resumo-item"><div class="label">Population Trend</div><div class="value" style="font-size:1em;">Decreasing</div></div>
+</div>
+
+<h2>Collections Used</h2>
+  <div style="max-height: 250px; overflow-y: auto; border: 1px solid #ecf0f1; padding: 15px; border-radius: 4px; background: #fafafa;">
+    <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; line-height: 1.6; color: #2c3e50;">
+      <li><b>A. C. Brade & J. Santos Lima 11556</b> (1932) - F — <i>Unknown Municipality</i></li><li><b>C. Baez; Thalis Lima, Patrícia da Rosa, Daniel Maurenza e João Marins 994</b> (2016) - JBRJ — <i>Santa Maria Madalena</i></li><li><b>Calió, MF 77</b> (2004) - SPF — <i>Santa Maria Madalena</i></li><li><b>Calió, MF; Harley, RM; et al. 77</b> (2004) - UNICAMP — <i>Santa Maria Madalena</i></li><li><b>E. Pereira 1236</b> (1955) - NY — <i>Unknown Municipality</i></li><li><b>Forzza, RC 4155</b> (2006) - SPF — <i>Santa Maria Madalena</i></li><li><b>J. A. Oliveira 218</b> (2012) - NY — <i>Unknown Municipality</i></li><li><b>M.S. Wängler; I.C. Silva-Batista, M.A.C. Loureiro, V. Ferreira 2810</b> (2021) - UFRRJ — <i>Santa Maria Madalena</i></li><li><b>M.S.Wängler; V.S.Ferreira; L.F.A. Barros 1623</b> (2015) - JBRJ — <i>Santa Maria Madalena</i></li><li><b>Oliveira, JA; et al. 218</b> (2012) - UNICAMP — <i>Santa Maria Madalena</i></li><li><b>R.C. Forzza; L. Freitas, A.C. Soares & A.R. Pereira 4155</b> (2006) - JBRJ — <i>Santa Maria Madalena</i></li><li><b>Souza, VC; Ferrucci, MS; Angulo, MB; Caliari, CP; Colletta, GD ESA121524</b> (2005) - UNICAMP — <i>Santa Maria Madalena</i></li><li><b>Souza-Buturi, FO; Temperini, V 312</b> (2010) - UNICAMP — <i>Santa Maria Madalena</i></li><li><b>T. Plowman 12876</b> (1983) - K — <i>Santa Maria Madalena</i></li>
+    </ul>
+  </div>
+  <p style="font-size:0.8em; color:#7f8c8d; margin-top:5px;">Total collections evaluated: 14</p>
+
+<h2>Threats Summary</h2>
+<table style="width:100%;border-collapse:collapse;"><thead style="background:#34495e;color:white;"><tr><th>Threat (IUCN-CMP v3.3)</th><th>Timing</th><th>Scope</th><th>% AOO</th><th>% EOO</th><th>Severity</th></tr></thead><tbody><tr><td><b>1.1 Housing & urban areas</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>1.98%</td><td>0.63%</td><td>slow</td></tr><tr><td><b>2.2 Wood & pulp plantations</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>0.07%</td><td>0.08%</td><td>slow</td></tr><tr><td><b>2.3 Livestock farming & ranching</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>majority</td><td>59.01%</td><td>80.86%</td><td>slow</td></tr><tr><td><b>10.3 Avalanches/landslides</b></td><td><span style="color:#f39c12;font-weight:bold;">future</span></td><td>minority</td><td>9.65%</td><td>1.03%</td><td>no_decline</td></tr></tbody></table>
+
+<h2>Threats — Methodological Details</h2>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">1.1 Housing & urban areas</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from human settlements with substantial footprint (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 24 (Urban Infrastructure).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">1.98% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.63% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🏘️
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.2 Wood & pulp plantations</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Stands of trees planted for timber outside natural forests (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 9 (Forest Plantation).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0.07% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.08% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🌲
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.3 Livestock farming & ranching</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Domestic terrestrial animals raised in one location or roaming wild (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 14, 15 and 21.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">59.01% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">80.86% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🐄
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">3.2 Mining & quarrying</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Exploring for, developing, and producing minerals and rocks (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 30 (Mining).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.2% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    ⛏️
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">10.3 Avalanches/landslides</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from catastrophic geological events (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> High susceptibility polygons CPRM/IPT filtered by scars dated via LandTrendr/CCDC.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">9.65% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">1.03% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    ⛰️
+  </div>
+</div>
+
+<h2>Protection Status</h2>
+<p style='margin-bottom: 5px;'><b>Management Category:</b> Integral Protection and Sustainable Use</p><p style='margin-top: 0; margin-bottom: 5px;'><b>Protected Areas:</b></p><ul style='margin-top: 5px; margin-bottom: 0;'><li>RESERVA PARTICULAR DO PATRIMÔNIO NATURAL VERBICARO</li><li>ÁREA DE PROTEÇÃO AMBIENTAL SÃO DOMINGOS</li></ul>
+
+<h2>Conservation actions</h2>
+<ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
+
+<h2>Distribution Map</h2>
+  <div id="map_44647" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    try {
+      var map = L.map("map_44647");
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap contributors"
+      }).addTo(map);
+
+      map.createPane("ucsPane"); map.getPane("ucsPane").style.zIndex = 400;
+      map.createPane("eooPane"); map.getPane("eooPane").style.zIndex = 410;
+      map.createPane("aooPane"); map.getPane("aooPane").style.zIndex = 420;
+      map.createPane("ptsPane"); map.getPane("ptsPane").style.zIndex = 430;
+
+      var ucsData = null;
+      if (ucsData && ucsData.type) {
+        L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
+      }
+
+      var eooData = { "type": "FeatureCollection", "name": "file137d06d6a2160", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Bradea brasiliensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.8902869, -21.8516162 ], [ -41.989444, -21.9475 ], [ -42.02, -21.97 ], [ -42.027778, -21.975 ], [ -42.1458178, -21.9813767 ], [ -42.2638682, -21.9876689 ], [ -42.381929, -21.9938767 ], [ -42.5, -22.0 ], [ -42.3773001, -21.8952051 ], [ -42.2547805, -21.7903193 ], [ -42.1324401, -21.6853435 ], [ -42.010278, -21.580278 ], [ -41.9061023, -21.5762084 ], [ -41.8019325, -21.572074 ], [ -41.6977687, -21.5678749 ], [ -41.593611, -21.563611 ], [ -41.6923712, -21.6596713 ], [ -41.7912629, -21.7556732 ], [ -41.8902869, -21.8516162 ] ] ] } } ] };
+      if (eooData && eooData.type) {
+        L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
+      }
+
+      var aooData = { "type": "FeatureCollection", "name": "file137d043fc509e", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Bradea brasiliensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.593905077520454, -21.564275730642954 ], [ -41.593905077520454, -21.54453087688125 ], [ -41.575789052624046, -21.54453087688125 ], [ -41.575789052624046, -21.564275730642954 ], [ -41.593905077520454, -21.564275730642954 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Bradea brasiliensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.010573650137886, -21.584023211535005 ], [ -42.010573650137886, -21.564275730642954 ], [ -41.992457625241485, -21.564275730642954 ], [ -41.992457625241485, -21.584023211535005 ], [ -42.010573650137886, -21.584023211535005 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Bradea brasiliensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.010573650137886, -21.959729001981675 ], [ -42.010573650137886, -21.939930961915493 ], [ -41.992457625241485, -21.939930961915493 ], [ -41.992457625241485, -21.959729001981675 ], [ -42.010573650137886, -21.959729001981675 ] ] ] } }, { "type": "Feature", "properties": { "count": 5.0, "species": "Bradea brasiliensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.992457625241485, -21.959729001981675 ], [ -41.992457625241485, -21.939930961915493 ], [ -41.974341600345078, -21.939930961915493 ], [ -41.974341600345078, -21.959729001981675 ], [ -41.992457625241485, -21.959729001981675 ] ] ] } }, { "type": "Feature", "properties": { "count": 5.0, "species": "Bradea brasiliensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.0286896750343, -21.979529737187832 ], [ -42.0286896750343, -21.959729001981675 ], [ -42.0105736501379, -21.959729001981675 ], [ -42.0105736501379, -21.979529737187832 ], [ -42.0286896750343, -21.979529737187832 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Bradea brasiliensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.517822347237377, -22.019139306778008 ], [ -42.517822347237377, -21.999333170972545 ], [ -42.499706322340977, -21.999333170972545 ], [ -42.499706322340977, -22.019139306778008 ], [ -42.517822347237377, -22.019139306778008 ] ] ] } } ] };
+      if (aooData && aooData.type) {
+        L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
+      }
+
+      var pts = [[-22.000000, -42.500000],[-21.943611, -41.993611],[-21.563611, -41.593611],[-21.943361, -41.991861],[-21.970000, -42.020000],[-21.580278, -42.010278],[-21.967500, -42.017778],[-21.947500, -41.989444],[-21.943611, -41.991667],[-21.975000, -42.027778],[-21.967500, -42.017500],[-21.943450, -41.991481],[-21.943500, -41.991528],[-21.966667, -42.016667]];
+      if (pts.length > 0) {
+        pts.forEach(function(p) {
+          L.circleMarker(p, { pane: "ptsPane", radius: 4, fillColor: "#e74c3c", color: "#fff", weight: 1, opacity: 1, fillOpacity: 0.9 }).addTo(map);
+        });
+      }
+
+      var bounds = [[-22.019139, -42.517822], [-21.544531, -41.575789]];
+      if (bounds) {
+        map.fitBounds(bounds, {padding: [30, 30], maxZoom: 14});
+      } else {
+        map.setView([-22.9, -43.2], 7);
+      }
+    } catch (error) {
+      console.error("Leaflet Rendering Error:", error);
+    }
+  });
+  </script>
+
+<h2>References</h2>
+<p>Flora do Brasil 2020 em construção. Jardim Botânico do Rio de Janeiro. Disponível em: http://floradobrasil.jbrj.gov.br.</p><p><a href="http://reflora.jbrj.gov.br/reflora/listaBrasil/FichaPublicaTaxonUC/FichaPublicaTaxonUC.do?id=FB13845" target="_blank" style="color:#2980b9; text-decoration:none; font-weight:bold;">🌐 Link to this taxon on Reflora</a></p>
+
+<hr style="margin-top:40px;">
+<p style="color:#95a5a6;font-size:0.85em;text-align:center;">
+Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+</div>
+</body>
+</html>

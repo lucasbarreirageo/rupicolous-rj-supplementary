@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quesnelia lateralis Wawra — IUCN Factsheet</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<style>
+  body { font-family:"Segoe UI",Arial,sans-serif; background:#f4f6f8; margin:0; padding:20px; }
+  .container { max-width:1200px; margin:auto; background:white; padding:30px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+  h1 { color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:10px; margin-bottom:10px; }
+  h2 { color:#34495e; margin-top:30px; border-bottom:2px solid #ecf0f1; padding-bottom:5px; }
+  .resumo-box { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; margin:20px 0; }
+  .resumo-item { background:#ecf0f1; padding:15px; border-radius:8px; text-align:center; }
+  .resumo-item .label { font-size:0.85em; color:#7f8c8d; text-transform:uppercase; }
+  .resumo-item .value { font-size:1.4em; font-weight:bold; color:#2c3e50; margin-top:5px; }
+  .categoria { font-size:2em; font-weight:bold; padding:10px 20px; border-radius:8px; color:white; display:inline-block; margin-bottom: 20px; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; }
+  th,td { padding:10px; border-bottom:1px solid #ecf0f1; text-align:left; }
+  .justificativa { background:#f8f9fa; padding:20px; border-left:4px solid #3498db; border-radius:4px; line-height:1.7; }
+  
+  ::-webkit-scrollbar { height: 8px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #95a5a6; }
+</style>
+</head>
+<body>
+
+<div id="imgModal" style="display:none; position:fixed; z-index:9999; padding-top:40px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.85);" onclick="if(event.target == this) closeModal()">
+  <span style="position:absolute; top:15px; right:35px; color:#f1f1f1; font-size:40px; font-weight:bold; cursor:pointer;" onclick="closeModal()">&times;</span>
+  <div style="margin:auto; display:flex; flex-direction:column; align-items:center; max-width:90%;">
+    <img id="modalContent" style="max-width:100%; max-height:75vh; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5);">
+    <div id="modalCaption" style="margin-top: 15px; background: rgba(255,255,255,0.95); padding: 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-size: 0.9em; max-width: 800px; line-height: 1.5;"></div>
+  </div>
+</div>
+
+<script>
+function openModal(imgElement) {
+  document.getElementById("imgModal").style.display = "block";
+  document.getElementById("modalContent").src = imgElement.src;
+  document.getElementById("modalCaption").innerHTML = imgElement.getAttribute("data-caption");
+}
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+</script>
+
+<div class="container">
+
+<h1><i>Quesnelia lateralis</i> <span style='font-size:0.55em; font-weight:normal; font-style:normal; color:#555;'>Wawra</span></h1>
+  <div style="margin-top: 15px; margin-bottom: 25px;">
+    <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scroll-snap-type: x mandatory;">
+      <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/621786856/original.jpg" alt="Photo of Quesnelia lateralis" data-caption="<b>Author/Owner:</b> Martin Vallejos &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc-nd/4.0/ &middot; <a href='https://www.inaturalist.org/photos/621786856' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/636567703/original.jpg" alt="Photo of Quesnelia lateralis" data-caption="<b>Author/Owner:</b> pierrax &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/636567703' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/636567842/original.jpg" alt="Photo of Quesnelia lateralis" data-caption="<b>Author/Owner:</b> pierrax &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/636567842' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/636568017/original.jpg" alt="Photo of Quesnelia lateralis" data-caption="<b>Author/Owner:</b> pierrax &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/636568017' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/636569433/original.jpg" alt="Photo of Quesnelia lateralis" data-caption="<b>Author/Owner:</b> pierrax &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/636569433' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/636565794/original.jpg" alt="Photo of Quesnelia lateralis" data-caption="<b>Author/Owner:</b> pierrax &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/636565794' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/644393983/original.jpg" alt="Photo of Quesnelia lateralis" data-caption="<b>Author/Owner:</b> Léo &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/644393983' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/649754054/original.jpg" alt="Photo of Quesnelia lateralis" data-caption="<b>Author/Owner:</b> Mariana Gomes &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/649754054' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/653010865/original.jpg" alt="Photo of Quesnelia lateralis" data-caption="<b>Author/Owner:</b> Eduardo Moreira &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/653010865' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/653010954/original.jpg" alt="Photo of Quesnelia lateralis" data-caption="<b>Author/Owner:</b> Eduardo Moreira &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/653010954' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+    </div>
+    <p style="font-size: 0.75em; color: #7f8c8d; margin-top: -5px;">Source: GBIF Occurrences (Click on any image to view details and references)</p>
+  </div>
+
+<h2>Taxonomy</h2>
+  <div style="background:#ecf0f1; padding:15px; border-radius:8px; display:flex; gap:30px; flex-wrap:wrap;">
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Family</span><br><b>Bromeliaceae</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Genus</span><br><b>Quesnelia</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Authority</span><br><b>Wawra</b></div>
+  </div>
+
+<br>
+<div class="categoria" style="background-color:#60C659;">LC/NT &middot; LC/NT</div>
+
+<h2>Assessment Summary</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Category</div><div class="value">LC/NT</div></div>
+  <div class="resumo-item"><div class="label">Criterion</div><div class="value">LC/NT</div></div>
+  <div class="resumo-item"><div class="label">Year</div><div class="value">2026</div></div>
+  <div class="resumo-item"><div class="label">Scope</div><div class="value">Regional (RJ)</div></div>
+</div>
+
+<h2>Justification</h2>
+<div class="justificativa"><i>Quesnelia lateralis</i> is endemic to the state of Rio de Janeiro, with a rupicolous habit. The spatial analysis of confirmed occurrences (EOO = 3,596.7 km²; AOO = 72 km², 2×2 km grid) identified <b>14</b> locations determined by the threat. Category: <b>LC/NT</b> — the quantitative thresholds for IUCN Criteria B and D were not met.</div>
+
+<h2>Supporting Information</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Countries</div><div class="value" style="font-size:1em;">BR-RJ (Brazil, Rio de Janeiro)</div></div>
+  <div class="resumo-item"><div class="label">System</div><div class="value" style="font-size:1em;">Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Habitat</div><div class="value" style="font-size:1em;">Epiphytic, Rupicolous, Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Biome</div><div class="value" style="font-size:1em;">Atlantic Forest</div></div>
+  <div class="resumo-item"><div class="label">Vegetation</div><div class="value" style="font-size:1em;">Rainforest</div></div>
+</div>
+
+<h2>Geographic Distribution</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">EOO</div><div class="value">3596.7 km²</div></div>
+  <div class="resumo-item"><div class="label">AOO (2×2 km)</div><div class="value">72 km²</div></div>
+  <div class="resumo-item"><div class="label">Endemic to RJ</div><div class="value">Yes</div></div>
+  <div class="resumo-item"><div class="label">Occurrences</div><div class="value">20</div></div>
+</div>
+
+<h2>Population & Locations</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Locations §4.11</div><div class="value">14</div></div>
+  <div class="resumo-item"><div class="label">Critical Threat</div><div class="value" style="font-size:1em;">10.3</div></div>
+  <div class="resumo-item"><div class="label">Population Trend</div><div class="value" style="font-size:1em;">Decreasing</div></div>
+</div>
+
+<h2>Collections Used</h2>
+  <div style="max-height: 250px; overflow-y: auto; border: 1px solid #ecf0f1; padding: 15px; border-radius: 4px; background: #fafafa;">
+    <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; line-height: 1.6; color: #2c3e50;">
+      <li><b>C. Farney 768</b> (1985) - NY — <i>Unknown Municipality</i></li><li><b>D.R. Couto;Couto, D.R.,Kessous, I.M.,I.M. Kessous 3070</b> (2015) - R — <i>Teresópolis</i></li><li><b>G. Martinelli & T. Plowman 6737</b> (1980) - F — <i>Unknown Municipality</i></li><li><b>G. Martinelli; C.Baez, D.Maurenza, I.Miller 19453</b> (2016) - JBRJ — <i>Nova Friburgo</i></li><li><b>G. Martinelli; M.Moraes, T.Lima, E Lerina 19413</b> (2016) - JBRJ — <i>Nova Friburgo</i></li><li><b>Grupo Vermelho;Temponi, L.G.,Moreira, S.N.,Lautert, M.,Lopes, N.,Araéjo, D. 106</b> (2012) - UNOP — <i>Teresópolis</i></li><li><b>Haroldo C. de Lima; R.D. Ribeiro, A.A. Calvet & W. Silva 6618</b> (2007) - JBRJ — <i>Nova Iguaçu</i></li><li><b>I.C. Silva-Batista; M.S. Wängler, M.A.C. Loureiro, V. Ferreira, R. Freitas 153</b> (2022) - UFRRJ — <i>Nova Friburgo</i></li><li><b>J. Paula-Souza; F.O. Zuloaga, O. Morrone & R. Tsuji 5849</b> (2006) - JBRJ — <i>Teresópolis</i></li><li><b>J. R. Grant, A. F. Costa & B. Rezende-Silva 99-03303</b> (1999) - US — <i>Unknown Municipality</i></li><li><b>J.A. Laombardi; et.al 8315</b> (2011) - JBRJ — <i>Teresópolis</i></li><li><b>J.A. Siqueira Filho 2899</b> (2013) - HVASF — <i>Unknown Municipality</i></li><li><b>K. Lems s.n.</b> (1964) - NY — <i>Unknown Municipality</i></li><li><b>M. Nadruz; T. Cabral, G. Heiden & P. Godinho 1915</b> (2007) - JBRJ — <i>Teresópolis</i></li><li><b>Martinelli, G.; T. Barbará, L. Heron, R. Azoury 15483</b> (1999) - JBRJ — <i>Petrópolis</i></li><li><b>Martinelli, G.;Azoury, R.,Barbará, T. Heron, L. 15483</b> (1999) - R — <i>Petrópolis</i></li><li><b>R. Borges; M. Moraes, R. Avancini, T. Serrano, A. Bevacqua, E. Fernandez 963</b> (2009) - JBRJ — <i>Petrópolis</i></li><li><b>R.R.Völtz; M.L. Brotto 2287</b> (2020) - JBRJ — <i>Nova Friburgo</i></li><li><b>Versieux, LM; Calvente, AM 284</b> (2006) - IPA/SP — <i>Teresópolis</i></li><li><b>Neves, B.F.S. 12; Uribbe, F.P. ; Costa, A. & Gonçalves, L.F.</b> (2011) - MN — <i>Petrópolis</i></li>
+    </ul>
+  </div>
+  <p style="font-size:0.8em; color:#7f8c8d; margin-top:5px;">Total collections evaluated: 20</p>
+
+<h2>Threats Summary</h2>
+<table style="width:100%;border-collapse:collapse;"><thead style="background:#34495e;color:white;"><tr><th>Threat (IUCN-CMP v3.3)</th><th>Timing</th><th>Scope</th><th>% AOO</th><th>% EOO</th><th>Severity</th></tr></thead><tbody><tr><td><b>1.1 Housing & urban areas</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>7.2%</td><td>2.62%</td><td>slow</td></tr><tr><td><b>2.2 Wood & pulp plantations</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>0.45%</td><td>0.76%</td><td>slow</td></tr><tr><td><b>2.3 Livestock farming & ranching</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>15.06%</td><td>32.47%</td><td>slow</td></tr><tr><td><b>10.3 Avalanches/landslides</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>38.45%</td><td>19.94%</td><td>slow</td></tr></tbody></table>
+
+<h2>Threats — Methodological Details</h2>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">1.1 Housing & urban areas</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from human settlements with substantial footprint (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 24 (Urban Infrastructure).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">7.2% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">2.62% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🏘️
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.1 Annual & perennial non-timber crops</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Crops planted for food, fodder, fibre, fuel (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 18-20, 35-36, 39-41, 46-48, 62.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.02% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🌾
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.2 Wood & pulp plantations</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Stands of trees planted for timber outside natural forests (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 9 (Forest Plantation).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0.45% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.76% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🌲
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.3 Livestock farming & ranching</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Domestic terrestrial animals raised in one location or roaming wild (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 14, 15 and 21.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">15.06% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">32.47% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🐄
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">10.3 Avalanches/landslides</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from catastrophic geological events (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> High susceptibility polygons CPRM/IPT filtered by scars dated via LandTrendr/CCDC.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">38.45% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">19.94% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    ⛰️
+  </div>
+</div>
+
+<h2>Protection Status</h2>
+<p style='margin-bottom: 5px;'><b>Management Category:</b> Integral Protection and Sustainable Use</p><p style='margin-top: 0; margin-bottom: 5px;'><b>Protected Areas:</b></p><ul style='margin-top: 5px; margin-bottom: 0;'><li>PARQUE NATURAL MUNICIPAL DE PETRÓPOLIS</li><li>RESERVA PARTICULAR DO PATRIMÔNIO NATURAL TOCA DA ONÇA</li><li>MONUMENTO NATURAL ESTADUAL DA SERRA DA MARIA COMPRIDA</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DE MACAÉ DE CIMA</li><li>RESERVA BIOLÓGICA DE ARARAS</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO DOS FRADES</li><li>AREA DE PROTEÇÃO AMBIENTAL DO RIO GUANDU</li><li>PARQUE ESTADUAL DOS TRÊS PICOS</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO MACACU</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO SÃO JOÃO - MICO-LEÃO-DOURADO</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA REGIÃO SERRANA DE PETRÓPOLIS</li><li>RESERVA BIOLÓGICA DO TINGUÁ</li><li>PARQUE NACIONAL DA SERRA DOS ÓRGÃOS</li></ul>
+
+<h2>Conservation actions</h2>
+<ul><li>2.1 Site/area management</li><li>2.3 Habitat & natural process restoration</li><li>1.2 Resource & habitat protection</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li></ul>
+
+<h2>Distribution Map</h2>
+  <div id="map_32264" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    try {
+      var map = L.map("map_32264");
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap contributors"
+      }).addTo(map);
+
+      map.createPane("ucsPane"); map.getPane("ucsPane").style.zIndex = 400;
+      map.createPane("eooPane"); map.getPane("eooPane").style.zIndex = 410;
+      map.createPane("aooPane"); map.getPane("aooPane").style.zIndex = 420;
+      map.createPane("ptsPane"); map.getPane("ptsPane").style.zIndex = 430;
+
+      var ucsData = null;
+      if (ucsData && ucsData.type) {
+        L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
+      }
+
+      var eooData = { "type": "FeatureCollection", "name": "file137d03ef95a68", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.3808977, -22.4018461 ], [ -42.495833, -22.491667 ], [ -42.6192981, -22.5041496 ], [ -42.7427854, -22.5165381 ], [ -42.8662947, -22.5288324 ], [ -42.989826, -22.5410325 ], [ -43.113379, -22.5531383 ], [ -43.2369536, -22.5651497 ], [ -43.3605497, -22.5770666 ], [ -43.484167, -22.588889 ], [ -43.3592249, -22.4996316 ], [ -43.234444, -22.410278 ], [ -43.1424032, -22.359174 ], [ -43.0504299, -22.308018 ], [ -42.958524, -22.2568102 ], [ -42.8666853, -22.2055508 ], [ -42.7749137, -22.1542399 ], [ -42.6832091, -22.1028776 ], [ -42.5915712, -22.0514643 ], [ -42.5, -22.0 ], [ -42.4416248, -22.0780172 ], [ -42.3831851, -22.1560137 ], [ -42.3246806, -22.2339893 ], [ -42.266111, -22.311944 ], [ -42.3808977, -22.4018461 ] ] ] } } ] };
+      if (eooData && eooData.type) {
+        L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
+      }
+
+      var aooData = { "type": "FeatureCollection", "name": "file137d0c7a4028", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.514326902654062, -22.014065750684964 ], [ -42.514326902654062, -21.994770274145477 ], [ -42.496286361194727, -21.994770274145477 ], [ -42.496286361194727, -22.014065750684964 ], [ -42.514326902654062, -22.014065750684964 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.875137731840908, -22.323144675793241 ], [ -42.875137731840908, -22.303807741285624 ], [ -42.857097190381566, -22.303807741285624 ], [ -42.857097190381566, -22.323144675793241 ], [ -42.875137731840908, -22.323144675793241 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.279799863682612, -22.323144675793241 ], [ -42.279799863682612, -22.303807741285624 ], [ -42.261759322223284, -22.303807741285624 ], [ -42.261759322223284, -22.323144675793241 ], [ -42.279799863682612, -22.323144675793241 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.748853941625505, -22.342484228816517 ], [ -42.748853941625505, -22.323144675793241 ], [ -42.730813400166163, -22.323144675793241 ], [ -42.730813400166163, -22.342484228816517 ], [ -42.748853941625505, -22.342484228816517 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.23594856102774, -22.41986869097985 ], [ -43.23594856102774, -22.400518631428525 ], [ -43.217908019568398, -22.400518631428525 ], [ -43.217908019568398, -22.41986869097985 ], [ -43.23594856102774, -22.41986869097985 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.532367444113405, -22.439221385296747 ], [ -42.532367444113405, -22.41986869097985 ], [ -42.514326902654069, -22.41986869097985 ], [ -42.514326902654069, -22.439221385296747 ], [ -42.532367444113405, -22.439221385296747 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.290070185405767, -22.458576717639573 ], [ -43.290070185405767, -22.439221385296744 ], [ -43.272029643946432, -22.439221385296744 ], [ -43.272029643946432, -22.458576717639573 ], [ -43.290070185405767, -22.458576717639573 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.217908019568398, -22.458576717639573 ], [ -43.217908019568398, -22.439221385296744 ], [ -43.199867478109056, -22.439221385296744 ], [ -43.199867478109056, -22.458576717639573 ], [ -43.217908019568398, -22.458576717639573 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.037502604974982, -22.458576717639573 ], [ -43.037502604974982, -22.439221385296744 ], [ -43.019462063515647, -22.439221385296744 ], [ -43.019462063515647, -22.458576717639573 ], [ -43.037502604974982, -22.458576717639573 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.01946206351564, -22.458576717639573 ], [ -43.01946206351564, -22.439221385296744 ], [ -43.001421522056305, -22.439221385296744 ], [ -43.001421522056305, -22.458576717639573 ], [ -43.01946206351564, -22.458576717639573 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.001421522056297, -22.458576717639573 ], [ -43.001421522056297, -22.439221385296744 ], [ -42.983380980596955, -22.439221385296744 ], [ -42.983380980596955, -22.458576717639573 ], [ -43.001421522056297, -22.458576717639573 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.30811072686511, -22.477934691272122 ], [ -43.30811072686511, -22.45857671763957 ], [ -43.290070185405774, -22.45857671763957 ], [ -43.290070185405774, -22.477934691272122 ], [ -43.30811072686511, -22.477934691272122 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.037502604974982, -22.477934691272122 ], [ -43.037502604974982, -22.45857671763957 ], [ -43.019462063515647, -22.45857671763957 ], [ -43.019462063515647, -22.477934691272122 ], [ -43.037502604974982, -22.477934691272122 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.001421522056297, -22.477934691272122 ], [ -43.001421522056297, -22.45857671763957 ], [ -42.983380980596955, -22.45857671763957 ], [ -42.983380980596955, -22.477934691272122 ], [ -43.001421522056297, -22.477934691272122 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.49628636119472, -22.497295309461709 ], [ -42.49628636119472, -22.477934691272122 ], [ -42.478245819735385, -22.477934691272122 ], [ -42.478245819735385, -22.497295309461709 ], [ -42.49628636119472, -22.497295309461709 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.181826936649713, -22.516658575479092 ], [ -43.181826936649713, -22.497295309461705 ], [ -43.163786395190385, -22.497295309461705 ], [ -43.163786395190385, -22.516658575479092 ], [ -43.181826936649713, -22.516658575479092 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.983380980596955, -22.536024492598528 ], [ -42.983380980596955, -22.516658575479084 ], [ -42.965340439137613, -22.516658575479084 ], [ -42.965340439137613, -22.536024492598528 ], [ -42.983380980596955, -22.536024492598528 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Quesnelia lateralis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.488516141458533, -22.594138183364311 ], [ -43.488516141458533, -22.574764293258124 ], [ -43.47047559999919, -22.574764293258124 ], [ -43.47047559999919, -22.594138183364311 ], [ -43.488516141458533, -22.594138183364311 ] ] ] } } ] };
+      if (aooData && aooData.type) {
+        L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
+      }
+
+      var pts = [[-22.508854, -43.178466],[-22.453333, -43.020000],[-22.000000, -42.500000],[-22.491667, -42.495833],[-22.438055, -42.525833],[-22.469722, -43.036111],[-22.588889, -43.484167],[-22.328333, -42.730833],[-22.450000, -43.000000],[-22.477200, -42.985800],[-22.533333, -42.983333],[-22.313333, -42.873333],[-22.449167, -43.013889],[-22.456389, -42.999167],[-22.452778, -43.285555],[-22.476944, -43.304444],[-22.410278, -43.234444],[-22.311944, -42.266111],[-22.439389, -43.026361],[-22.441389, -43.202500]];
+      if (pts.length > 0) {
+        pts.forEach(function(p) {
+          L.circleMarker(p, { pane: "ptsPane", radius: 4, fillColor: "#e74c3c", color: "#fff", weight: 1, opacity: 1, fillOpacity: 0.9 }).addTo(map);
+        });
+      }
+
+      var bounds = [[-22.594138, -43.488516], [-21.994770, -42.261759]];
+      if (bounds) {
+        map.fitBounds(bounds, {padding: [30, 30], maxZoom: 14});
+      } else {
+        map.setView([-22.9, -43.2], 7);
+      }
+    } catch (error) {
+      console.error("Leaflet Rendering Error:", error);
+    }
+  });
+  </script>
+
+<h2>References</h2>
+<p>Flora do Brasil 2020 em construção. Jardim Botânico do Rio de Janeiro. Disponível em: http://floradobrasil.jbrj.gov.br.</p><p><a href="http://reflora.jbrj.gov.br/reflora/listaBrasil/FichaPublicaTaxonUC/FichaPublicaTaxonUC.do?id=FB6344" target="_blank" style="color:#2980b9; text-decoration:none; font-weight:bold;">🌐 Link to this taxon on Reflora</a></p>
+
+<hr style="margin-top:40px;">
+<p style="color:#95a5a6;font-size:0.85em;text-align:center;">
+Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+</div>
+</body>
+</html>

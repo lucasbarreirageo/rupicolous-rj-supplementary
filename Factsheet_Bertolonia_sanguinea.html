@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bertolonia sanguinea Saldanha ex Cogn. — IUCN Factsheet</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<style>
+  body { font-family:"Segoe UI",Arial,sans-serif; background:#f4f6f8; margin:0; padding:20px; }
+  .container { max-width:1200px; margin:auto; background:white; padding:30px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+  h1 { color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:10px; margin-bottom:10px; }
+  h2 { color:#34495e; margin-top:30px; border-bottom:2px solid #ecf0f1; padding-bottom:5px; }
+  .resumo-box { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; margin:20px 0; }
+  .resumo-item { background:#ecf0f1; padding:15px; border-radius:8px; text-align:center; }
+  .resumo-item .label { font-size:0.85em; color:#7f8c8d; text-transform:uppercase; }
+  .resumo-item .value { font-size:1.4em; font-weight:bold; color:#2c3e50; margin-top:5px; }
+  .categoria { font-size:2em; font-weight:bold; padding:10px 20px; border-radius:8px; color:white; display:inline-block; margin-bottom: 20px; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; }
+  th,td { padding:10px; border-bottom:1px solid #ecf0f1; text-align:left; }
+  .justificativa { background:#f8f9fa; padding:20px; border-left:4px solid #3498db; border-radius:4px; line-height:1.7; }
+  
+  ::-webkit-scrollbar { height: 8px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #95a5a6; }
+</style>
+</head>
+<body>
+
+<div id="imgModal" style="display:none; position:fixed; z-index:9999; padding-top:40px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.85);" onclick="if(event.target == this) closeModal()">
+  <span style="position:absolute; top:15px; right:35px; color:#f1f1f1; font-size:40px; font-weight:bold; cursor:pointer;" onclick="closeModal()">&times;</span>
+  <div style="margin:auto; display:flex; flex-direction:column; align-items:center; max-width:90%;">
+    <img id="modalContent" style="max-width:100%; max-height:75vh; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5);">
+    <div id="modalCaption" style="margin-top: 15px; background: rgba(255,255,255,0.95); padding: 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-size: 0.9em; max-width: 800px; line-height: 1.5;"></div>
+  </div>
+</div>
+
+<script>
+function openModal(imgElement) {
+  document.getElementById("imgModal").style.display = "block";
+  document.getElementById("modalContent").src = imgElement.src;
+  document.getElementById("modalCaption").innerHTML = imgElement.getAttribute("data-caption");
+}
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+</script>
+
+<div class="container">
+
+<h1><i>Bertolonia sanguinea</i> <span style='font-size:0.55em; font-weight:normal; font-style:normal; color:#555;'>Saldanha ex Cogn.</span></h1>
+  <div style="margin-top: 15px; margin-bottom: 25px;">
+    <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scroll-snap-type: x mandatory;">
+      <img src="https://d2jcv3kl45hlgi.cloudfront.net/695b2d8a30a85562e4a1733f2a176a5c.jpg" alt="Photo of Bertolonia sanguinea" data-caption="<b>Author/Owner:</b> Royal Botanic Gardens, Kew &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='http://specimens.kew.org/Herbarium/K006960120' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://d2jcv3kl45hlgi.cloudfront.net/5472e8d92939f7e66b393e93d969c6dd.jpg" alt="Photo of Bertolonia sanguinea" data-caption="<b>Author/Owner:</b> Royal Botanic Gardens, Kew &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='http://specimens.kew.org/Herbarium/K006960120' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://sweetgum.nybg.org/images3/1292/133/01081096.jpg" alt="Photo of Bertolonia sanguinea" data-caption="<b>Author/Owner:</b> The New York Botanical Garden &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.gbif.org/occurrence/1928825123' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://sweetgum.nybg.org/images3/1292/132/01081095.jpg" alt="Photo of Bertolonia sanguinea" data-caption="<b>Author/Owner:</b> The New York Botanical Garden &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.gbif.org/occurrence/1928711445' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://d2jcv3kl45hlgi.cloudfront.net/0f701ea7eef1ee0dba861478284da17d.jpg" alt="Photo of Bertolonia sanguinea" data-caption="<b>Author/Owner:</b> Royal Botanic Gardens, Kew &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='http://specimens.kew.org/Herbarium/K000973970' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://sweetgum.nybg.org/images3/3115/635/03815933.jpg" alt="Photo of Bertolonia sanguinea" data-caption="<b>Author/Owner:</b> The New York Botanical Garden &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.gbif.org/occurrence/1949821717' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://sweetgum.nybg.org/images3/3115/642/03815942.jpg" alt="Photo of Bertolonia sanguinea" data-caption="<b>Author/Owner:</b> The New York Botanical Garden &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.gbif.org/occurrence/1949826416' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+    </div>
+    <p style="font-size: 0.75em; color: #7f8c8d; margin-top: -5px;">Source: GBIF Occurrences (Click on any image to view details and references)</p>
+  </div>
+
+<h2>Taxonomy</h2>
+  <div style="background:#ecf0f1; padding:15px; border-radius:8px; display:flex; gap:30px; flex-wrap:wrap;">
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Family</span><br><b>Melastomataceae</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Genus</span><br><b>Bertolonia</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Authority</span><br><b>Saldanha ex Cogn.</b></div>
+  </div>
+
+<br>
+<div class="categoria" style="background-color:#F9E814;">VU &middot; B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div>
+
+<h2>Assessment Summary</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Category</div><div class="value">VU</div></div>
+  <div class="resumo-item"><div class="label">Criterion</div><div class="value">B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div></div>
+  <div class="resumo-item"><div class="label">Year</div><div class="value">2026</div></div>
+  <div class="resumo-item"><div class="label">Scope</div><div class="value">Regional (RJ)</div></div>
+</div>
+
+<h2>Justification</h2>
+<div class="justificativa"><i>Bertolonia sanguinea</i> is endemic to the state of Rio de Janeiro, with a rupicolous habit. The spatial analysis of confirmed occurrences (EOO = 6,833.5 km²; AOO = 44 km², 2×2 km grid) identified <b>10</b> locations determined by the threat. Assessment: <b>VU</b> under criterion B1 (EOO < 20,000 km²). Criterion: <b>B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</b>.  The number of locations (10) meets the IUCN threshold for VU (≤ 10).  Active threats (IUCN-CMP v3.3): 2.3 Livestock farming & ranching; 10.3 Avalanches/landslides.  Occurs in Protected Areas (PA regime: Integral Protection and Sustainable Use): MONUMENTO NATURAL MUNICIPAL DA CONCÓRDIA | ÁREA DE PROTEÇÃO AMBIENTAL ALTO PIRAÍ - APA ALTO PIRAÍ | PARQUE ESTADUAL DOS TRÊS PICOS | ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO MACACU | PARQUE ESTADUAL DO DESENGANO | PARQUE ESTADUAL CUNHAMBEBE | ÁREA DE PROTEÇÃO AMBIENTAL DA REGIÃO SERRANA DE PETRÓPOLIS | PARQUE NACIONAL DA SERRA DOS ÓRGÃOS | RESERVA BIOLÓGICA UNIÃO. </div>
+
+<h2>Supporting Information</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Countries</div><div class="value" style="font-size:1em;">BR-RJ (Brazil, Rio de Janeiro)</div></div>
+  <div class="resumo-item"><div class="label">System</div><div class="value" style="font-size:1em;">Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Habitat</div><div class="value" style="font-size:1em;">Rupicolous, Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Biome</div><div class="value" style="font-size:1em;">Atlantic Forest</div></div>
+  <div class="resumo-item"><div class="label">Vegetation</div><div class="value" style="font-size:1em;">Rainforest</div></div>
+</div>
+
+<h2>Geographic Distribution</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">EOO</div><div class="value">6833.5 km²</div></div>
+  <div class="resumo-item"><div class="label">AOO (2×2 km)</div><div class="value">44 km²</div></div>
+  <div class="resumo-item"><div class="label">Endemic to RJ</div><div class="value">Yes</div></div>
+  <div class="resumo-item"><div class="label">Occurrences</div><div class="value">11</div></div>
+</div>
+
+<h2>Population & Locations</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Locations §4.11</div><div class="value">10</div></div>
+  <div class="resumo-item"><div class="label">Critical Threat</div><div class="value" style="font-size:1em;">10.3</div></div>
+  <div class="resumo-item"><div class="label">Population Trend</div><div class="value" style="font-size:1em;">Decreasing</div></div>
+</div>
+
+<h2>Collections Used</h2>
+  <div style="max-height: 250px; overflow-y: auto; border: 1px solid #ecf0f1; padding: 15px; border-radius: 4px; background: #fafafa;">
+    <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; line-height: 1.6; color: #2c3e50;">
+      <li><b>B. Valente; J.F.A. Baumgratz, N.U. Silva, Bermuda 296</b> (2021) - JBRJ — <i>Guapimirim</i></li><li><b>C. FARNEY 1453</b> (1987) - JBRJ — <i>Santa Maria Madalena</i></li><li><b>D.R. Couto;B.M. Rocha,M.T. Nascimento, L.M. Rabello 5000</b> (2019) - HUENF — <i>Rio das Ostras</i></li><li><b>G. Martinelli; G.Bromley & E. de Lamare 10407</b> (1984) - JBRJ — <i>Guapimirim</i></li><li><b>J.F.A. Baumgratz; B.C. Bandeira, F.F.V.A. Barberena, T.E.C. Meneguzzo, F.M. Pinheiro & L.F.G. Silva (Bermuda) 1197</b> (2011) - JBRJ — <i>Guapimirim</i></li><li><b>J.F.A. Baumgratz; M. Bovini, M. Nadruz, D.S. Pereira da Silva & B.C. Bandeira 1308</b> (2013) - JBRJ — <i>Rio Claro</i></li><li><b>K.C. Silva-Gonçalves 301</b> (2013) - UFRRJ — <i>Cachoeiras de Macacu</i></li><li><b>M. Peron; et al. 909</b> (1992) - INMA — <i>Guapimirim</i></li><li><b>Nunes, D.; Silva, D.F.; Rossetto, E.F.S. & Feliz, P. 2063</b> (2025) - UFU — <i>Casimiro de Abreu</i></li><li><b>P.Rosa; C. Baez, T. Lima, D. Maurenza & J. Marins. 1045</b> (2016) - JBRJ — <i>Campos dos Goytacazes</i></li><li><b>Plowman, T. C.  (Plowman, Timothy Charles);H.C. Lima 12924</b> (1983) - US — <i>Santa Maria Madalena</i></li>
+    </ul>
+  </div>
+  <p style="font-size:0.8em; color:#7f8c8d; margin-top:5px;">Total collections evaluated: 11</p>
+
+<h2>Threats Summary</h2>
+<table style="width:100%;border-collapse:collapse;"><thead style="background:#34495e;color:white;"><tr><th>Threat (IUCN-CMP v3.3)</th><th>Timing</th><th>Scope</th><th>% AOO</th><th>% EOO</th><th>Severity</th></tr></thead><tbody><tr><td><b>2.3 Livestock farming & ranching</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>10.45%</td><td>38.18%</td><td>slow</td></tr><tr><td><b>10.3 Avalanches/landslides</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>17.88%</td><td>14.72%</td><td>slow</td></tr></tbody></table>
+
+<h2>Threats — Methodological Details</h2>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">1.1 Housing & urban areas</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from human settlements with substantial footprint (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 24 (Urban Infrastructure).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">4.2% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🏘️
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.1 Annual & perennial non-timber crops</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Crops planted for food, fodder, fibre, fuel (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 18-20, 35-36, 39-41, 46-48, 62.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.05% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🌾
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.2 Wood & pulp plantations</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Stands of trees planted for timber outside natural forests (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 9 (Forest Plantation).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.33% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🌲
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.3 Livestock farming & ranching</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Domestic terrestrial animals raised in one location or roaming wild (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 14, 15 and 21.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">10.45% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">38.18% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🐄
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">3.2 Mining & quarrying</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Exploring for, developing, and producing minerals and rocks (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 30 (Mining).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.07% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    ⛏️
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">10.3 Avalanches/landslides</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from catastrophic geological events (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> High susceptibility polygons CPRM/IPT filtered by scars dated via LandTrendr/CCDC.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">17.88% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">14.72% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    ⛰️
+  </div>
+</div>
+
+<h2>Protection Status</h2>
+<p style='margin-bottom: 5px;'><b>Management Category:</b> Integral Protection and Sustainable Use</p><p style='margin-top: 0; margin-bottom: 5px;'><b>Protected Areas:</b></p><ul style='margin-top: 5px; margin-bottom: 0;'><li>MONUMENTO NATURAL MUNICIPAL DA CONCÓRDIA</li><li>ÁREA DE PROTEÇÃO AMBIENTAL ALTO PIRAÍ - APA ALTO PIRAÍ</li><li>PARQUE ESTADUAL DOS TRÊS PICOS</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO MACACU</li><li>PARQUE ESTADUAL DO DESENGANO</li><li>PARQUE ESTADUAL CUNHAMBEBE</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA REGIÃO SERRANA DE PETRÓPOLIS</li><li>PARQUE NACIONAL DA SERRA DOS ÓRGÃOS</li><li>RESERVA BIOLÓGICA UNIÃO</li></ul>
+
+<h2>Conservation actions</h2>
+<ul><li>2.1 Site/area management</li><li>2.3 Habitat & natural process restoration</li><li>1.2 Resource & habitat protection</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
+
+<h2>Distribution Map</h2>
+  <div id="map_92470" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    try {
+      var map = L.map("map_92470");
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap contributors"
+      }).addTo(map);
+
+      map.createPane("ucsPane"); map.getPane("ucsPane").style.zIndex = 400;
+      map.createPane("eooPane"); map.getPane("eooPane").style.zIndex = 410;
+      map.createPane("aooPane"); map.getPane("aooPane").style.zIndex = 420;
+      map.createPane("ptsPane"); map.getPane("ptsPane").style.zIndex = 430;
+
+      var ucsData = null;
+      if (ucsData && ucsData.type) {
+        L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
+      }
+
+      var eooData = { "type": "FeatureCollection", "name": "file137d0e011c24", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Bertolonia sanguinea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.9638743, -22.2660164 ], [ -42.033333, -22.416667 ], [ -42.044722, -22.422222 ], [ -42.181435, -22.452295 ], [ -42.3182071, -22.4822527 ], [ -42.4550384, -22.5120951 ], [ -42.5919286, -22.5418218 ], [ -42.7288777, -22.5714327 ], [ -42.8658855, -22.6009275 ], [ -43.002952, -22.630306 ], [ -43.1400769, -22.659568 ], [ -43.2772602, -22.6887133 ], [ -43.4145018, -22.7177417 ], [ -43.5518015, -22.7466529 ], [ -43.6891591, -22.7754467 ], [ -43.8265746, -22.8041229 ], [ -43.9640479, -22.8326814 ], [ -44.1015787, -22.8611218 ], [ -44.239167, -22.889444 ], [ -44.0828649, -22.8233417 ], [ -43.9267147, -22.7570871 ], [ -43.770716, -22.6906809 ], [ -43.6148686, -22.6241236 ], [ -43.4591723, -22.557416 ], [ -43.3036266, -22.4905586 ], [ -43.1482313, -22.4235521 ], [ -42.9929861, -22.3563972 ], [ -42.8378907, -22.2890944 ], [ -42.6829447, -22.2216444 ], [ -42.5281478, -22.1540479 ], [ -42.3734998, -22.0863054 ], [ -42.2190002, -22.0184177 ], [ -42.0646488, -21.9503853 ], [ -41.9104451, -21.8822088 ], [ -41.756389, -21.813889 ], [ -41.8254037, -21.9646271 ], [ -41.894565, -22.1153364 ], [ -41.9638743, -22.2660164 ] ] ] } } ] };
+      if (eooData && eooData.type) {
+        L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
+      }
+
+      var aooData = { "type": "FeatureCollection", "name": "file137d0626a5bab", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Bertolonia sanguinea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.756428826990906, -21.813954618020134 ], [ -41.756428826990906, -21.794475543460432 ], [ -41.738438292100497, -21.794475543460432 ], [ -41.738438292100497, -21.813954618020134 ], [ -41.756428826990906, -21.813954618020134 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Bertolonia sanguinea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.846381501442934, -21.89189684631447 ], [ -41.846381501442934, -21.872407393207464 ], [ -41.828390966552526, -21.872407393207464 ], [ -41.828390966552526, -21.89189684631447 ], [ -41.846381501442934, -21.89189684631447 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Bertolonia sanguinea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.882362571223744, -21.950380835540585 ], [ -41.882362571223744, -21.9308835642065 ], [ -41.864372036333343, -21.9308835642065 ], [ -41.864372036333343, -21.950380835540585 ], [ -41.882362571223744, -21.950380835540585 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Bertolonia sanguinea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.044277385237393, -22.419106732050849 ], [ -42.044277385237393, -22.399545844365292 ], [ -42.026286850346992, -22.399545844365292 ], [ -42.026286850346992, -22.419106732050849 ], [ -42.044277385237393, -22.419106732050849 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Bertolonia sanguinea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.853851455305652, -22.438670312130551 ], [ -42.853851455305652, -22.419106732050849 ], [ -42.83586092041525, -22.419106732050849 ], [ -42.83586092041525, -22.438670312130551 ], [ -42.853851455305652, -22.438670312130551 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Bertolonia sanguinea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.83586092041525, -22.438670312130551 ], [ -42.83586092041525, -22.419106732050849 ], [ -42.817870385524841, -22.419106732050849 ], [ -42.817870385524841, -22.438670312130551 ], [ -42.83586092041525, -22.438670312130551 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Bertolonia sanguinea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.062267920127802, -22.438670312130551 ], [ -42.062267920127802, -22.419106732050849 ], [ -42.044277385237393, -22.419106732050849 ], [ -42.044277385237393, -22.438670312130551 ], [ -42.062267920127802, -22.438670312130551 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Bertolonia sanguinea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.015766269319307, -22.497377240432851 ], [ -43.015766269319307, -22.477805562948099 ], [ -42.997775734428899, -22.477805562948099 ], [ -42.997775734428899, -22.497377240432851 ], [ -43.015766269319307, -22.497377240432851 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Bertolonia sanguinea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.925813594867279, -22.497377240432851 ], [ -42.925813594867279, -22.477805562948099 ], [ -42.90782305997687, -22.477805562948099 ], [ -42.90782305997687, -22.497377240432851 ], [ -42.925813594867279, -22.497377240432851 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Bertolonia sanguinea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.997775734428899, -22.516951623805593 ], [ -42.997775734428899, -22.497377240432851 ], [ -42.97978519953849, -22.497377240432851 ], [ -42.97978519953849, -22.516951623805593 ], [ -42.997775734428899, -22.516951623805593 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Bertolonia sanguinea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.257113176757301, -22.909012763770587 ], [ -44.257113176757301, -22.889383547402186 ], [ -44.239122641866899, -22.889383547402186 ], [ -44.239122641866899, -22.909012763770587 ], [ -44.257113176757301, -22.909012763770587 ] ] ] } } ] };
+      if (aooData && aooData.type) {
+        L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
+      }
+
+      var pts = [[-22.499722, -42.981944],[-21.883333, -41.833333],[-22.416667, -42.033333],[-22.433333, -42.833333],[-22.489722, -43.009167],[-22.889444, -44.239167],[-22.485555, -42.915556],[-22.433333, -42.850000],[-22.422222, -42.044722],[-21.813889, -41.756389],[-21.933333, -41.866667]];
+      if (pts.length > 0) {
+        pts.forEach(function(p) {
+          L.circleMarker(p, { pane: "ptsPane", radius: 4, fillColor: "#e74c3c", color: "#fff", weight: 1, opacity: 1, fillOpacity: 0.9 }).addTo(map);
+        });
+      }
+
+      var bounds = [[-22.909013, -44.257113], [-21.794476, -41.738438]];
+      if (bounds) {
+        map.fitBounds(bounds, {padding: [30, 30], maxZoom: 14});
+      } else {
+        map.setView([-22.9, -43.2], 7);
+      }
+    } catch (error) {
+      console.error("Leaflet Rendering Error:", error);
+    }
+  });
+  </script>
+
+<h2>References</h2>
+<p>Flora do Brasil 2020 em construção. Jardim Botânico do Rio de Janeiro. Disponível em: http://floradobrasil.jbrj.gov.br.</p><p><a href="http://reflora.jbrj.gov.br/reflora/listaBrasil/FichaPublicaTaxonUC/FichaPublicaTaxonUC.do?id=FB9427" target="_blank" style="color:#2980b9; text-decoration:none; font-weight:bold;">🌐 Link to this taxon on Reflora</a></p>
+
+<hr style="margin-top:40px;">
+<p style="color:#95a5a6;font-size:0.85em;text-align:center;">
+Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+</div>
+</body>
+</html>

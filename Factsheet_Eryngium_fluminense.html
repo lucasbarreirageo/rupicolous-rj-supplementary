@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Eryngium fluminense Urb. — IUCN Factsheet</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<style>
+  body { font-family:"Segoe UI",Arial,sans-serif; background:#f4f6f8; margin:0; padding:20px; }
+  .container { max-width:1200px; margin:auto; background:white; padding:30px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+  h1 { color:#2c3e50; border-bottom:4px solid #3498db; padding-bottom:10px; margin-bottom:10px; }
+  h2 { color:#34495e; margin-top:30px; border-bottom:2px solid #ecf0f1; padding-bottom:5px; }
+  .resumo-box { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; margin:20px 0; }
+  .resumo-item { background:#ecf0f1; padding:15px; border-radius:8px; text-align:center; }
+  .resumo-item .label { font-size:0.85em; color:#7f8c8d; text-transform:uppercase; }
+  .resumo-item .value { font-size:1.4em; font-weight:bold; color:#2c3e50; margin-top:5px; }
+  .categoria { font-size:2em; font-weight:bold; padding:10px 20px; border-radius:8px; color:white; display:inline-block; margin-bottom: 20px; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; }
+  th,td { padding:10px; border-bottom:1px solid #ecf0f1; text-align:left; }
+  .justificativa { background:#f8f9fa; padding:20px; border-left:4px solid #3498db; border-radius:4px; line-height:1.7; }
+  
+  ::-webkit-scrollbar { height: 8px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #95a5a6; }
+</style>
+</head>
+<body>
+
+<div id="imgModal" style="display:none; position:fixed; z-index:9999; padding-top:40px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.85);" onclick="if(event.target == this) closeModal()">
+  <span style="position:absolute; top:15px; right:35px; color:#f1f1f1; font-size:40px; font-weight:bold; cursor:pointer;" onclick="closeModal()">&times;</span>
+  <div style="margin:auto; display:flex; flex-direction:column; align-items:center; max-width:90%;">
+    <img id="modalContent" style="max-width:100%; max-height:75vh; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5);">
+    <div id="modalCaption" style="margin-top: 15px; background: rgba(255,255,255,0.95); padding: 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-size: 0.9em; max-width: 800px; line-height: 1.5;"></div>
+  </div>
+</div>
+
+<script>
+function openModal(imgElement) {
+  document.getElementById("imgModal").style.display = "block";
+  document.getElementById("modalContent").src = imgElement.src;
+  document.getElementById("modalCaption").innerHTML = imgElement.getAttribute("data-caption");
+}
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+</script>
+
+<div class="container">
+
+<h1><i>Eryngium fluminense</i> <span style='font-size:0.55em; font-weight:normal; font-style:normal; color:#555;'>Urb.</span></h1>
+  <div style="margin-top: 15px; margin-bottom: 25px;">
+    <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scroll-snap-type: x mandatory;">
+      <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/579716759/original.jpg" alt="Photo of Eryngium fluminense" data-caption="<b>Author/Owner:</b> johannesundolli &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/579716759' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/579716781/original.jpg" alt="Photo of Eryngium fluminense" data-caption="<b>Author/Owner:</b> johannesundolli &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/579716781' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/596243316/original.jpg" alt="Photo of Eryngium fluminense" data-caption="<b>Author/Owner:</b> dansmall &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/596243316' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/587436394/original.jpg" alt="Photo of Eryngium fluminense" data-caption="<b>Author/Owner:</b> filipeprates &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.inaturalist.org/photos/587436394' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/587436508/original.jpg" alt="Photo of Eryngium fluminense" data-caption="<b>Author/Owner:</b> filipeprates &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.inaturalist.org/photos/587436508' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/587436380/original.jpg" alt="Photo of Eryngium fluminense" data-caption="<b>Author/Owner:</b> filipeprates &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.inaturalist.org/photos/587436380' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/465152294/original.jpeg" alt="Photo of Eryngium fluminense" data-caption="<b>Author/Owner:</b> Gabriel Garcia &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/465152294' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="https://inaturalist-open-data.s3.amazonaws.com/photos/465152303/original.jpeg" alt="Photo of Eryngium fluminense" data-caption="<b>Author/Owner:</b> Gabriel Garcia &middot; <b>License:</b> http://creativecommons.org/licenses/by-nc/4.0/ &middot; <a href='https://www.inaturalist.org/photos/465152303' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://jbrj-public-img.s3-sa-east-1.amazonaws.com/JPG/rbr/rbr/0/4/64/52/rbr00046452.jpg" alt="Photo of Eryngium fluminense" data-caption="<b>Author/Owner:</b> Universidade Federal Rural do Rio de Janeiro (RBR) &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://rbr.jbrj.gov.br/v2/regua/visualizador.php?r=true&colbot=rbr&codtestemunho=RBR46452&arquivo=rbr00046452.dzi' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+<img src="http://sweetgum.nybg.org/images3/1375/208/01039136.jpg" alt="Photo of Eryngium fluminense" data-caption="<b>Author/Owner:</b> The New York Botanical Garden &middot; <b>License:</b> http://creativecommons.org/licenses/by/4.0/ &middot; <a href='https://www.gbif.org/occurrence/1931279260' target='_blank' style='color:#3498db; font-weight:bold;'>View Original Record (GBIF)</a>" title="Clique para ampliar e ver referências" onclick="openModal(this)" style="height: 250px; width: 300px; object-fit: cover; border-radius: 8px; border: 3px solid #ecf0f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; flex-shrink: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+    </div>
+    <p style="font-size: 0.75em; color: #7f8c8d; margin-top: -5px;">Source: GBIF Occurrences (Click on any image to view details and references)</p>
+  </div>
+
+<h2>Taxonomy</h2>
+  <div style="background:#ecf0f1; padding:15px; border-radius:8px; display:flex; gap:30px; flex-wrap:wrap;">
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Family</span><br><b>Apiaceae</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Genus</span><br><b>Eryngium</b></div>
+    <div><span style="color:#7f8c8d; font-size:0.85em; text-transform:uppercase;">Authority</span><br><b>Urb.</b></div>
+  </div>
+
+<br>
+<div class="categoria" style="background-color:#F9E814;">VU &middot; B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div>
+
+<h2>Assessment Summary</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Category</div><div class="value">VU</div></div>
+  <div class="resumo-item"><div class="label">Criterion</div><div class="value">B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div></div>
+  <div class="resumo-item"><div class="label">Year</div><div class="value">2026</div></div>
+  <div class="resumo-item"><div class="label">Scope</div><div class="value">Regional (RJ)</div></div>
+</div>
+
+<h2>Justification</h2>
+<div class="justificativa"><i>Eryngium fluminense</i> is endemic to the state of Rio de Janeiro, with a rupicolous habit. The spatial analysis of confirmed occurrences (EOO = 1,559.2 km²; AOO = 44 km², 2×2 km grid) identified <b>9</b> locations determined by the threat. Assessment: <b>VU</b> under criterion B1 (EOO < 20,000 km²). Criterion: <b>B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</b>.  The number of locations (9) meets the IUCN threshold for VU (≤ 10).  Active threats (IUCN-CMP v3.3): 1.1 Housing & urban areas; 2.2 Wood & pulp plantations; 2.3 Livestock farming & ranching; 10.3 Avalanches/landslides.  Occurs in Protected Areas (PA regime: Integral Protection and Sustainable Use): PARQUE NATURAL MUNICIPAL MONTANHAS DE TERESÓPOLIS | ÁREA DE PROTEÇÃO AMBIENTAL DE TRÊS PICOS | ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO DOS FRADES | ÁREA DE PROTEÇÃO AMBIENTAL DE MACAÉ DE CIMA | PARQUE ESTADUAL DOS TRÊS PICOS | ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO MACACU | ÁREA DE PROTEÇÃO AMBIENTAL DA REGIÃO SERRANA DE PETRÓPOLIS | PARQUE NACIONAL DA SERRA DOS ÓRGÃOS. </div>
+
+<h2>Supporting Information</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Countries</div><div class="value" style="font-size:1em;">BR-RJ (Brazil, Rio de Janeiro)</div></div>
+  <div class="resumo-item"><div class="label">System</div><div class="value" style="font-size:1em;">Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Habitat</div><div class="value" style="font-size:1em;">Rupicolous, Terrestrial</div></div>
+  <div class="resumo-item"><div class="label">Biome</div><div class="value" style="font-size:1em;">Atlantic Forest</div></div>
+  <div class="resumo-item"><div class="label">Vegetation</div><div class="value" style="font-size:1em;">High Altitude Grassland</div></div>
+</div>
+
+<h2>Geographic Distribution</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">EOO</div><div class="value">1559.2 km²</div></div>
+  <div class="resumo-item"><div class="label">AOO (2×2 km)</div><div class="value">44 km²</div></div>
+  <div class="resumo-item"><div class="label">Endemic to RJ</div><div class="value">Yes</div></div>
+  <div class="resumo-item"><div class="label">Occurrences</div><div class="value">17</div></div>
+</div>
+
+<h2>Population & Locations</h2>
+<div class="resumo-box">
+  <div class="resumo-item"><div class="label">Locations §4.11</div><div class="value">9</div></div>
+  <div class="resumo-item"><div class="label">Critical Threat</div><div class="value" style="font-size:1em;">10.3</div></div>
+  <div class="resumo-item"><div class="label">Population Trend</div><div class="value" style="font-size:1em;">Decreasing</div></div>
+</div>
+
+<h2>Collections Used</h2>
+  <div style="max-height: 250px; overflow-y: auto; border: 1px solid #ecf0f1; padding: 15px; border-radius: 4px; background: #fafafa;">
+    <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; line-height: 1.6; color: #2c3e50;">
+      <li><b>A. F. M. Glaziou 17627</b> (s.d.) - NY — <i>Unknown Municipality</i></li><li><b>Azul (Rocha, L.C.F.; Veiga, E.B.; Konopczyk, R.M.G.; Lombardi, J.A.; Saka, M.N.) 107</b> (2012) - UNESP-RC — <i>Teresópolis</i></li><li><b>Azul; Rocha, L.C.F.|Veiga, E.B.|Konopczyk, R.M.G.|Lombardi, J.A.|Saka, M.N. 107</b> (2012) - UFPR — <i>Teresópolis</i></li><li><b>Brotto, ML;Völtz, RR 3914</b> (2020) - MBM — <i>Nova Friburgo</i></li><li><b>C. Baez; C. Vianna, G. Tisi 100</b> (2014) - JBRJ — <i>Nova Friburgo</i></li><li><b>C. Baez; C. Vianna, T. Amorim 119</b> (2014) - JBRJ — <i>Nova Friburgo</i></li><li><b>C. Baez; Thalis Lima, Lucas Moraes, Fabiano Silva 1080</b> (2016) - JBRJ — <i>Nova Friburgo</i></li><li><b>C. Baez; Thalis Lima, Lucas Moraes, Fabiano Silva 1147</b> (2016) - JBRJ — <i>Teresópolis</i></li><li><b>C.N. Fraga; M.M. Saavedra 2564</b> (2009) - JBRJ — <i>Nova Friburgo</i></li><li><b>Eduardo P. Fernandez; Caio Baez & Thalis Lima 193</b> (2015) - JBRJ — <i>Teresópolis</i></li><li><b>Fiaschi, P 3887</b> (2012) - SPF — <i>Teresópolis</i></li><li><b>Forzza, RC 3415</b> (2004) - SPF — <i>Nova Friburgo</i></li><li><b>M.L. Brotto; R.R. Völtz 3914</b> (2020) - JBRJ — <i>Nova Friburgo</i></li><li><b>M.S. Wängler; T.E.C. Meneguzzo, J.F.A. Baumgratz & K.C. Silva-Gonçalves 1585</b> (2015) - JBRJ — <i>Nova Friburgo</i></li><li><b>R. C. Forzza 3415</b> (2004) - NY — <i>Unknown Municipality</i></li><li><b>T.C. Alves 84</b> (2019) - UFRRJ — <i>Petrópolis</i></li><li><b>Völtz, RR;Brotto, ML,Meyer, FS 2191</b> (2019) - MBM — <i>Teresópolis</i></li>
+    </ul>
+  </div>
+  <p style="font-size:0.8em; color:#7f8c8d; margin-top:5px;">Total collections evaluated: 17</p>
+
+<h2>Threats Summary</h2>
+<table style="width:100%;border-collapse:collapse;"><thead style="background:#34495e;color:white;"><tr><th>Threat (IUCN-CMP v3.3)</th><th>Timing</th><th>Scope</th><th>% AOO</th><th>% EOO</th><th>Severity</th></tr></thead><tbody><tr><td><b>1.1 Housing & urban areas</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>0.38%</td><td>3.03%</td><td>slow</td></tr><tr><td><b>2.2 Wood & pulp plantations</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>0.22%</td><td>0.98%</td><td>slow</td></tr><tr><td><b>2.3 Livestock farming & ranching</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>21.49%</td><td>29.62%</td><td>slow</td></tr><tr><td><b>10.3 Avalanches/landslides</b></td><td><span style="color:#e74c3c;font-weight:bold;">ongoing</span></td><td>minority</td><td>31.33%</td><td>25.2%</td><td>slow</td></tr></tbody></table>
+
+<h2>Threats — Methodological Details</h2>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">1.1 Housing & urban areas</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from human settlements with substantial footprint (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 24 (Urban Infrastructure).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0.38% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">3.03% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🏘️
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.2 Wood & pulp plantations</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Stands of trees planted for timber outside natural forests (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 9 (Forest Plantation).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0.22% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.98% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🌲
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">2.3 Livestock farming & ranching</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Domestic terrestrial animals raised in one location or roaming wild (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas classes 14, 15 and 21.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">21.49% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">29.62% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    🐄
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">3.2 Mining & quarrying</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Exploring for, developing, and producing minerals and rocks (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> MapBiomas class 30 (Mining).</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">0% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">0.01% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    ⛏️
+  </div>
+</div>
+<div style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-left:3px solid #3498db; border-radius:4px; display:flex; align-items:center; justify-content:space-between;">
+  <div style="flex-grow: 1; padding-right: 15px;">
+    <div style="font-weight:bold; color:#2c3e50; margin-bottom:5px;">10.3 Avalanches/landslides</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Definition:</b> Threats from catastrophic geological events (IUCN-CMP v3.3).</div>
+    <div style="font-size:0.9em; color:#555; margin-bottom:5px;"><b>Mapping:</b> High susceptibility polygons CPRM/IPT filtered by scars dated via LandTrendr/CCDC.</div>
+    <div style="font-size:0.9em; color:#2c3e50; margin-top:8px;"><b>Impact on this species:</b> <span style="color:#3498db;font-weight:bold;">31.33% of AOO</span> &middot; <span style="color:#f39c12;font-weight:bold;">25.2% of EOO</span></div>
+  </div>
+  <div style="font-size: 3.2em; margin-right: 10px; opacity: 0.25;">
+    ⛰️
+  </div>
+</div>
+
+<h2>Protection Status</h2>
+<p style='margin-bottom: 5px;'><b>Management Category:</b> Integral Protection and Sustainable Use</p><p style='margin-top: 0; margin-bottom: 5px;'><b>Protected Areas:</b></p><ul style='margin-top: 5px; margin-bottom: 0;'><li>PARQUE NATURAL MUNICIPAL MONTANHAS DE TERESÓPOLIS</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DE TRÊS PICOS</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO DOS FRADES</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DE MACAÉ DE CIMA</li><li>PARQUE ESTADUAL DOS TRÊS PICOS</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO MACACU</li><li>ÁREA DE PROTEÇÃO AMBIENTAL DA REGIÃO SERRANA DE PETRÓPOLIS</li><li>PARQUE NACIONAL DA SERRA DOS ÓRGÃOS</li></ul>
+
+<h2>Conservation actions</h2>
+<ul><li>2.1 Site/area management</li><li>2.3 Habitat & natural process restoration</li><li>1.2 Resource & habitat protection</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
+
+<h2>Distribution Map</h2>
+  <div id="map_89876" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    try {
+      var map = L.map("map_89876");
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap contributors"
+      }).addTo(map);
+
+      map.createPane("ucsPane"); map.getPane("ucsPane").style.zIndex = 400;
+      map.createPane("eooPane"); map.getPane("eooPane").style.zIndex = 410;
+      map.createPane("aooPane"); map.getPane("aooPane").style.zIndex = 420;
+      map.createPane("ptsPane"); map.getPane("ptsPane").style.zIndex = 430;
+
+      var ucsData = null;
+      if (ucsData && ucsData.type) {
+        L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
+      }
+
+      var eooData = { "type": "FeatureCollection", "name": "file137d019ff5331", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Eryngium fluminense" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.9154293, -22.5040744 ], [ -43.008333, -22.530833 ], [ -43.037778, -22.464167 ], [ -43.0208218, -22.3677789 ], [ -43.003889, -22.271389 ], [ -42.8407118, -22.2566331 ], [ -42.6775691, -22.2417144 ], [ -42.5144614, -22.226633 ], [ -42.351389, -22.211389 ], [ -42.266111, -22.315 ], [ -42.266111, -22.315278 ], [ -42.3587627, -22.3424075 ], [ -42.4514504, -22.3694842 ], [ -42.5441742, -22.3965082 ], [ -42.6369339, -22.4234793 ], [ -42.7297297, -22.4503974 ], [ -42.8225615, -22.4772625 ], [ -42.9154293, -22.5040744 ] ] ] } } ] };
+      if (eooData && eooData.type) {
+        L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
+      }
+
+      var aooData = { "type": "FeatureCollection", "name": "file137d060d769c", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Eryngium fluminense" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.352650517573011, -22.225635289563122 ], [ -42.352650517573011, -22.206261187414718 ], [ -42.334511620677517, -22.206261187414718 ], [ -42.334511620677517, -22.225635289563122 ], [ -42.352650517573011, -22.225635289563122 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Eryngium fluminense" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.005650805810589, -22.283773303710337 ], [ -43.005650805810589, -22.26439134445808 ], [ -42.987511908915089, -22.26439134445808 ], [ -42.987511908915089, -22.283773303710337 ], [ -43.005650805810589, -22.283773303710337 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Eryngium fluminense" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.733567352378266, -22.322545102114557 ], [ -42.733567352378266, -22.303157888508675 ], [ -42.715428455482773, -22.303157888508675 ], [ -42.715428455482773, -22.322545102114557 ], [ -42.733567352378266, -22.322545102114557 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Eryngium fluminense" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.280094929991058, -22.322545102114557 ], [ -42.280094929991058, -22.303157888508675 ], [ -42.261956033095565, -22.303157888508675 ], [ -42.261956033095565, -22.322545102114557 ], [ -42.280094929991058, -22.322545102114557 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Eryngium fluminense" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.769845146169246, -22.361327428812181 ], [ -42.769845146169246, -22.341934947792929 ], [ -42.751706249273752, -22.341934947792929 ], [ -42.751706249273752, -22.361327428812181 ], [ -42.769845146169246, -22.361327428812181 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Eryngium fluminense" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.733567352378266, -22.361327428812181 ], [ -42.733567352378266, -22.341934947792929 ], [ -42.715428455482773, -22.341934947792929 ], [ -42.715428455482773, -22.361327428812181 ], [ -42.733567352378266, -22.361327428812181 ] ] ] } }, { "type": "Feature", "properties": { "count": 3.0, "species": "Eryngium fluminense" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.588456177214361, -22.361327428812181 ], [ -42.588456177214361, -22.341934947792929 ], [ -42.570317280318868, -22.341934947792929 ], [ -42.570317280318868, -22.361327428812181 ], [ -42.588456177214361, -22.361327428812181 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Eryngium fluminense" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.806122939960218, -22.380722548444187 ], [ -42.806122939960218, -22.361327428812181 ], [ -42.787984043064725, -22.361327428812181 ], [ -42.787984043064725, -22.380722548444187 ], [ -42.806122939960218, -22.380722548444187 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Eryngium fluminense" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.005650805810589, -22.458329478659088 ], [ -43.005650805810589, -22.438923771787671 ], [ -42.987511908915089, -22.438923771787671 ], [ -42.987511908915089, -22.458329478659088 ], [ -43.005650805810589, -22.458329478659088 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Eryngium fluminense" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.041928599601569, -22.477737840554941 ], [ -43.041928599601569, -22.458329478659088 ], [ -43.023789702706075, -22.458329478659088 ], [ -43.023789702706075, -22.477737840554941 ], [ -43.041928599601569, -22.477737840554941 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Eryngium fluminense" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.023789702706082, -22.535978889335102 ], [ -43.023789702706082, -22.516562542594816 ], [ -43.005650805810589, -22.516562542594816 ], [ -43.005650805810589, -22.535978889335102 ], [ -43.023789702706082, -22.535978889335102 ] ] ] } } ] };
+      if (aooData && aooData.type) {
+        L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
+      }
+
+      var pts = [[-22.530833, -43.008333],[-22.451667, -43.001667],[-22.450000, -43.000000],[-22.315000, -42.266111],[-22.343611, -42.724722],[-22.353611, -42.586944],[-22.318333, -42.725556],[-22.354167, -42.760556],[-22.353333, -42.586944],[-22.354444, -42.761944],[-22.271389, -43.003889],[-22.211389, -42.351389],[-22.315278, -42.266111],[-22.342500, -42.718889],[-22.353600, -42.586900],[-22.464167, -43.037778],[-22.379444, -42.800833]];
+      if (pts.length > 0) {
+        pts.forEach(function(p) {
+          L.circleMarker(p, { pane: "ptsPane", radius: 4, fillColor: "#e74c3c", color: "#fff", weight: 1, opacity: 1, fillOpacity: 0.9 }).addTo(map);
+        });
+      }
+
+      var bounds = [[-22.535979, -43.041929], [-22.206261, -42.261956]];
+      if (bounds) {
+        map.fitBounds(bounds, {padding: [30, 30], maxZoom: 14});
+      } else {
+        map.setView([-22.9, -43.2], 7);
+      }
+    } catch (error) {
+      console.error("Leaflet Rendering Error:", error);
+    }
+  });
+  </script>
+
+<h2>References</h2>
+<p>Flora do Brasil 2020 em construção. Jardim Botânico do Rio de Janeiro. Disponível em: http://floradobrasil.jbrj.gov.br.</p><p><a href="http://reflora.jbrj.gov.br/reflora/listaBrasil/FichaPublicaTaxonUC/FichaPublicaTaxonUC.do?id=FB26416" target="_blank" style="color:#2980b9; text-decoration:none; font-weight:bold;">🌐 Link to this taxon on Reflora</a></p>
+
+<hr style="margin-top:40px;">
+<p style="color:#95a5a6;font-size:0.85em;text-align:center;">
+Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+</div>
+</body>
+</html>
