@@ -14,7 +14,7 @@ state of Rio de Janeiro, Brazil.
 
 The navigable supplementary material is available at:
 
-**https://lucasbarreirageo.github.io/rupicolous-rj-supplementary/**
+**[https://lucasbarreirageo.github.io/rupicolous-rj-supplementary/](https://lucasbarreirageo.github.io/rupicolous-rj-supplementary/)**
 
 The master table opens automatically; click any species name to open its individual
 factsheet.
