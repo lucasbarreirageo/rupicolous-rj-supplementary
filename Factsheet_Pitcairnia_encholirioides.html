@@ -157,11 +157,11 @@ function closeModal() {
 <ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_87711" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_96517" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_87711");
+      var map = L.map("map_96517");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -177,12 +177,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d05fb52dc8", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Pitcairnia encholirioides" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.951111, -21.893333 ], [ -41.994167, -21.945278 ], [ -42.0175, -21.9675 ], [ -42.018333, -21.9675 ], [ -41.951111, -21.893333 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d073a6330", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Pitcairnia encholirioides" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.951111, -21.893333 ], [ -41.994167, -21.945278 ], [ -42.0175, -21.9675 ], [ -42.018333, -21.9675 ], [ -41.951111, -21.893333 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d048e11bae", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Pitcairnia encholirioides" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.967336238321082, -21.911410155008571 ], [ -41.967336238321082, -21.89241051464035 ], [ -41.949949345996949, -21.89241051464035 ], [ -41.949949345996949, -21.911410155008571 ], [ -41.967336238321082, -21.911410155008571 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Pitcairnia encholirioides" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.002110022969347, -21.949416866961457 ], [ -42.002110022969347, -21.930412271437568 ], [ -41.984723130645214, -21.930412271437568 ], [ -41.984723130645214, -21.949416866961457 ], [ -42.002110022969347, -21.949416866961457 ] ] ] } }, { "type": "Feature", "properties": { "count": 3.0, "species": "Pitcairnia encholirioides" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.01949691529348, -21.968423944617477 ], [ -42.01949691529348, -21.949416866961457 ], [ -42.002110022969347, -21.949416866961457 ], [ -42.002110022969347, -21.968423944617477 ], [ -42.01949691529348, -21.968423944617477 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d0539c2854", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Pitcairnia encholirioides" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.967336238321082, -21.911410155008571 ], [ -41.967336238321082, -21.89241051464035 ], [ -41.949949345996949, -21.89241051464035 ], [ -41.949949345996949, -21.911410155008571 ], [ -41.967336238321082, -21.911410155008571 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Pitcairnia encholirioides" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.002110022969347, -21.949416866961457 ], [ -42.002110022969347, -21.930412271437568 ], [ -41.984723130645214, -21.930412271437568 ], [ -41.984723130645214, -21.949416866961457 ], [ -42.002110022969347, -21.949416866961457 ] ] ] } }, { "type": "Feature", "properties": { "count": 3.0, "species": "Pitcairnia encholirioides" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.01949691529348, -21.968423944617477 ], [ -42.01949691529348, -21.949416866961457 ], [ -42.002110022969347, -21.949416866961457 ], [ -42.002110022969347, -21.968423944617477 ], [ -42.01949691529348, -21.968423944617477 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -211,7 +211,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

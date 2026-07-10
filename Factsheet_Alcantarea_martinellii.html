@@ -160,11 +160,11 @@ function closeModal() {
 <ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_76983" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_66658" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_76983");
+      var map = L.map("map_66658");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -180,12 +180,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d014fa975", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Alcantarea martinellii" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.0733145, -22.4722534 ], [ -43.177778, -22.511389 ], [ -43.246944, -22.433889 ], [ -43.1256421, -22.4141634 ], [ -43.0043747, -22.3943473 ], [ -42.883142, -22.3744408 ], [ -42.761944, -22.354444 ], [ -42.760278, -22.354444 ], [ -42.8645645, -22.3937808 ], [ -42.96891, -22.4330506 ], [ -43.0733145, -22.4722534 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d05baf1a80", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Alcantarea martinellii" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.0733145, -22.4722534 ], [ -43.177778, -22.511389 ], [ -43.246944, -22.433889 ], [ -43.1256421, -22.4141634 ], [ -43.0043747, -22.3943473 ], [ -42.883142, -22.3744408 ], [ -42.761944, -22.354444 ], [ -42.760278, -22.354444 ], [ -42.8645645, -22.3937808 ], [ -42.96891, -22.4330506 ], [ -43.0733145, -22.4722534 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d0783e27c3", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 2.0, "species": "Alcantarea martinellii" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.77305542874177, -22.366994267440507 ], [ -42.77305542874177, -22.348170516242622 ], [ -42.75532043924504, -22.348170516242622 ], [ -42.75532043924504, -22.366994267440507 ], [ -42.77305542874177, -22.366994267440507 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Alcantarea martinellii" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.251900145153478, -22.44231417029831 ], [ -43.251900145153478, -22.423480453875619 ], [ -43.23416515565674, -22.423480453875619 ], [ -43.23416515565674, -22.44231417029831 ], [ -43.251900145153478, -22.44231417029831 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Alcantarea martinellii" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.180960187166555, -22.517674054207749 ], [ -43.180960187166555, -22.498830324474401 ], [ -43.163225197669824, -22.498830324474401 ], [ -43.163225197669824, -22.517674054207749 ], [ -43.180960187166555, -22.517674054207749 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d05392130c", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 2.0, "species": "Alcantarea martinellii" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.77305542874177, -22.366994267440507 ], [ -42.77305542874177, -22.348170516242622 ], [ -42.75532043924504, -22.348170516242622 ], [ -42.75532043924504, -22.366994267440507 ], [ -42.77305542874177, -22.366994267440507 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Alcantarea martinellii" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.251900145153478, -22.44231417029831 ], [ -43.251900145153478, -22.423480453875619 ], [ -43.23416515565674, -22.423480453875619 ], [ -43.23416515565674, -22.44231417029831 ], [ -43.251900145153478, -22.44231417029831 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Alcantarea martinellii" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.180960187166555, -22.517674054207749 ], [ -43.180960187166555, -22.498830324474401 ], [ -43.163225197669824, -22.498830324474401 ], [ -43.163225197669824, -22.517674054207749 ], [ -43.180960187166555, -22.517674054207749 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -214,7 +214,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

@@ -174,11 +174,11 @@ function closeModal() {
 <ul><li>2.1 Site/area management</li><li>2.3 Habitat & natural process restoration</li><li>1.2 Resource & habitat protection</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_56486" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_17667" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_56486");
+      var map = L.map("map_17667");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -194,12 +194,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d04e64659f", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Pleroma virgatum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.9166433, -22.4256503 ], [ -43.073169, -22.496706 ], [ -42.9863904, -22.4521129 ], [ -42.8996675, -22.4074735 ], [ -42.8130005, -22.3627878 ], [ -42.726389, -22.318056 ], [ -42.723333, -22.320556 ], [ -42.723611, -22.320833 ], [ -42.760278, -22.354444 ], [ -42.9166433, -22.4256503 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d068841cd5", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Pleroma virgatum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.9166433, -22.4256503 ], [ -43.073169, -22.496706 ], [ -42.9863904, -22.4521129 ], [ -42.8996675, -22.4074735 ], [ -42.8130005, -22.3627878 ], [ -42.726389, -22.318056 ], [ -42.723333, -22.320556 ], [ -42.723611, -22.320833 ], [ -42.760278, -22.354444 ], [ -42.9166433, -22.4256503 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d029bf13db", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 4.0, "species": "Pleroma virgatum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.736739910487138, -22.331223693382139 ], [ -42.736739910487138, -22.312197462831548 ], [ -42.718794191196665, -22.312197462831548 ], [ -42.718794191196665, -22.331223693382139 ], [ -42.736739910487138, -22.331223693382139 ] ] ] } }, { "type": "Feature", "properties": { "count": 3.0, "species": "Pleroma virgatum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.772631349068064, -22.369283765760809 ], [ -42.772631349068064, -22.350252459995204 ], [ -42.754685629777597, -22.350252459995204 ], [ -42.754685629777597, -22.369283765760809 ], [ -42.772631349068064, -22.369283765760809 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Pleroma virgatum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.077708577005929, -22.502574262635502 ], [ -43.077708577005929, -22.483525096008652 ], [ -43.059762857715462, -22.483525096008652 ], [ -43.059762857715462, -22.502574262635502 ], [ -43.077708577005929, -22.502574262635502 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d01e851911", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 4.0, "species": "Pleroma virgatum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.736739910487138, -22.331223693382139 ], [ -42.736739910487138, -22.312197462831548 ], [ -42.718794191196665, -22.312197462831548 ], [ -42.718794191196665, -22.331223693382139 ], [ -42.736739910487138, -22.331223693382139 ] ] ] } }, { "type": "Feature", "properties": { "count": 3.0, "species": "Pleroma virgatum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.772631349068064, -22.369283765760809 ], [ -42.772631349068064, -22.350252459995204 ], [ -42.754685629777597, -22.350252459995204 ], [ -42.754685629777597, -22.369283765760809 ], [ -42.772631349068064, -22.369283765760809 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Pleroma virgatum" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.077708577005929, -22.502574262635502 ], [ -43.077708577005929, -22.483525096008652 ], [ -43.059762857715462, -22.483525096008652 ], [ -43.059762857715462, -22.502574262635502 ], [ -43.077708577005929, -22.502574262635502 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -228,7 +228,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

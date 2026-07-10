@@ -163,11 +163,11 @@ function closeModal() {
 <ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_88619" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_14517" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_88619");
+      var map = L.map("map_14517");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -183,12 +183,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d044381558", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Alcantarea odorata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.919689, -21.7628551 ], [ -41.93333, -21.88333 ], [ -41.93933, -21.87567 ], [ -41.943333, -21.865 ], [ -41.9284361, -21.7468171 ], [ -41.9135636, -21.6286328 ], [ -41.8987155, -21.5104473 ], [ -41.8838915, -21.3922604 ], [ -41.8690914, -21.2740722 ], [ -41.8543151, -21.1558828 ], [ -41.8395624, -21.037692 ], [ -41.824833, -20.9195 ], [ -41.8383175, -21.0399825 ], [ -41.8518238, -21.160464 ], [ -41.8653522, -21.2809444 ], [ -41.8789027, -21.4014237 ], [ -41.8924755, -21.521902 ], [ -41.9060709, -21.6423791 ], [ -41.919689, -21.7628551 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d0374f698f", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Alcantarea odorata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.919689, -21.7628551 ], [ -41.93333, -21.88333 ], [ -41.93933, -21.87567 ], [ -41.943333, -21.865 ], [ -41.9284361, -21.7468171 ], [ -41.9135636, -21.6286328 ], [ -41.8987155, -21.5104473 ], [ -41.8838915, -21.3922604 ], [ -41.8690914, -21.2740722 ], [ -41.8543151, -21.1558828 ], [ -41.8395624, -21.037692 ], [ -41.824833, -20.9195 ], [ -41.8383175, -21.0399825 ], [ -41.8518238, -21.160464 ], [ -41.8653522, -21.2809444 ], [ -41.8789027, -21.4014237 ], [ -41.8924755, -21.521902 ], [ -41.9060709, -21.6423791 ], [ -41.919689, -21.7628551 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d053f27980", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Alcantarea odorata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.840818738681065, -20.938509273586519 ], [ -41.840818738681065, -20.919284198125215 ], [ -41.823512286407379, -20.919284198125215 ], [ -41.823512286407379, -20.938509273586519 ], [ -41.840818738681065, -20.938509273586519 ] ] ] } }, { "type": "Feature", "properties": { "count": 3.0, "species": "Alcantarea odorata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.944657452323227, -21.883551698819669 ], [ -41.944657452323227, -21.864204851988998 ], [ -41.927351000049534, -21.864204851988998 ], [ -41.927351000049534, -21.883551698819669 ], [ -41.944657452323227, -21.883551698819669 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d053ee3d12", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Alcantarea odorata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.840818738681065, -20.938509273586519 ], [ -41.840818738681065, -20.919284198125215 ], [ -41.823512286407379, -20.919284198125215 ], [ -41.823512286407379, -20.938509273586519 ], [ -41.840818738681065, -20.938509273586519 ] ] ] } }, { "type": "Feature", "properties": { "count": 3.0, "species": "Alcantarea odorata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.944657452323227, -21.883551698819669 ], [ -41.944657452323227, -21.864204851988998 ], [ -41.927351000049534, -21.864204851988998 ], [ -41.927351000049534, -21.883551698819669 ], [ -41.944657452323227, -21.883551698819669 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -217,7 +217,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

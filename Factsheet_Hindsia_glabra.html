@@ -174,11 +174,11 @@ function closeModal() {
 <ul><li>2.1 Site/area management</li><li>2.3 Habitat & natural process restoration</li><li>1.2 Resource & habitat protection</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_48162" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_52027" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_48162");
+      var map = L.map("map_52027");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -194,12 +194,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d0280642f", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Hindsia glabra" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.5546133, -22.3993009 ], [ -44.692, -22.425 ], [ -44.695, -22.416667 ], [ -44.679444, -22.39 ], [ -44.5428767, -22.3664777 ], [ -44.4063556, -22.3428409 ], [ -44.2698809, -22.3190897 ], [ -44.1334527, -22.2952244 ], [ -43.9970713, -22.2712451 ], [ -43.8607367, -22.247152 ], [ -43.7244491, -22.2229453 ], [ -43.5882087, -22.198625 ], [ -43.4520155, -22.1741915 ], [ -43.3158699, -22.1496449 ], [ -43.1797718, -22.1249854 ], [ -43.0437214, -22.1002131 ], [ -42.9077189, -22.0753282 ], [ -42.7717644, -22.050331 ], [ -42.6358581, -22.0252215 ], [ -42.5, -22.0 ], [ -42.6366086, -22.027419 ], [ -42.77327, -22.0547248 ], [ -42.909984, -22.0819171 ], [ -43.0467506, -22.1089957 ], [ -43.1835697, -22.1359604 ], [ -43.320441, -22.162811 ], [ -43.457364399999989, -22.1895473 ], [ -43.5943399, -22.2161692 ], [ -43.7313673, -22.2426764 ], [ -43.8684464, -22.2690688 ], [ -44.0055771, -22.2953461 ], [ -44.1427593, -22.3215082 ], [ -44.279992799999988, -22.3475548 ], [ -44.4172776, -22.3734857 ], [ -44.5546133, -22.3993009 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d0440d3629", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Hindsia glabra" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.5546133, -22.3993009 ], [ -44.692, -22.425 ], [ -44.695, -22.416667 ], [ -44.679444, -22.39 ], [ -44.5428767, -22.3664777 ], [ -44.4063556, -22.3428409 ], [ -44.2698809, -22.3190897 ], [ -44.1334527, -22.2952244 ], [ -43.9970713, -22.2712451 ], [ -43.8607367, -22.247152 ], [ -43.7244491, -22.2229453 ], [ -43.5882087, -22.198625 ], [ -43.4520155, -22.1741915 ], [ -43.3158699, -22.1496449 ], [ -43.1797718, -22.1249854 ], [ -43.0437214, -22.1002131 ], [ -42.9077189, -22.0753282 ], [ -42.7717644, -22.050331 ], [ -42.6358581, -22.0252215 ], [ -42.5, -22.0 ], [ -42.6366086, -22.027419 ], [ -42.77327, -22.0547248 ], [ -42.909984, -22.0819171 ], [ -43.0467506, -22.1089957 ], [ -43.1835697, -22.1359604 ], [ -43.320441, -22.162811 ], [ -43.457364399999989, -22.1895473 ], [ -43.5943399, -22.2161692 ], [ -43.7313673, -22.2426764 ], [ -43.8684464, -22.2690688 ], [ -44.0055771, -22.2953461 ], [ -44.1427593, -22.3215082 ], [ -44.279992799999988, -22.3475548 ], [ -44.4172776, -22.3734857 ], [ -44.5546133, -22.3993009 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d02f1e6ef1", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Hindsia glabra" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.513332939977055, -22.015258827218055 ], [ -42.513332939977055, -21.995565551662256 ], [ -42.495412823261631, -21.995565551662256 ], [ -42.495412823261631, -22.015258827218055 ], [ -42.513332939977055, -22.015258827218055 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Hindsia glabra" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.681667062542815, -22.409690450451347 ], [ -44.681667062542815, -22.389943042640866 ], [ -44.663746945827398, -22.389943042640866 ], [ -44.663746945827398, -22.409690450451347 ], [ -44.681667062542815, -22.409690450451347 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Hindsia glabra" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.699587179258238, -22.429440600962394 ], [ -44.699587179258238, -22.409690450451343 ], [ -44.681667062542807, -22.409690450451343 ], [ -44.681667062542807, -22.429440600962394 ], [ -44.699587179258238, -22.429440600962394 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d021894274", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Hindsia glabra" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.513332939977055, -22.015258827218055 ], [ -42.513332939977055, -21.995565551662256 ], [ -42.495412823261631, -21.995565551662256 ], [ -42.495412823261631, -22.015258827218055 ], [ -42.513332939977055, -22.015258827218055 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Hindsia glabra" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.681667062542815, -22.409690450451347 ], [ -44.681667062542815, -22.389943042640866 ], [ -44.663746945827398, -22.389943042640866 ], [ -44.663746945827398, -22.409690450451347 ], [ -44.681667062542815, -22.409690450451347 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Hindsia glabra" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.699587179258238, -22.429440600962394 ], [ -44.699587179258238, -22.409690450451343 ], [ -44.681667062542807, -22.409690450451343 ], [ -44.681667062542807, -22.429440600962394 ], [ -44.699587179258238, -22.429440600962394 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -228,7 +228,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

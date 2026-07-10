@@ -185,11 +185,11 @@ function closeModal() {
 <ul><li>2.1 Site/area management</li><li>2.3 Habitat & natural process restoration</li><li>1.2 Resource & habitat protection</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_81739" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_83803" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_81739");
+      var map = L.map("map_83803");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -205,12 +205,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d0559c65d0", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Prepusa connata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.6104073, -22.3986292 ], [ -42.64735, -22.531489 ], [ -42.8029013, -22.5028681 ], [ -42.958388, -22.474098 ], [ -43.11381, -22.4451788 ], [ -43.269167, -22.416111 ], [ -43.2121876, -22.3307044 ], [ -43.155278, -22.245278 ], [ -42.9912446, -22.1842039 ], [ -42.8273539, -22.1229658 ], [ -42.6636058, -22.0615643 ], [ -42.5, -22.0 ], [ -42.5367329, -22.1328847 ], [ -42.5735351, -22.2657611 ], [ -42.6104073, -22.3986292 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d021f047a9", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Prepusa connata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.6104073, -22.3986292 ], [ -42.64735, -22.531489 ], [ -42.8029013, -22.5028681 ], [ -42.958388, -22.474098 ], [ -43.11381, -22.4451788 ], [ -43.269167, -22.416111 ], [ -43.2121876, -22.3307044 ], [ -43.155278, -22.245278 ], [ -42.9912446, -22.1842039 ], [ -42.8273539, -22.1229658 ], [ -42.6636058, -22.0615643 ], [ -42.5, -22.0 ], [ -42.5367329, -22.1328847 ], [ -42.5735351, -22.2657611 ], [ -42.6104073, -22.3986292 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d029ea1145", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa connata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.517747487630373, -22.000300354221114 ], [ -42.517747487630373, -21.980675569132956 ], [ -42.49985304717071, -21.980675569132956 ], [ -42.49985304717071, -22.000300354221114 ], [ -42.517747487630373, -22.000300354221114 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa connata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.161947344178166, -22.255665263784358 ], [ -43.161947344178166, -22.236005719073884 ], [ -43.144052903718503, -22.236005719073884 ], [ -43.144052903718503, -22.255665263784358 ], [ -43.161947344178166, -22.255665263784358 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Prepusa connata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.269313986936126, -22.432722962198152 ], [ -43.269313986936126, -22.413039017324518 ], [ -43.25141954647647, -22.413039017324518 ], [ -43.25141954647647, -22.432722962198152 ], [ -43.269313986936126, -22.432722962198152 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa connata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.66090301130766, -22.550884044562334 ], [ -42.66090301130766, -22.531183678734283 ], [ -42.643008570848004, -22.531183678734283 ], [ -42.643008570848004, -22.550884044562334 ], [ -42.66090301130766, -22.550884044562334 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d01e5c4b9c", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa connata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.517747487630373, -22.000300354221114 ], [ -42.517747487630373, -21.980675569132956 ], [ -42.49985304717071, -21.980675569132956 ], [ -42.49985304717071, -22.000300354221114 ], [ -42.517747487630373, -22.000300354221114 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa connata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.161947344178166, -22.255665263784358 ], [ -43.161947344178166, -22.236005719073884 ], [ -43.144052903718503, -22.236005719073884 ], [ -43.144052903718503, -22.255665263784358 ], [ -43.161947344178166, -22.255665263784358 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Prepusa connata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.269313986936126, -22.432722962198152 ], [ -43.269313986936126, -22.413039017324518 ], [ -43.25141954647647, -22.413039017324518 ], [ -43.25141954647647, -22.432722962198152 ], [ -43.269313986936126, -22.432722962198152 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prepusa connata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.66090301130766, -22.550884044562334 ], [ -42.66090301130766, -22.531183678734283 ], [ -42.643008570848004, -22.531183678734283 ], [ -42.643008570848004, -22.550884044562334 ], [ -42.66090301130766, -22.550884044562334 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -239,7 +239,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

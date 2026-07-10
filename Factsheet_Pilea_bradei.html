@@ -117,11 +117,11 @@ function closeModal() {
 <p><i>No conservation actions specified.</i></p>
 
 <h2>Distribution Map</h2>
-  <div id="map_95197" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_27385" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_95197");
+      var map = L.map("map_27385");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -137,12 +137,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d04be92c3e", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Pilea bradei" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.591944, -22.423889 ], [ -44.607222, -22.431111 ], [ -44.619722, -22.4275 ], [ -44.618056, -22.426389 ], [ -44.591389, -22.423056 ], [ -44.591944, -22.423889 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d079af8ff", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Pilea bradei" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.591944, -22.423889 ], [ -44.607222, -22.431111 ], [ -44.619722, -22.4275 ], [ -44.618056, -22.426389 ], [ -44.591389, -22.423056 ], [ -44.591944, -22.423889 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d078985fa9", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 3.0, "species": "Pilea bradei" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.623751850951628, -22.436677088934751 ], [ -44.623751850951628, -22.417487659724063 ], [ -44.605553480487494, -22.417487659724063 ], [ -44.605553480487494, -22.436677088934751 ], [ -44.623751850951628, -22.436677088934751 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Pilea bradei" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.605553480487494, -22.436677088934751 ], [ -44.605553480487494, -22.417487659724063 ], [ -44.587355110023367, -22.417487659724063 ], [ -44.587355110023367, -22.436677088934751 ], [ -44.605553480487494, -22.436677088934751 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d0174b4ab7", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 3.0, "species": "Pilea bradei" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.623751850951628, -22.436677088934751 ], [ -44.623751850951628, -22.417487659724063 ], [ -44.605553480487494, -22.417487659724063 ], [ -44.605553480487494, -22.436677088934751 ], [ -44.623751850951628, -22.436677088934751 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Pilea bradei" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.605553480487494, -22.436677088934751 ], [ -44.605553480487494, -22.417487659724063 ], [ -44.587355110023367, -22.417487659724063 ], [ -44.587355110023367, -22.436677088934751 ], [ -44.605553480487494, -22.436677088934751 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -171,7 +171,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

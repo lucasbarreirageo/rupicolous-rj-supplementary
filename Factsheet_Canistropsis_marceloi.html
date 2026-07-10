@@ -174,11 +174,11 @@ function closeModal() {
 <ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_56022" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_31652" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_56022");
+      var map = L.map("map_31652");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -194,12 +194,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d05f2b2122", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Canistropsis marceloi" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.53805, -22.33305 ], [ -44.606111, -22.433056 ], [ -44.613333, -22.440555 ], [ -44.617222, -22.436111 ], [ -44.622222, -22.425833 ], [ -44.53805, -22.33305 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d0d0c54aa", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Canistropsis marceloi" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.53805, -22.33305 ], [ -44.606111, -22.433056 ], [ -44.613333, -22.440555 ], [ -44.617222, -22.436111 ], [ -44.622222, -22.425833 ], [ -44.53805, -22.33305 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d0b6020f2", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 2.0, "species": "Canistropsis marceloi" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.55413241643236, -22.349671640425314 ], [ -44.55413241643236, -22.331116494286782 ], [ -44.536793933320752, -22.331116494286782 ], [ -44.536793933320752, -22.349671640425314 ], [ -44.55413241643236, -22.349671640425314 ] ] ] } }, { "type": "Feature", "properties": { "count": 4.0, "species": "Canistropsis marceloi" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.623486348878757, -22.442483642268719 ], [ -44.623486348878757, -22.423916396172281 ], [ -44.606147865767149, -22.423916396172281 ], [ -44.606147865767149, -22.442483642268719 ], [ -44.623486348878757, -22.442483642268719 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Canistropsis marceloi" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.606147865767163, -22.442483642268719 ], [ -44.606147865767163, -22.423916396172281 ], [ -44.588809382655555, -22.423916396172281 ], [ -44.588809382655555, -22.442483642268719 ], [ -44.606147865767163, -22.442483642268719 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d07b34cf4", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 2.0, "species": "Canistropsis marceloi" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.55413241643236, -22.349671640425314 ], [ -44.55413241643236, -22.331116494286782 ], [ -44.536793933320752, -22.331116494286782 ], [ -44.536793933320752, -22.349671640425314 ], [ -44.55413241643236, -22.349671640425314 ] ] ] } }, { "type": "Feature", "properties": { "count": 4.0, "species": "Canistropsis marceloi" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.623486348878757, -22.442483642268719 ], [ -44.623486348878757, -22.423916396172281 ], [ -44.606147865767149, -22.423916396172281 ], [ -44.606147865767149, -22.442483642268719 ], [ -44.623486348878757, -22.442483642268719 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Canistropsis marceloi" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.606147865767163, -22.442483642268719 ], [ -44.606147865767163, -22.423916396172281 ], [ -44.588809382655555, -22.423916396172281 ], [ -44.588809382655555, -22.442483642268719 ], [ -44.606147865767163, -22.442483642268719 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -228,7 +228,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

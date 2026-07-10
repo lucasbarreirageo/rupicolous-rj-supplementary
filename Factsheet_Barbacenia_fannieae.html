@@ -165,11 +165,11 @@ function closeModal() {
 <ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_53227" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_98626" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_53227");
+      var map = L.map("map_98626");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -185,12 +185,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d02e266227", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Barbacenia fannieae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.99008, -21.9435964 ], [ -42.0171409, -21.9678396 ], [ -41.9906277, -21.9436301 ], [ -41.99008, -21.9435964 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d04901624f", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Barbacenia fannieae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.99008, -21.9435964 ], [ -42.0171409, -21.9678396 ], [ -41.9906277, -21.9436301 ], [ -41.99008, -21.9435964 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d041ce2c99", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 2.0, "species": "Barbacenia fannieae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.004027926100946, -21.945378289274093 ], [ -42.004027926100946, -21.925028228788829 ], [ -41.987558812558746, -21.925028228788829 ], [ -41.987558812558746, -21.945378289274093 ], [ -42.004027926100946, -21.945378289274093 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Barbacenia fannieae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.020497039643139, -21.986086950390259 ], [ -42.020497039643139, -21.965731195230379 ], [ -42.004027926100946, -21.965731195230379 ], [ -42.004027926100946, -21.986086950390259 ], [ -42.020497039643139, -21.986086950390259 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d021a256c5", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 2.0, "species": "Barbacenia fannieae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.004027926100946, -21.945378289274093 ], [ -42.004027926100946, -21.925028228788829 ], [ -41.987558812558746, -21.925028228788829 ], [ -41.987558812558746, -21.945378289274093 ], [ -42.004027926100946, -21.945378289274093 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Barbacenia fannieae" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.020497039643139, -21.986086950390259 ], [ -42.020497039643139, -21.965731195230379 ], [ -42.004027926100946, -21.965731195230379 ], [ -42.004027926100946, -21.986086950390259 ], [ -42.020497039643139, -21.986086950390259 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -219,7 +219,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

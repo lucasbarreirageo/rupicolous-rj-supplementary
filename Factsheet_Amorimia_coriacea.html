@@ -184,11 +184,11 @@ function closeModal() {
 <ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_19487" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_53697" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_19487");
+      var map = L.map("map_53697");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -204,12 +204,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d07a23782f", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Amorimia coriacea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.1746275, -22.7831046 ], [ -42.016667, -22.866667 ], [ -42.018611, -22.879444 ], [ -42.1366208, -22.8871798 ], [ -42.254644, -22.8948284 ], [ -42.3726805, -22.9023899 ], [ -42.49073, -22.9098643 ], [ -42.6087924, -22.9172514 ], [ -42.7268677, -22.9245513 ], [ -42.8449556, -22.9317638 ], [ -42.963056, -22.938889 ], [ -42.8839528, -22.8370973 ], [ -42.8049678, -22.7352665 ], [ -42.7261005, -22.633397 ], [ -42.64735, -22.531489 ], [ -42.4899683, -22.6155148 ], [ -42.3323943, -22.6993869 ], [ -42.1746275, -22.7831046 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d01b50375a", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Amorimia coriacea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.1746275, -22.7831046 ], [ -42.016667, -22.866667 ], [ -42.018611, -22.879444 ], [ -42.1366208, -22.8871798 ], [ -42.254644, -22.8948284 ], [ -42.3726805, -22.9023899 ], [ -42.49073, -22.9098643 ], [ -42.6087924, -22.9172514 ], [ -42.7268677, -22.9245513 ], [ -42.8449556, -22.9317638 ], [ -42.963056, -22.938889 ], [ -42.8839528, -22.8370973 ], [ -42.8049678, -22.7352665 ], [ -42.7261005, -22.633397 ], [ -42.64735, -22.531489 ], [ -42.4899683, -22.6155148 ], [ -42.3323943, -22.6993869 ], [ -42.1746275, -22.7831046 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d04ddc1e1a", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Amorimia coriacea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.659570510302878, -22.550598113790198 ], [ -42.659570510302878, -22.531197031419598 ], [ -42.6417061712852, -22.531197031419598 ], [ -42.6417061712852, -22.550598113790198 ], [ -42.659570510302878, -22.550598113790198 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Amorimia coriacea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.034318644683928, -22.880827109828122 ], [ -42.034318644683928, -22.861380254859046 ], [ -42.016454305666251, -22.861380254859046 ], [ -42.016454305666251, -22.880827109828122 ], [ -42.034318644683928, -22.880827109828122 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Amorimia coriacea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.927535595568138, -22.91972899079791 ], [ -42.927535595568138, -22.90027668735377 ], [ -42.90967125655046, -22.90027668735377 ], [ -42.90967125655046, -22.91972899079791 ], [ -42.927535595568138, -22.91972899079791 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Amorimia coriacea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.963264273603514, -22.939184023526124 ], [ -42.963264273603514, -22.919728990797907 ], [ -42.945399934585836, -22.919728990797907 ], [ -42.945399934585836, -22.939184023526124 ], [ -42.963264273603514, -22.939184023526124 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d0b216665", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Amorimia coriacea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.659570510302878, -22.550598113790198 ], [ -42.659570510302878, -22.531197031419598 ], [ -42.6417061712852, -22.531197031419598 ], [ -42.6417061712852, -22.550598113790198 ], [ -42.659570510302878, -22.550598113790198 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Amorimia coriacea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.034318644683928, -22.880827109828122 ], [ -42.034318644683928, -22.861380254859046 ], [ -42.016454305666251, -22.861380254859046 ], [ -42.016454305666251, -22.880827109828122 ], [ -42.034318644683928, -22.880827109828122 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Amorimia coriacea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.927535595568138, -22.91972899079791 ], [ -42.927535595568138, -22.90027668735377 ], [ -42.90967125655046, -22.90027668735377 ], [ -42.90967125655046, -22.91972899079791 ], [ -42.927535595568138, -22.91972899079791 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Amorimia coriacea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.963264273603514, -22.939184023526124 ], [ -42.963264273603514, -22.919728990797907 ], [ -42.945399934585836, -22.919728990797907 ], [ -42.945399934585836, -22.939184023526124 ], [ -42.963264273603514, -22.939184023526124 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -238,7 +238,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

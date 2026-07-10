@@ -178,11 +178,11 @@ function closeModal() {
 <ul><li>2.1 Site/area management</li><li>2.3 Habitat & natural process restoration</li><li>1.2 Resource & habitat protection</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_41899" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_68882" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_41899");
+      var map = L.map("map_68882");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -198,12 +198,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d01e076717", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Begonia fimbritepala" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.5179185, -22.317222 ], [ -43.516667, -22.483333 ], [ -43.517222, -22.635278 ], [ -43.546111, -22.479722 ], [ -43.5326231, -22.3154171 ], [ -43.519167, -22.151111 ], [ -43.5179185, -22.317222 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d03652dee", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Begonia fimbritepala" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.5179185, -22.317222 ], [ -43.516667, -22.483333 ], [ -43.517222, -22.635278 ], [ -43.546111, -22.479722 ], [ -43.5326231, -22.3154171 ], [ -43.519167, -22.151111 ], [ -43.5179185, -22.317222 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d040a184b", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia fimbritepala" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.531388487925163, -22.170193512572876 ], [ -43.531388487925163, -22.150836416607753 ], [ -43.514503154967997, -22.150836416607753 ], [ -43.514503154967997, -22.170193512572876 ], [ -43.531388487925163, -22.170193512572876 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia fimbritepala" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.548273820882322, -22.480263391463495 ], [ -43.548273820882322, -22.460864242314958 ], [ -43.531388487925163, -22.460864242314958 ], [ -43.531388487925163, -22.480263391463495 ], [ -43.548273820882322, -22.480263391463495 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Begonia fimbritepala" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.531388487925163, -22.499665196739723 ], [ -43.531388487925163, -22.480263391463499 ], [ -43.514503154967997, -22.480263391463499 ], [ -43.514503154967997, -22.499665196739723 ], [ -43.531388487925163, -22.499665196739723 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia fimbritepala" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.531388487925163, -22.63555248221677 ], [ -43.531388487925163, -22.616131991674497 ], [ -43.514503154967997, -22.616131991674497 ], [ -43.514503154967997, -22.63555248221677 ], [ -43.531388487925163, -22.63555248221677 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d07829b2a", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia fimbritepala" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.531388487925163, -22.170193512572876 ], [ -43.531388487925163, -22.150836416607753 ], [ -43.514503154967997, -22.150836416607753 ], [ -43.514503154967997, -22.170193512572876 ], [ -43.531388487925163, -22.170193512572876 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia fimbritepala" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.548273820882322, -22.480263391463495 ], [ -43.548273820882322, -22.460864242314958 ], [ -43.531388487925163, -22.460864242314958 ], [ -43.531388487925163, -22.480263391463495 ], [ -43.548273820882322, -22.480263391463495 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Begonia fimbritepala" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.531388487925163, -22.499665196739723 ], [ -43.531388487925163, -22.480263391463499 ], [ -43.514503154967997, -22.480263391463499 ], [ -43.514503154967997, -22.499665196739723 ], [ -43.531388487925163, -22.499665196739723 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia fimbritepala" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.531388487925163, -22.63555248221677 ], [ -43.531388487925163, -22.616131991674497 ], [ -43.514503154967997, -22.616131991674497 ], [ -43.514503154967997, -22.63555248221677 ], [ -43.531388487925163, -22.63555248221677 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -232,7 +232,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

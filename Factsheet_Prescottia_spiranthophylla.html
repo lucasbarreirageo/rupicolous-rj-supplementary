@@ -196,11 +196,11 @@ function closeModal() {
 <ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_46254" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_78495" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_46254");
+      var map = L.map("map_78495");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -216,12 +216,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d03b98876", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Prescottia spiranthophylla" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.0395406, -22.8483651 ], [ -43.2076686, -22.9069599 ], [ -43.1293668, -22.8507828 ], [ -43.0511298, -22.7945675 ], [ -42.9729573, -22.738314 ], [ -42.894849, -22.6820225 ], [ -42.816805, -22.6256932 ], [ -42.7388248, -22.5693262 ], [ -42.6609085, -22.5129216 ], [ -42.5830557, -22.4564795 ], [ -42.5052663, -22.4000002 ], [ -42.4275402, -22.3434836 ], [ -42.349877, -22.28693 ], [ -42.2722767, -22.2303395 ], [ -42.194739, -22.1737122 ], [ -42.1172638, -22.1170483 ], [ -42.0398509, -22.0603478 ], [ -41.9625, -22.003611 ], [ -41.9386049, -22.1110385 ], [ -41.9146734, -22.2184625 ], [ -41.8907052, -22.325883 ], [ -41.8667, -22.4333 ], [ -42.033815, -22.4931156 ], [ -42.2010744, -22.5527588 ], [ -42.3684782, -22.6122289 ], [ -42.5360266, -22.6715252 ], [ -42.7037198, -22.7306472 ], [ -42.8715577, -22.789594 ], [ -43.0395406, -22.8483651 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d032337f1d", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Prescottia spiranthophylla" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.0395406, -22.8483651 ], [ -43.2076686, -22.9069599 ], [ -43.1293668, -22.8507828 ], [ -43.0511298, -22.7945675 ], [ -42.9729573, -22.738314 ], [ -42.894849, -22.6820225 ], [ -42.816805, -22.6256932 ], [ -42.7388248, -22.5693262 ], [ -42.6609085, -22.5129216 ], [ -42.5830557, -22.4564795 ], [ -42.5052663, -22.4000002 ], [ -42.4275402, -22.3434836 ], [ -42.349877, -22.28693 ], [ -42.2722767, -22.2303395 ], [ -42.194739, -22.1737122 ], [ -42.1172638, -22.1170483 ], [ -42.0398509, -22.0603478 ], [ -41.9625, -22.003611 ], [ -41.9386049, -22.1110385 ], [ -41.9146734, -22.2184625 ], [ -41.8907052, -22.325883 ], [ -41.8667, -22.4333 ], [ -42.033815, -22.4931156 ], [ -42.2010744, -22.5527588 ], [ -42.3684782, -22.6122289 ], [ -42.5360266, -22.6715252 ], [ -42.7037198, -22.7306472 ], [ -42.8715577, -22.789594 ], [ -43.0395406, -22.8483651 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d05e3c5160", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Prescottia spiranthophylla" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.97383361631816, -22.003795039395335 ], [ -41.97383361631816, -21.984228415513204 ], [ -41.955949523540887, -21.984228415513204 ], [ -41.955949523540887, -22.003795039395335 ], [ -41.97383361631816, -22.003795039395335 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prescottia spiranthophylla" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.88441315243179, -22.434934192717854 ], [ -41.88441315243179, -22.415308751178848 ], [ -41.866529059654518, -22.415308751178848 ], [ -41.866529059654518, -22.434934192717854 ], [ -41.88441315243179, -22.434934192717854 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prescottia spiranthophylla" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.207836017950079, -22.926460643699972 ], [ -43.207836017950079, -22.906766364278745 ], [ -43.189951925172807, -22.906766364278745 ], [ -43.189951925172807, -22.926460643699972 ], [ -43.207836017950079, -22.926460643699972 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d0f801a1c", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Prescottia spiranthophylla" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.97383361631816, -22.003795039395335 ], [ -41.97383361631816, -21.984228415513204 ], [ -41.955949523540887, -21.984228415513204 ], [ -41.955949523540887, -22.003795039395335 ], [ -41.97383361631816, -22.003795039395335 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prescottia spiranthophylla" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -41.88441315243179, -22.434934192717854 ], [ -41.88441315243179, -22.415308751178848 ], [ -41.866529059654518, -22.415308751178848 ], [ -41.866529059654518, -22.434934192717854 ], [ -41.88441315243179, -22.434934192717854 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Prescottia spiranthophylla" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.207836017950079, -22.926460643699972 ], [ -43.207836017950079, -22.906766364278745 ], [ -43.189951925172807, -22.906766364278745 ], [ -43.189951925172807, -22.926460643699972 ], [ -43.207836017950079, -22.926460643699972 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -250,7 +250,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

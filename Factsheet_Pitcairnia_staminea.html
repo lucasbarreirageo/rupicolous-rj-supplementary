@@ -185,11 +185,11 @@ function closeModal() {
 <ul><li>2.1 Site/area management</li><li>2.3 Habitat & natural process restoration</li><li>1.2 Resource & habitat protection</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_67258" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_47277" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_67258");
+      var map = L.map("map_47277");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -205,12 +205,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d0755d1d39", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Pitcairnia staminea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.9095856, -22.8182635 ], [ -42.908611, -22.930278 ], [ -42.963056, -22.938889 ], [ -43.029167, -22.924167 ], [ -42.9999295, -22.8136882 ], [ -42.9707394, -22.7032041 ], [ -42.9415963, -22.5927147 ], [ -42.9125, -22.48222 ], [ -42.9115301, -22.5942345 ], [ -42.9105587, -22.706249 ], [ -42.9095856, -22.8182635 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d03689605a", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Pitcairnia staminea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.9095856, -22.8182635 ], [ -42.908611, -22.930278 ], [ -42.963056, -22.938889 ], [ -43.029167, -22.924167 ], [ -42.9999295, -22.8136882 ], [ -42.9707394, -22.7032041 ], [ -42.9415963, -22.5927147 ], [ -42.9125, -22.48222 ], [ -42.9115301, -22.5942345 ], [ -42.9105587, -22.706249 ], [ -42.9095856, -22.8182635 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d046c53d1c", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Pitcairnia staminea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.925152251934513, -22.48270245078324 ], [ -42.925152251934513, -22.462922724666498 ], [ -42.907658786751682, -22.462922724666498 ], [ -42.907658786751682, -22.48270245078324 ], [ -42.925152251934513, -22.48270245078324 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Pitcairnia staminea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.030113043031555, -22.93840548752458 ], [ -43.030113043031555, -22.918561352347751 ], [ -43.012619577848717, -22.918561352347751 ], [ -43.012619577848717, -22.93840548752458 ], [ -43.030113043031555, -22.93840548752458 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Pitcairnia staminea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.925152251934513, -22.93840548752458 ], [ -42.925152251934513, -22.918561352347751 ], [ -42.907658786751682, -22.918561352347751 ], [ -42.907658786751682, -22.93840548752458 ], [ -42.925152251934513, -22.93840548752458 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Pitcairnia staminea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.977632647483034, -22.958252465654031 ], [ -42.977632647483034, -22.93840548752458 ], [ -42.960139182300196, -22.93840548752458 ], [ -42.960139182300196, -22.958252465654031 ], [ -42.977632647483034, -22.958252465654031 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d05642156a", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Pitcairnia staminea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.925152251934513, -22.48270245078324 ], [ -42.925152251934513, -22.462922724666498 ], [ -42.907658786751682, -22.462922724666498 ], [ -42.907658786751682, -22.48270245078324 ], [ -42.925152251934513, -22.48270245078324 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Pitcairnia staminea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.030113043031555, -22.93840548752458 ], [ -43.030113043031555, -22.918561352347751 ], [ -43.012619577848717, -22.918561352347751 ], [ -43.012619577848717, -22.93840548752458 ], [ -43.030113043031555, -22.93840548752458 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Pitcairnia staminea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.925152251934513, -22.93840548752458 ], [ -42.925152251934513, -22.918561352347751 ], [ -42.907658786751682, -22.918561352347751 ], [ -42.907658786751682, -22.93840548752458 ], [ -42.925152251934513, -22.93840548752458 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Pitcairnia staminea" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.977632647483034, -22.958252465654031 ], [ -42.977632647483034, -22.93840548752458 ], [ -42.960139182300196, -22.93840548752458 ], [ -42.960139182300196, -22.958252465654031 ], [ -42.977632647483034, -22.958252465654031 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -239,7 +239,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

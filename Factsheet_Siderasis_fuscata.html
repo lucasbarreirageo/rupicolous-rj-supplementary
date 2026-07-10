@@ -174,11 +174,11 @@ function closeModal() {
 <ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_35501" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_97340" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_35501");
+      var map = L.map("map_97340");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -194,12 +194,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d04cc07451", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Siderasis fuscata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.1369888, -22.8344889 ], [ -43.212076, -22.951842 ], [ -43.233333, -22.95 ], [ -43.216667, -22.916667 ], [ -43.140444, -22.8081093 ], [ -43.0643423, -22.6995154 ], [ -42.9883613, -22.5908855 ], [ -42.9125, -22.48222 ], [ -42.9872017, -22.5996777 ], [ -43.062031, -22.7171007 ], [ -43.1369888, -22.8344889 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d05cc73e2", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Siderasis fuscata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.1369888, -22.8344889 ], [ -43.212076, -22.951842 ], [ -43.233333, -22.95 ], [ -43.216667, -22.916667 ], [ -43.140444, -22.8081093 ], [ -43.0643423, -22.6995154 ], [ -42.9883613, -22.5908855 ], [ -42.9125, -22.48222 ], [ -42.9872017, -22.5996777 ], [ -43.062031, -22.7171007 ], [ -43.1369888, -22.8344889 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d01cf44b51", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Siderasis fuscata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.930112585603375, -22.501748017545165 ], [ -42.930112585603375, -22.482211238269695 ], [ -42.912262244257661, -22.482211238269695 ], [ -42.912262244257661, -22.501748017545165 ], [ -42.930112585603375, -22.501748017545165 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Siderasis fuscata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.233568388480499, -22.932245451865136 ], [ -43.233568388480499, -22.912648559334869 ], [ -43.215718047134779, -22.912648559334869 ], [ -43.215718047134779, -22.932245451865136 ], [ -43.233568388480499, -22.932245451865136 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Siderasis fuscata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.233568388480499, -22.951845116105972 ], [ -43.233568388480499, -22.932245451865136 ], [ -43.215718047134779, -22.932245451865136 ], [ -43.215718047134779, -22.951845116105972 ], [ -43.233568388480499, -22.951845116105972 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Siderasis fuscata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.215718047134786, -22.951845116105972 ], [ -43.215718047134786, -22.932245451865136 ], [ -43.197867705789065, -22.932245451865136 ], [ -43.197867705789065, -22.951845116105972 ], [ -43.215718047134786, -22.951845116105972 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d04504655", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Siderasis fuscata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.930112585603375, -22.501748017545165 ], [ -42.930112585603375, -22.482211238269695 ], [ -42.912262244257661, -22.482211238269695 ], [ -42.912262244257661, -22.501748017545165 ], [ -42.930112585603375, -22.501748017545165 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Siderasis fuscata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.233568388480499, -22.932245451865136 ], [ -43.233568388480499, -22.912648559334869 ], [ -43.215718047134779, -22.912648559334869 ], [ -43.215718047134779, -22.932245451865136 ], [ -43.233568388480499, -22.932245451865136 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Siderasis fuscata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.233568388480499, -22.951845116105972 ], [ -43.233568388480499, -22.932245451865136 ], [ -43.215718047134779, -22.932245451865136 ], [ -43.215718047134779, -22.951845116105972 ], [ -43.233568388480499, -22.951845116105972 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Siderasis fuscata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.215718047134786, -22.951845116105972 ], [ -43.215718047134786, -22.932245451865136 ], [ -43.197867705789065, -22.932245451865136 ], [ -43.197867705789065, -22.951845116105972 ], [ -43.215718047134786, -22.951845116105972 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -228,7 +228,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

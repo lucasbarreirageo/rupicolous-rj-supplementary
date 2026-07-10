@@ -185,11 +185,11 @@ function closeModal() {
 <ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_18704" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_79703" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_18704");
+      var map = L.map("map_79703");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -205,12 +205,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d06e7a5d8e", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Barbacenia squamata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.2021083, -22.9245129 ], [ -43.28325, -22.989472 ], [ -43.2132841, -22.9087413 ], [ -43.1434015, -22.8279799 ], [ -43.0736018, -22.7471881 ], [ -43.0038846, -22.6663661 ], [ -42.9342495, -22.5855138 ], [ -42.8646962, -22.5046317 ], [ -42.7952241, -22.4237197 ], [ -42.725833, -22.342778 ], [ -42.6341483, -22.2932695 ], [ -42.5425286, -22.2437095 ], [ -42.4509737, -22.1940982 ], [ -42.3594836, -22.1444358 ], [ -42.2680579, -22.0947224 ], [ -42.1766967, -22.0449582 ], [ -42.0853998, -21.9951433 ], [ -41.994167, -21.945278 ], [ -42.0741701, -22.0108373 ], [ -42.1542472, -22.0763577 ], [ -42.2343986, -22.1418392 ], [ -42.314624599999988, -22.2072814 ], [ -42.3949254, -22.2726843 ], [ -42.4753013, -22.3380477 ], [ -42.5557526, -22.4033714 ], [ -42.6362795, -22.4686553 ], [ -42.7168823, -22.5338992 ], [ -42.7975613, -22.5991029 ], [ -42.8783167, -22.6642663 ], [ -42.9591488, -22.7293891 ], [ -43.040058, -22.7944713 ], [ -43.1210444, -22.8595126 ], [ -43.2021083, -22.9245129 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d06ba25b81", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Barbacenia squamata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.2021083, -22.9245129 ], [ -43.28325, -22.989472 ], [ -43.2132841, -22.9087413 ], [ -43.1434015, -22.8279799 ], [ -43.0736018, -22.7471881 ], [ -43.0038846, -22.6663661 ], [ -42.9342495, -22.5855138 ], [ -42.8646962, -22.5046317 ], [ -42.7952241, -22.4237197 ], [ -42.725833, -22.342778 ], [ -42.6341483, -22.2932695 ], [ -42.5425286, -22.2437095 ], [ -42.4509737, -22.1940982 ], [ -42.3594836, -22.1444358 ], [ -42.2680579, -22.0947224 ], [ -42.1766967, -22.0449582 ], [ -42.0853998, -21.9951433 ], [ -41.994167, -21.945278 ], [ -42.0741701, -22.0108373 ], [ -42.1542472, -22.0763577 ], [ -42.2343986, -22.1418392 ], [ -42.314624599999988, -22.2072814 ], [ -42.3949254, -22.2726843 ], [ -42.4753013, -22.3380477 ], [ -42.5557526, -22.4033714 ], [ -42.6362795, -22.4686553 ], [ -42.7168823, -22.5338992 ], [ -42.7975613, -22.5991029 ], [ -42.8783167, -22.6642663 ], [ -42.9591488, -22.7293891 ], [ -43.040058, -22.7944713 ], [ -43.1210444, -22.8595126 ], [ -43.2021083, -22.9245129 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d028dc646b", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Barbacenia squamata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.011953785492601, -21.945586109532613 ], [ -42.011953785492601, -21.925968959302157 ], [ -41.994046461300577, -21.925968959302157 ], [ -41.994046461300577, -21.945586109532613 ], [ -42.011953785492601, -21.945586109532613 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Barbacenia squamata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.728246753173607, -22.358162253520803 ], [ -42.728246753173607, -22.338488867846827 ], [ -42.710339428981591, -22.338488867846827 ], [ -42.710339428981591, -22.358162253520803 ], [ -42.728246753173607, -22.358162253520803 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Barbacenia squamata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.283373803126395, -23.008927834212226 ], [ -43.283373803126395, -22.989163021560437 ], [ -43.265466478934371, -22.989163021560437 ], [ -43.265466478934371, -23.008927834212226 ], [ -43.283373803126395, -23.008927834212226 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d057974031", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Barbacenia squamata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.011953785492601, -21.945586109532613 ], [ -42.011953785492601, -21.925968959302157 ], [ -41.994046461300577, -21.925968959302157 ], [ -41.994046461300577, -21.945586109532613 ], [ -42.011953785492601, -21.945586109532613 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Barbacenia squamata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -42.728246753173607, -22.358162253520803 ], [ -42.728246753173607, -22.338488867846827 ], [ -42.710339428981591, -22.338488867846827 ], [ -42.710339428981591, -22.358162253520803 ], [ -42.728246753173607, -22.358162253520803 ] ] ] } }, { "type": "Feature", "properties": { "count": 1.0, "species": "Barbacenia squamata" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.283373803126395, -23.008927834212226 ], [ -43.283373803126395, -22.989163021560437 ], [ -43.265466478934371, -22.989163021560437 ], [ -43.265466478934371, -23.008927834212226 ], [ -43.283373803126395, -23.008927834212226 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -239,7 +239,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

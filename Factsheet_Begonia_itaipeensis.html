@@ -133,11 +133,11 @@ function closeModal() {
 <ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_28890" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_68814" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_28890");
+      var map = L.map("map_68814");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -153,12 +153,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d07ce16078", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Begonia itaipeensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.180278, -22.899722 ], [ -44.216667, -22.9 ], [ -44.18, -22.899444 ], [ -44.180278, -22.899722 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d05f651600", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Begonia itaipeensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.180278, -22.899722 ], [ -44.216667, -22.9 ], [ -44.18, -22.899444 ], [ -44.180278, -22.899722 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d0323b58c", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia itaipeensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.223516031495819, -22.908594298354505 ], [ -44.223516031495819, -22.890845073310739 ], [ -44.206727802143185, -22.890845073310739 ], [ -44.206727802143185, -22.908594298354505 ], [ -44.223516031495819, -22.908594298354505 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Begonia itaipeensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.189939572790529, -22.908594298354505 ], [ -44.189939572790529, -22.890845073310739 ], [ -44.173151343437887, -22.890845073310739 ], [ -44.173151343437887, -22.908594298354505 ], [ -44.189939572790529, -22.908594298354505 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d01152b93", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 1.0, "species": "Begonia itaipeensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.223516031495819, -22.908594298354505 ], [ -44.223516031495819, -22.890845073310739 ], [ -44.206727802143185, -22.890845073310739 ], [ -44.206727802143185, -22.908594298354505 ], [ -44.223516031495819, -22.908594298354505 ] ] ] } }, { "type": "Feature", "properties": { "count": 2.0, "species": "Begonia itaipeensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -44.189939572790529, -22.908594298354505 ], [ -44.189939572790529, -22.890845073310739 ], [ -44.173151343437887, -22.890845073310739 ], [ -44.173151343437887, -22.908594298354505 ], [ -44.189939572790529, -22.908594298354505 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -187,7 +187,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>

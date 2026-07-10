@@ -65,18 +65,18 @@ function closeModal() {
   </div>
 
 <br>
-<div class="categoria" style="background-color:#60C659;">LC/NT &middot; LC/NT</div>
+<div class="categoria" style="background-color:#D81E05;">CR &middot; B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div>
 
 <h2>Assessment Summary</h2>
 <div class="resumo-box">
-  <div class="resumo-item"><div class="label">Category</div><div class="value">LC/NT</div></div>
-  <div class="resumo-item"><div class="label">Criterion</div><div class="value">LC/NT</div></div>
+  <div class="resumo-item"><div class="label">Category</div><div class="value">CR</div></div>
+  <div class="resumo-item"><div class="label">Criterion</div><div class="value">B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</div></div>
   <div class="resumo-item"><div class="label">Year</div><div class="value">2026</div></div>
   <div class="resumo-item"><div class="label">Scope</div><div class="value">Regional (RJ)</div></div>
 </div>
 
 <h2>Justification</h2>
-<div class="justificativa"><i>Begonia pedrabrancensis</i> is endemic to the state of Rio de Janeiro, with a rupicolous habit. The spatial analysis of confirmed occurrences (EOO = 4 km² <i>(Raw EOO = 0 km² was normalized to AOO according to §4.10 RLG)</i>; AOO = 4 km², 2×2 km grid) identified <b>1</b> location determined by the threat. Category: <b>LC/NT</b> — the quantitative thresholds for IUCN Criteria B and D were not met.</div>
+<div class="justificativa"><i>Begonia pedrabrancensis</i> is endemic to the state of Rio de Janeiro, with a rupicolous habit. The spatial analysis of confirmed occurrences (EOO = 4 km² <i>(Raw EOO = 0 km² was normalized to AOO according to §4.10 RLG)</i>; AOO = 4 km², 2×2 km grid) identified <b>1</b> location determined by the threat. Assessment: <b>CR</b> under criterion B1 (EOO < 100 km²). Criterion: <b>B1ab(i,ii,iii,iv)+B2ab(i,ii,iii,iv)</b>.  The number of locations (1) meets the IUCN threshold for CR (≤ 1).  Active threats (IUCN-CMP v3.3): 2.3 Livestock farming & ranching.  Occurs in Protected Areas (PA regime: Integral Protection and Sustainable Use): APA DA PEDRA BRANCA | PARQUE ESTADUAL DA PEDRA BRANCA. </div>
 
 <h2>Supporting Information</h2>
 <div class="resumo-box">
@@ -130,14 +130,14 @@ function closeModal() {
 <p style='margin-bottom: 5px;'><b>Management Category:</b> Integral Protection and Sustainable Use</p><p style='margin-top: 0; margin-bottom: 5px;'><b>Protected Areas:</b></p><ul style='margin-top: 5px; margin-bottom: 0;'><li>APA DA PEDRA BRANCA</li><li>PARQUE ESTADUAL DA PEDRA BRANCA</li></ul>
 
 <h2>Conservation actions</h2>
-<ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li></ul>
+<ul><li>1.2 Resource & habitat protection</li><li>2.3 Habitat & natural process restoration</li><li>3.4.1 Captive breeding/artificial propagation</li><li>3.4.2 Genome resource bank</li><li>3.2 Species recovery</li><li>5.1.3 Legislation (sub-national)</li><li>5.4.3 Compliance and enforcement (sub-national)</li><li>4.3 Awareness & communications</li></ul>
 
 <h2>Distribution Map</h2>
-  <div id="map_47538" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
+  <div id="map_51356" style="width: 100%; height: 500px; border: 1px solid #ccc; border-radius: 4px; z-index: 1;"></div>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     try {
-      var map = L.map("map_47538");
+      var map = L.map("map_51356");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap contributors"
@@ -153,12 +153,12 @@ function closeModal() {
         L.geoJSON(ucsData, { pane: "ucsPane", style: { color: "#1e8449", weight: 1, fillColor: "#27ae60", fillOpacity: 0.25 } }).addTo(map);
       }
 
-      var eooData = { "type": "FeatureCollection", "name": "file137d063b333", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Begonia pedrabrancensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.4155553, -22.943055 ], [ -43.4156706, -22.943277 ], [ -43.415558, -22.943056 ], [ -43.4155553, -22.943055 ] ] ] } } ] };
+      var eooData = { "type": "FeatureCollection", "name": "file144d060b12929", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "species": "Begonia pedrabrancensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.4155553, -22.943055 ], [ -43.4156706, -22.943277 ], [ -43.415558, -22.943056 ], [ -43.4155553, -22.943055 ] ] ] } } ] };
       if (eooData && eooData.type) {
         L.geoJSON(eooData, { pane: "eooPane", style: { color: "#f39c12", weight: 2, dashArray: "5, 5", fillOpacity: 0 } }).addTo(map);
       }
 
-      var aooData = { "type": "FeatureCollection", "name": "file137d0282d5472", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 3.0, "species": "Begonia pedrabrancensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.423711028078891, -22.952012857184744 ], [ -43.423711028078891, -22.934324713282667 ], [ -43.407516200136776, -22.934324713282667 ], [ -43.407516200136776, -22.952012857184744 ], [ -43.423711028078891, -22.952012857184744 ] ] ] } } ] };
+      var aooData = { "type": "FeatureCollection", "name": "file144d0382f48aa", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "count": 3.0, "species": "Begonia pedrabrancensis" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -43.423711028078891, -22.952012857184744 ], [ -43.423711028078891, -22.934324713282667 ], [ -43.407516200136776, -22.934324713282667 ], [ -43.407516200136776, -22.952012857184744 ], [ -43.423711028078891, -22.952012857184744 ] ] ] } } ] };
       if (aooData && aooData.type) {
         L.geoJSON(aooData, { pane: "aooPane", style: { color: "#2c3e50", weight: 1, fillColor: "#3498db", fillOpacity: 0.5 } }).addTo(map);
       }
@@ -187,7 +187,7 @@ function closeModal() {
 
 <hr style="margin-top:40px;">
 <p style="color:#95a5a6;font-size:0.85em;text-align:center;">
-Factsheet generated on 2026-07-03 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
+Factsheet generated on 2026-07-10 | IUCN Red List Categories &amp; Criteria v3.1 | Guidelines v16 (Mar 2024)</p>
 </div>
 </body>
 </html>
