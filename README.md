@@ -1,15 +1,9 @@
-<!--
-  INSTRUÇÕES: substitua os campos entre colchetes [ ] pelos seus dados
-  antes de publicar. Depois apague este comentário.
--->
-
 # Supplementary Material — Threatened Rupicolous Flora of Rio de Janeiro
 
 Interactive supplementary material for the article:
 
-> [BARREIRA, A.L. et al.] ([2026]). *[Beyond land-use change: landslide susceptibility 
-and rock-outcrop flora conservation]*. [Acta Botanica Brasilica].
-> DOI: [DOI do artigo, quando disponível]
+> Barreira, A. L. et al. (2026). *Beyond land-use change: integrating geomorphological
+> susceptibility into the conservation assessment of rupicolous flora.* Acta Botanica Brasilica.
 
 This repository hosts the interactive supplementary dataset accompanying a regional
 IUCN Red List assessment of threatened rupicolous plant species (with emphasis on
@@ -20,16 +14,16 @@ state of Rio de Janeiro, Brazil.
 
 The navigable supplementary material is available at:
 
-**https://[SEU_USUARIO].github.io/[NOME_DO_REPO]/**
+**https://lucasbarreirageo.github.io/rupicolous-rj-supplementary/**
 
-Start from the master table (`00_Supplementary_Master_Table.html`); click any species
-name to open its individual factsheet.
+The master table opens automatically; click any species name to open its individual
+factsheet.
 
 ## Contents
 
 | File | Description |
 |------|-------------|
-| `00_Supplementary_Master_Table.html` | Master synthesis table: all assessed species grouped by family, with Red List category distribution, threat synthesis, and links to each factsheet. |
+| `index.html` / `00_Supplementary_Master_Table.html` | Master synthesis table: all assessed species grouped by family, with Red List category distribution, threat synthesis, and links to each factsheet. |
 | `Factsheet_<Genus>_<species>.html` | Individual factsheet per taxon: taxonomy, assessment justification, EOO/AOO, locations, threats (IUCN-CMP v3.3), protection status, interactive distribution map, and reference photographs. |
 
 ## How to use
@@ -60,12 +54,15 @@ server-side code.
 
 If you use this material, please cite the associated article and this archived dataset:
 
-> [SOBRENOME, Inicial.] ([ANO]). *Supplementary material — Threatened Rupicolous Flora of
-> Rio de Janeiro* [Data set]. Zenodo. https://doi.org/[DOI_DO_ZENODO]
+> Barreira, A. L. (2026). *Supplementary material — Threatened Rupicolous Flora of
+> Rio de Janeiro* [Data set]. Zenodo. https://doi.org/PENDING
+
+<!-- Após arquivar no Zenodo, substitua PENDING pelo DOI real (ex.: 10.5281/zenodo.1234567). -->
 
 ## License
 
-- **Code and HTML documents:** [ex.: MIT License] (see `LICENSE`).
-- **Assessment data and text:** [ex.: CC BY 4.0].
+- **Code and HTML documents:** MIT License (see `LICENSE`).
+- **Assessment data and accompanying text:** Creative Commons Attribution 4.0 International
+  (CC BY 4.0).
 - **Photographs:** © respective authors, under the Creative Commons licenses indicated on
   each image (sourced from GBIF).
